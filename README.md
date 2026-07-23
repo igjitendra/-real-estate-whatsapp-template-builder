@@ -61,3 +61,24 @@ REWFB.substitute(template.message, REWFB.getSampleValues());
 - Message editor shell, formatting toolbar and counters
 - Mobile/compact and light/dark preview controls
 - Single Message and reserved Complete Chat Flow modes
+
+
+## Part 5 — Message Editor and Variable Engine
+- Category/language template auto-loading from the Part 3 catalog
+- Cursor-aware dynamic variable picker with grouped search
+- Variable status inspector, missing-value detection and resolved preview
+- Bold, italic, bullet and emoji helpers
+- Live character, word and 1,000-character part counters
+- Editor undo/redo history, reset and duplicate actions
+- Form-to-variable mapping for business, customer, property, lead and appointment fields
+
+
+## Part 6 — Live WhatsApp Preview
+- Real-time message and variable synchronization
+- Dynamic company name, agent status, initials and optional logo URL
+- Category-aware customer replies and quick-reply buttons
+- Read ticks, current timestamps and browser conversation simulation
+- Brochure, video and map attachment cards from verified HTTP(S) links
+- Missing-variable status and live sync feedback
+- Proper light/dark themes plus phone/desktop preview layouts
+- Safe HTML escaping and protocol validation for user-provided content
