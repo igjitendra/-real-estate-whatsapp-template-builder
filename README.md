@@ -82,3 +82,11 @@ REWFB.substitute(template.message, REWFB.getSampleValues());
 - Missing-variable status and live sync feedback
 - Proper light/dark themes plus phone/desktop preview layouts
 - Safe HTML escaping and protocol validation for user-provided content
+
+
+## Part 7 — Save, Copy, Download and Import
+- Browser-local draft save and autosave
+- Open, search, rename, duplicate, delete and clear saved drafts
+- Resolved copy, TXT download, JSON backup export/import
+- Print and user-triggered WhatsApp sharing
+- Import validation, safe filenames and storage error feedback
