@@ -101,3 +101,9 @@ REWFB.substitute(template.message, REWFB.getSampleValues());
 - Featured, title and lead-stage sorting
 - Browser-local favorites, copy action and WhatsApp-style preview
 - Direct template handoff into Template Maker
+
+
+## Part 11 — Chat Flow Directory
+- Searchable directory of all 33 real estate chat flows
+- Seven categories with stage, duration and sorting controls
+- Step, action and variable previews with browser-local saved flows
