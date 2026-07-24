@@ -151,3 +151,17 @@ REWFB.substitute(template.message, REWFB.getSampleValues());
 - Dedicated `blogs/` folder with separate CSS, JavaScript, images and data
 - Two complete sample articles, reusable upload template, README and RSS feed
 - Article TOC, reading progress, font controls, copy blocks, sharing, printing and feedback
+
+
+## Local Real Estate Lead Manager
+- Complete lead profile with 34 portable CSV columns
+- LocalStorage persistence, table and pipeline views
+- Search, filters, sorting, pagination and configurable columns
+- Follow-up, overdue, visit and pipeline metrics
+- CSV import/export, selected/filtered export, sample CSV
+- JSON backup/restore, duplicate checks and bulk updates
+- Quick WhatsApp/call actions and six demonstration leads
+
+## Premium Homepage Refresh
+- New command-center hero, product metrics and local privacy messaging
+- Dedicated tool cards, Lead Manager spotlight, template collections and blog discovery
