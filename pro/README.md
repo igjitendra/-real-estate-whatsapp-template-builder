@@ -137,3 +137,11 @@ REWFB.substitute(template.message, REWFB.getSampleValues());
 - Named-variable and Meta-numbered-variable views
 - Copy full step/flow, TXT and JSON exports, interactive click-path preview
 - Approval checklists, samples, category guidance and compliance warnings
+
+
+## Complete Click-by-Click Flow Correction
+- Every flow now contains six connected customer-facing message templates
+- Every Quick Reply opens its mapped next message and a new action set
+- Every message has its own Quick Reply and/or URL/Phone CTA buttons
+- CTA return-path simulation is clearly separated from real WhatsApp behavior
+- All button paths are visible, copyable and exportable
