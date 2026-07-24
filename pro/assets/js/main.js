@@ -12,7 +12,7 @@
           <span class="brand-text">Real Estate Flow <small>WhatsApp Builder</small></span>
         </a>
         <nav class="nav-links" id="primary-navigation" aria-label="Primary navigation">
-          <a href="${base}index.html">Home</a><a href="${base}template-maker.html">Template Maker</a><a href="${base}chat-flows.html">Chat Flows</a><a href="${base}templates.html">Templates</a><a href="${base}about.html">About</a><a href="${base}contact.html">Contact</a>
+          <a href="${base}index.html">Home</a><a href="${base}template-maker.html">Template Maker</a><a href="${base}chat-flows.html">Chat Flows</a><a href="${base}premium-templates.html">Templates</a><a href="${base}about.html">About</a><a href="${base}contact.html">Contact</a>
         </nav>
         <div class="nav-actions">
           <a class="instagram-link" href="https://instagram.com/jitendrauno" target="_blank" rel="noopener" aria-label="Follow @JITENDRAUNO on Instagram">${iconInstagram}</a>
@@ -25,7 +25,7 @@
     <footer class="site-footer">
       <div class="container footer-main">
         <div class="footer-brand"><a class="brand" href="${base}index.html"><img src="${base}assets/images/logo.svg" alt="" width="40" height="40"><span class="brand-text">Real Estate Flow <small>WhatsApp Builder</small></span></a><p>Create professional property messages and lead-conversion flows without complicated software.</p><div class="social-row"><a href="https://instagram.com/jitendrauno" target="_blank" rel="noopener" aria-label="Instagram">${iconInstagram}</a></div></div>
-        <div class="footer-col"><h3>Template Tools</h3><a href="${base}template-maker.html">Template Maker</a><a href="${base}templates.html">All Templates</a><a href="${base}flows/lead-qualification.html">Lead Qualification</a><a href="${base}flows/site-visit-booking.html">Site Visit Flow</a></div>
+        <div class="footer-col"><h3>Template Tools</h3><a href="${base}template-maker.html">Template Maker</a><a href="${base}premium-templates.html">All Templates</a><a href="${base}flows/lead-qualification.html">Lead Qualification</a><a href="${base}flows/site-visit-booking.html">Site Visit Flow</a></div>
         <div class="footer-col"><h3>Chat Flows</h3><a href="${base}flows/property-recommendation.html">Property Recommendation</a><a href="${base}flows/booking-confirmation.html">Booking Confirmation</a><a href="${base}flows/home-loan.html">Home Loan</a><a href="${base}flows/customer-support.html">Customer Support</a></div>
         <div class="footer-col"><h3>Connect</h3><a href="${base}about.html">About</a><a href="${base}contact.html">Contact</a><a href="${base}privacy-policy.html">Privacy Policy</a><a href="${base}disclaimer.html">Disclaimer</a><a href="https://instagram.com/jitendrauno" target="_blank" rel="noopener">@JITENDRAUNO</a></div>
       </div>

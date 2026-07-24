@@ -1,0 +1,2455 @@
+{
+  "version": "1.0.0",
+  "templates": [
+    {
+      "id": "marketing-01",
+      "templateName": "real_estate_marketing_new_project_launch_v1",
+      "title": "New Project Launch",
+      "category": "Marketing",
+      "intent": "Project Launch",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nA new residential opportunity is now available for {{ProjectName}} in {{Location}}.\n\nExplore the project overview, configurations and currently verified launch information.\n\nWould you like the brochure or a priority callback?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nA new residential opportunity is now available for {{2}} in {{3}}.\n\nExplore the project overview, configurations and currently verified launch information.\n\nWould you like the brochure or a priority callback?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "View Brochure",
+        "Check Price",
+        "Book Visit"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Project",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like the brochure or a priority callback?"
+    },
+    {
+      "id": "marketing-02",
+      "templateName": "real_estate_marketing_pre_launch_priority_list_v1",
+      "title": "Pre-Launch Priority List",
+      "category": "Marketing",
+      "intent": "Project Launch",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nPriority registrations have opened for an upcoming project for {{ProjectName}} in {{Location}}.\n\nJoin the interest list to receive verified updates when official details are released.\n\nWould you like to register your interest?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nPriority registrations have opened for an upcoming project for {{2}} in {{3}}.\n\nJoin the interest list to receive verified updates when official details are released.\n\nWould you like to register your interest?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "Join Priority List",
+        "View Location",
+        "Talk to Advisor"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Register Interest",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like to register your interest?"
+    },
+    {
+      "id": "marketing-03",
+      "templateName": "real_estate_marketing_new_tower_announcement_v1",
+      "title": "New Tower Announcement",
+      "category": "Marketing",
+      "intent": "Project Launch",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nA new tower has been announced for {{ProjectName}} in {{Location}}.\n\nReview available configurations, location advantages and official release information.\n\nWould you like the floor plan or callback?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nA new tower has been announced for {{2}} in {{3}}.\n\nReview available configurations, location advantages and official release information.\n\nWould you like the floor plan or callback?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "View Floor Plan",
+        "Check Price",
+        "Request Callback"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Tower",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like the floor plan or callback?"
+    },
+    {
+      "id": "marketing-04",
+      "templateName": "real_estate_marketing_new_phase_launch_v1",
+      "title": "New Phase Launch",
+      "category": "Marketing",
+      "intent": "Project Launch",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nThe next phase is now open for enquiries for {{ProjectName}} in {{Location}}.\n\nCompare the new phase with existing options before deciding.\n\nWould you like a comparison or site visit?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nThe next phase is now open for enquiries for {{2}} in {{3}}.\n\nCompare the new phase with existing options before deciding.\n\nWould you like a comparison or site visit?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "Compare Phases",
+        "View Brochure",
+        "Book Visit"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Phase",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like a comparison or site visit?"
+    },
+    {
+      "id": "marketing-05",
+      "templateName": "real_estate_marketing_inventory_availability_alert_v1",
+      "title": "Inventory Availability Alert",
+      "category": "Marketing",
+      "intent": "Availability",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nSelected units may currently be available for {{ProjectName}} in {{Location}}.\n\nInventory changes frequently and must be reconfirmed before booking.\n\nWhich configuration should we check?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nSelected units may currently be available for {{2}} in {{3}}.\n\nInventory changes frequently and must be reconfirmed before booking.\n\nWhich configuration should we check?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "2 BHK",
+        "3 BHK",
+        "Other"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Check Availability",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Which configuration should we check?"
+    },
+    {
+      "id": "marketing-06",
+      "templateName": "real_estate_marketing_price_revision_update_v1",
+      "title": "Price Revision Update",
+      "category": "Marketing",
+      "intent": "Pricing",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nAn official price revision has been announced for {{ProjectName}} in {{Location}}.\n\nReview the latest verified price sheet and applicable charges.\n\nWould you like the updated price sheet?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nAn official price revision has been announced for {{2}} in {{3}}.\n\nReview the latest verified price sheet and applicable charges.\n\nWould you like the updated price sheet?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "Get Price Sheet",
+        "Talk to Advisor",
+        "Not Now"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Price Sheet",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like the updated price sheet?"
+    },
+    {
+      "id": "marketing-07",
+      "templateName": "real_estate_marketing_festive_property_offer_v1",
+      "title": "Festive Property Offer",
+      "category": "Marketing",
+      "intent": "Offer",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nA festive campaign is available on selected units for {{ProjectName}} in {{Location}}.\n\nTerms, inventory and final pricing remain subject to written confirmation.\n\nWould you like to review the official offer details?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nA festive campaign is available on selected units for {{2}} in {{3}}.\n\nTerms, inventory and final pricing remain subject to written confirmation.\n\nWould you like to review the official offer details?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "View Offer",
+        "Check Eligibility",
+        "Book Visit"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Offer",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like to review the official offer details?"
+    },
+    {
+      "id": "marketing-08",
+      "templateName": "real_estate_marketing_limited_period_benefit_v1",
+      "title": "Limited-Period Benefit",
+      "category": "Marketing",
+      "intent": "Offer",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nA time-bound benefit may be available for {{ProjectName}} in {{Location}}.\n\nPlease verify eligibility, validity and unit availability before making a decision.\n\nShould we check the applicable units?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nA time-bound benefit may be available for {{2}} in {{3}}.\n\nPlease verify eligibility, validity and unit availability before making a decision.\n\nShould we check the applicable units?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "Check Units",
+        "View Terms",
+        "Talk to Advisor"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Terms",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Should we check the applicable units?"
+    },
+    {
+      "id": "marketing-09",
+      "templateName": "real_estate_marketing_early_bird_registration_v1",
+      "title": "Early-Bird Registration",
+      "category": "Marketing",
+      "intent": "Offer",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nEarly registrations are being accepted for {{ProjectName}} in {{Location}}.\n\nRegistration indicates interest and does not guarantee inventory or pricing.\n\nWould you like to join the list?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nEarly registrations are being accepted for {{2}} in {{3}}.\n\nRegistration indicates interest and does not guarantee inventory or pricing.\n\nWould you like to join the list?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "Register Interest",
+        "View Project",
+        "Not Now"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Register",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like to join the list?"
+    },
+    {
+      "id": "marketing-10",
+      "templateName": "real_estate_marketing_open_house_invitation_v1",
+      "title": "Open House Invitation",
+      "category": "Marketing",
+      "intent": "Event",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nYou are invited to an open-house event for {{ProjectName}} in {{Location}}.\n\nTour the project, review sample spaces and ask questions in person.\n\nWould you like to reserve a visitor slot?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nYou are invited to an open-house event for {{2}} in {{3}}.\n\nTour the project, review sample spaces and ask questions in person.\n\nWould you like to reserve a visitor slot?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "Reserve Slot",
+        "Get Directions",
+        "Maybe Later"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Reserve Slot",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like to reserve a visitor slot?"
+    },
+    {
+      "id": "marketing-11",
+      "templateName": "real_estate_marketing_property_webinar_invitation_v1",
+      "title": "Property Webinar Invitation",
+      "category": "Marketing",
+      "intent": "Event",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nA live property information session is scheduled for {{ProjectName}} in {{Location}}.\n\nLearn about the location, configurations, pricing structure and buying process.\n\nWould you like to register?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nA live property information session is scheduled for {{2}} in {{3}}.\n\nLearn about the location, configurations, pricing structure and buying process.\n\nWould you like to register?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "Register",
+        "View Agenda",
+        "Ask a Question"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Register Webinar",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like to register?"
+    },
+    {
+      "id": "marketing-12",
+      "templateName": "real_estate_marketing_sample_flat_preview_v1",
+      "title": "Sample Flat Preview",
+      "category": "Marketing",
+      "intent": "Event",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nSample-flat viewing appointments are available for {{ProjectName}} in {{Location}}.\n\nExperience the layout and discuss verified options with a consultant.\n\nWhich day would suit you?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nSample-flat viewing appointments are available for {{2}} in {{3}}.\n\nExperience the layout and discuss verified options with a consultant.\n\nWhich day would suit you?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "This Weekend",
+        "Next Week",
+        "Request Callback"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Book Preview",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Which day would suit you?"
+    },
+    {
+      "id": "marketing-13",
+      "templateName": "real_estate_marketing_weekend_site_visit_drive_v1",
+      "title": "Weekend Site Visit Drive",
+      "category": "Marketing",
+      "intent": "Event",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nExtended site-visit slots are available this weekend for {{ProjectName}} in {{Location}}.\n\nChoose a convenient time and receive confirmed directions from the team.\n\nWould you like a morning or afternoon slot?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nExtended site-visit slots are available this weekend for {{2}} in {{3}}.\n\nChoose a convenient time and receive confirmed directions from the team.\n\nWould you like a morning or afternoon slot?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "Morning Slot",
+        "Afternoon Slot",
+        "Call Me"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Book Visit",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like a morning or afternoon slot?"
+    },
+    {
+      "id": "marketing-14",
+      "templateName": "real_estate_marketing_investor_information_campaign_v1",
+      "title": "Investor Information Campaign",
+      "category": "Marketing",
+      "intent": "Investor",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nA property may be worth evaluating for your investment criteria for {{ProjectName}} in {{Location}}.\n\nReview pricing, approvals, location and risks independently; returns are not guaranteed.\n\nWould you like the information pack?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nA property may be worth evaluating for your investment criteria for {{2}} in {{3}}.\n\nReview pricing, approvals, location and risks independently; returns are not guaranteed.\n\nWould you like the information pack?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "View Information",
+        "Compare Options",
+        "Expert Callback"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Information",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like the information pack?"
+    },
+    {
+      "id": "marketing-15",
+      "templateName": "real_estate_marketing_commercial_property_campaign_v1",
+      "title": "Commercial Property Campaign",
+      "category": "Marketing",
+      "intent": "Investor",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nCommercial property options are available for evaluation for {{ProjectName}} in {{Location}}.\n\nAssess use, location, ticket size, approvals and associated risks independently.\n\nWould you like available options?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nCommercial property options are available for evaluation for {{2}} in {{3}}.\n\nAssess use, location, ticket size, approvals and associated risks independently.\n\nWould you like available options?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "View Options",
+        "Check Budget Fit",
+        "Talk to Expert"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Options",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like available options?"
+    },
+    {
+      "id": "marketing-16",
+      "templateName": "real_estate_marketing_plot_launch_campaign_v1",
+      "title": "Plot Launch Campaign",
+      "category": "Marketing",
+      "intent": "Investor",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nResidential plot options are open for enquiries for {{ProjectName}} in {{Location}}.\n\nVerify title, approvals, dimensions, infrastructure and development status independently.\n\nWould you like the layout plan?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nResidential plot options are open for enquiries for {{2}} in {{3}}.\n\nVerify title, approvals, dimensions, infrastructure and development status independently.\n\nWould you like the layout plan?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "View Layout",
+        "Check Price",
+        "Book Visit"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Layout",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like the layout plan?"
+    },
+    {
+      "id": "marketing-17",
+      "templateName": "real_estate_marketing_nri_property_consultation_v1",
+      "title": "NRI Property Consultation",
+      "category": "Marketing",
+      "intent": "Investor",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nA remote property consultation is available for {{ProjectName}} in {{Location}}.\n\nReview documentation, payment process, taxes and authorization requirements with qualified professionals.\n\nWould you like an online appointment?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nA remote property consultation is available for {{2}} in {{3}}.\n\nReview documentation, payment process, taxes and authorization requirements with qualified professionals.\n\nWould you like an online appointment?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "Book Video Call",
+        "View Project",
+        "Ask a Question"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Book Consultation",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like an online appointment?"
+    },
+    {
+      "id": "marketing-18",
+      "templateName": "real_estate_marketing_ready_to_move_campaign_v1",
+      "title": "Ready-to-Move Campaign",
+      "category": "Marketing",
+      "intent": "Property Type",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nReady-to-move options are available for enquiry for {{ProjectName}} in {{Location}}.\n\nConfirm occupancy, completion documents, inventory and final charges before proceeding.\n\nWould you like matching options?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nReady-to-move options are available for enquiry for {{2}} in {{3}}.\n\nConfirm occupancy, completion documents, inventory and final charges before proceeding.\n\nWould you like matching options?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "View Options",
+        "Check Price",
+        "Book Visit"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Options",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like matching options?"
+    },
+    {
+      "id": "marketing-19",
+      "templateName": "real_estate_marketing_luxury_residence_showcase_v1",
+      "title": "Luxury Residence Showcase",
+      "category": "Marketing",
+      "intent": "Property Type",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nPremium residences are available for private review for {{ProjectName}} in {{Location}}.\n\nExplore verified specifications, services and appointment-only viewing options.\n\nWould you like a private preview?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nPremium residences are available for private review for {{2}} in {{3}}.\n\nExplore verified specifications, services and appointment-only viewing options.\n\nWould you like a private preview?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "View Collection",
+        "Private Visit",
+        "Request Callback"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Collection",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like a private preview?"
+    },
+    {
+      "id": "marketing-20",
+      "templateName": "real_estate_marketing_affordable_housing_options_v1",
+      "title": "Affordable Housing Options",
+      "category": "Marketing",
+      "intent": "Property Type",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nBudget-focused housing options are available for {{ProjectName}} in {{Location}}.\n\nEligibility, pricing, allocation and scheme conditions must be independently verified.\n\nWould you like suitable options?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nBudget-focused housing options are available for {{2}} in {{3}}.\n\nEligibility, pricing, allocation and scheme conditions must be independently verified.\n\nWould you like suitable options?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "View Options",
+        "Check Eligibility",
+        "Talk to Advisor"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Options",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like suitable options?"
+    },
+    {
+      "id": "marketing-21",
+      "templateName": "real_estate_marketing_resale_property_alert_v1",
+      "title": "Resale Property Alert",
+      "category": "Marketing",
+      "intent": "Property Type",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nA resale property matching common requirements is available for {{ProjectName}} in {{Location}}.\n\nVerify ownership, documents, condition, dues and price independently.\n\nWould you like the summary?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nA resale property matching common requirements is available for {{2}} in {{3}}.\n\nVerify ownership, documents, condition, dues and price independently.\n\nWould you like the summary?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "View Summary",
+        "Schedule Visit",
+        "Talk to Advisor"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Property",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like the summary?"
+    },
+    {
+      "id": "marketing-22",
+      "templateName": "real_estate_marketing_rental_property_alert_v1",
+      "title": "Rental Property Alert",
+      "category": "Marketing",
+      "intent": "Property Type",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nA rental property may match your preferences for {{ProjectName}} in {{Location}}.\n\nConfirm rent, deposit, maintenance, condition and agreement terms directly.\n\nWould you like the details?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nA rental property may match your preferences for {{2}} in {{3}}.\n\nConfirm rent, deposit, maintenance, condition and agreement terms directly.\n\nWould you like the details?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "View Details",
+        "Schedule Visit",
+        "Not Interested"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Property",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like the details?"
+    },
+    {
+      "id": "marketing-23",
+      "templateName": "real_estate_marketing_location_spotlight_v1",
+      "title": "Location Spotlight",
+      "category": "Marketing",
+      "intent": "Content",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nExplore property options in a high-interest location for {{ProjectName}} in {{Location}}.\n\nCompare connectivity, infrastructure, civic services and project approvals independently.\n\nWould you like available projects in this area?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nExplore property options in a high-interest location for {{2}} in {{3}}.\n\nCompare connectivity, infrastructure, civic services and project approvals independently.\n\nWould you like available projects in this area?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "View Projects",
+        "Location Guide",
+        "Talk to Advisor"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Explore Location",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like available projects in this area?"
+    },
+    {
+      "id": "marketing-24",
+      "templateName": "real_estate_marketing_amenity_spotlight_v1",
+      "title": "Amenity Spotlight",
+      "category": "Marketing",
+      "intent": "Content",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nExplore the verified amenities planned for a project for {{ProjectName}} in {{Location}}.\n\nAvailability, access and completion timelines should be confirmed in official documents.\n\nWould you like the complete amenity list?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nExplore the verified amenities planned for a project for {{2}} in {{3}}.\n\nAvailability, access and completion timelines should be confirmed in official documents.\n\nWould you like the complete amenity list?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "View Amenities",
+        "View Brochure",
+        "Book Visit"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Amenities",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like the complete amenity list?"
+    },
+    {
+      "id": "marketing-25",
+      "templateName": "real_estate_marketing_construction_milestone_update_v1",
+      "title": "Construction Milestone Update",
+      "category": "Marketing",
+      "intent": "Content",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nA construction milestone update is available for {{ProjectName}} in {{Location}}.\n\nReview dated site information and official progress communication before relying on it.\n\nWould you like the latest update?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nA construction milestone update is available for {{2}} in {{3}}.\n\nReview dated site information and official progress communication before relying on it.\n\nWould you like the latest update?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "View Update",
+        "Book Site Visit",
+        "Ask a Question"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Progress",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like the latest update?"
+    },
+    {
+      "id": "marketing-26",
+      "templateName": "real_estate_marketing_market_update_newsletter_v1",
+      "title": "Market Update Newsletter",
+      "category": "Marketing",
+      "intent": "Content",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nA local real estate market update is available for {{ProjectName}} in {{Location}}.\n\nUse the information for general awareness and verify decisions with qualified advisors.\n\nWould you like the report?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nA local real estate market update is available for {{2}} in {{3}}.\n\nUse the information for general awareness and verify decisions with qualified advisors.\n\nWould you like the report?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "View Report",
+        "Explore Properties",
+        "Unsubscribe"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Read Update",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like the report?"
+    },
+    {
+      "id": "marketing-27",
+      "templateName": "real_estate_marketing_brochure_follow_up_v1",
+      "title": "Brochure Follow-Up",
+      "category": "Marketing",
+      "intent": "Retargeting",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nYou recently requested project information for {{ProjectName}} in {{Location}}.\n\nWe can help clarify configurations, pricing or visit availability after you review the brochure.\n\nWhat would you like next?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nYou recently requested project information for {{2}} in {{3}}.\n\nWe can help clarify configurations, pricing or visit availability after you review the brochure.\n\nWhat would you like next?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "Check Price",
+        "Book Visit",
+        "Ask Question"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Brochure",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "What would you like next?"
+    },
+    {
+      "id": "marketing-28",
+      "templateName": "real_estate_marketing_customer_reactivation_v1",
+      "title": "Customer Reactivation",
+      "category": "Marketing",
+      "intent": "Retargeting",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nWe are checking whether your property requirement is still active for {{ProjectName}} in {{Location}}.\n\nShare updated preferences so we contact you only with relevant options.\n\nWould you like to continue?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nWe are checking whether your property requirement is still active for {{2}} in {{3}}.\n\nShare updated preferences so we contact you only with relevant options.\n\nWould you like to continue?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "Requirement Active",
+        "Update Preference",
+        "Stop Messages"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Update Requirement",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like to continue?"
+    },
+    {
+      "id": "marketing-29",
+      "templateName": "real_estate_marketing_price_drop_interest_check_v1",
+      "title": "Price-Drop Interest Check",
+      "category": "Marketing",
+      "intent": "Retargeting",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nA verified pricing update may affect selected options for {{ProjectName}} in {{Location}}.\n\nFinal pricing and inventory must be reconfirmed with the authorized team.\n\nShould we check your preferred configuration?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nA verified pricing update may affect selected options for {{2}} in {{3}}.\n\nFinal pricing and inventory must be reconfirmed with the authorized team.\n\nShould we check your preferred configuration?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "Check My Option",
+        "View Price Sheet",
+        "Not Now"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Check Price",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Should we check your preferred configuration?"
+    },
+    {
+      "id": "marketing-30",
+      "templateName": "real_estate_marketing_waitlist_reopening_v1",
+      "title": "Waitlist Reopening",
+      "category": "Marketing",
+      "intent": "Retargeting",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nThe interest waitlist has reopened for {{ProjectName}} in {{Location}}.\n\nJoining the list does not guarantee allocation, pricing or priority.\n\nWould you like to rejoin?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nThe interest waitlist has reopened for {{2}} in {{3}}.\n\nJoining the list does not guarantee allocation, pricing or priority.\n\nWould you like to rejoin?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "Join Waitlist",
+        "View Details",
+        "Not Now"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Join Waitlist",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like to rejoin?"
+    },
+    {
+      "id": "marketing-31",
+      "templateName": "real_estate_marketing_referral_invitation_v1",
+      "title": "Referral Invitation",
+      "category": "Marketing",
+      "intent": "Referral",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nYou can refer someone who is actively exploring property options for {{ProjectName}} in {{Location}}.\n\nPlease share details only with their permission; no reward is guaranteed unless confirmed in writing.\n\nWould you like the referral terms?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nYou can refer someone who is actively exploring property options for {{2}} in {{3}}.\n\nPlease share details only with their permission; no reward is guaranteed unless confirmed in writing.\n\nWould you like the referral terms?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "View Terms",
+        "Refer Now",
+        "Not Interested"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Referral Terms",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like the referral terms?"
+    },
+    {
+      "id": "marketing-32",
+      "templateName": "real_estate_marketing_channel_partner_event_v1",
+      "title": "Channel Partner Event",
+      "category": "Marketing",
+      "intent": "Partner",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nA channel-partner information event is scheduled for {{ProjectName}} in {{Location}}.\n\nReview eligibility, registration, commercial terms and applicable policies.\n\nWould you like to register?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nA channel-partner information event is scheduled for {{2}} in {{3}}.\n\nReview eligibility, registration, commercial terms and applicable policies.\n\nWould you like to register?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "Register",
+        "View Agenda",
+        "Contact Team"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Register",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like to register?"
+    },
+    {
+      "id": "marketing-33",
+      "templateName": "real_estate_marketing_home_loan_assistance_camp_v1",
+      "title": "Home Loan Assistance Camp",
+      "category": "Marketing",
+      "intent": "Finance",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nA home-loan information session is available for {{ProjectName}} in {{Location}}.\n\nLoan eligibility, rates and approval depend entirely on the lender and applicant profile.\n\nWould you like an expert appointment?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nA home-loan information session is available for {{2}} in {{3}}.\n\nLoan eligibility, rates and approval depend entirely on the lender and applicant profile.\n\nWould you like an expert appointment?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "Book Appointment",
+        "View Checklist",
+        "Not Now"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Book Appointment",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like an expert appointment?"
+    },
+    {
+      "id": "marketing-34",
+      "templateName": "real_estate_marketing_event_reminder_v1",
+      "title": "Event Reminder",
+      "category": "Marketing",
+      "intent": "Reminder",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nA property event you expressed interest in is approaching for {{ProjectName}} in {{Location}}.\n\nConfirm your attendance to receive final timing and location details.\n\nWill you attend?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nA property event you expressed interest in is approaching for {{2}} in {{3}}.\n\nConfirm your attendance to receive final timing and location details.\n\nWill you attend?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "Yes, Confirm",
+        "Need Directions",
+        "Cannot Attend"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Confirm Attendance",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Will you attend?"
+    },
+    {
+      "id": "marketing-35",
+      "templateName": "real_estate_marketing_offer_expiry_reminder_v1",
+      "title": "Offer Expiry Reminder",
+      "category": "Marketing",
+      "intent": "Reminder",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nA previously shared offer is nearing its stated validity date for {{ProjectName}} in {{Location}}.\n\nConfirm the written terms, applicable unit and final eligibility before acting.\n\nWould you like the verified terms again?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nA previously shared offer is nearing its stated validity date for {{2}} in {{3}}.\n\nConfirm the written terms, applicable unit and final eligibility before acting.\n\nWould you like the verified terms again?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "View Terms",
+        "Talk to Advisor",
+        "Not Interested"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Terms",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like the verified terms again?"
+    },
+    {
+      "id": "marketing-36",
+      "templateName": "real_estate_marketing_marketing_opt_in_confirmation_v1",
+      "title": "Marketing Opt-In Confirmation",
+      "category": "Marketing",
+      "intent": "Consent",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nPlease confirm whether you want occasional property updates for {{ProjectName}} in {{Location}}.\n\nYou can change your preference or opt out at any time.\n\nWould you like to continue receiving relevant updates?\n\nReply STOP to opt out of marketing updates from {{CompanyName}}.",
+      "bodyMeta": "Hi {{1}} 👋\n\nPlease confirm whether you want occasional property updates for {{2}} in {{3}}.\n\nYou can change your preference or opt out at any time.\n\nWould you like to continue receiving relevant updates?\n\nReply STOP to opt out of marketing updates from {{4}}.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "CompanyName"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension",
+        "CompanyName": "Prime Estate Advisors"
+      },
+      "quickReplies": [
+        "Yes, Keep Me Updated",
+        "Choose Preferences",
+        "Stop Messages"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Manage Preferences",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Reply STOP to opt out",
+      "goal": "Would you like to continue receiving relevant updates?"
+    },
+    {
+      "id": "utility-01",
+      "templateName": "real_estate_utility_new_enquiry_acknowledgement_v1",
+      "title": "New Enquiry Acknowledgement",
+      "category": "Utility",
+      "intent": "Lead Intake",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nWe received your property enquiry for {{ProjectName}} in {{Location}}.\n\nA consultant can assist after confirming the project and requirement.\n\nWhich information do you need first?",
+      "bodyMeta": "Hi {{1}} 👋\n\nWe received your property enquiry for {{2}} in {{3}}.\n\nA consultant can assist after confirming the project and requirement.\n\nWhich information do you need first?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Price & Availability",
+        "Brochure",
+        "Site Visit"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Project",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Which information do you need first?"
+    },
+    {
+      "id": "utility-02",
+      "templateName": "real_estate_utility_lead_source_acknowledgement_v1",
+      "title": "Lead Source Acknowledgement",
+      "category": "Utility",
+      "intent": "Lead Intake",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nWe received your enquiry through {{LeadSource}} for {{ProjectName}} in {{Location}}.\n\nPlease confirm the project so the correct team can assist.\n\nIs this the right project?",
+      "bodyMeta": "Hi {{1}} 👋\n\nWe received your enquiry through {{2}} for {{3}} in {{4}}.\n\nPlease confirm the project so the correct team can assist.\n\nIs this the right project?",
+      "variables": [
+        "CustomerName",
+        "LeadSource",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "LeadSource": "Property portal",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Yes, Correct",
+        "Change Project",
+        "Talk to Advisor"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Project",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Is this the right project?"
+    },
+    {
+      "id": "utility-03",
+      "templateName": "real_estate_utility_requirement_collection_v1",
+      "title": "Requirement Collection",
+      "category": "Utility",
+      "intent": "Qualification",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nPlease share your property requirement for {{ProjectName}} in {{Location}}.\n\nInclude purpose, property type, preferred location, budget and timeline.\n\nYou may reply in one message.",
+      "bodyMeta": "Hi {{1}} 👋\n\nPlease share your property requirement for {{2}} in {{3}}.\n\nInclude purpose, property type, preferred location, budget and timeline.\n\nYou may reply in one message.",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Share Requirement",
+        "Need Guidance",
+        "Talk to Advisor"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Requirement Form",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "You may reply in one message."
+    },
+    {
+      "id": "utility-04",
+      "templateName": "real_estate_utility_budget_range_check_v1",
+      "title": "Budget Range Check",
+      "category": "Utility",
+      "intent": "Qualification",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nPlease share the budget range you are considering for {{ProjectName}} in {{Location}}.\n\nThis helps filter options without treating pricing as final.\n\nWhich range is closest?",
+      "bodyMeta": "Hi {{1}} 👋\n\nPlease share the budget range you are considering for {{2}} in {{3}}.\n\nThis helps filter options without treating pricing as final.\n\nWhich range is closest?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Under ₹50 Lakh",
+        "₹50L–₹1 Cr",
+        "Above ₹1 Cr"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Options",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Which range is closest?"
+    },
+    {
+      "id": "utility-05",
+      "templateName": "real_estate_utility_location_preference_check_v1",
+      "title": "Location Preference Check",
+      "category": "Utility",
+      "intent": "Qualification",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nPlease confirm your preferred location for {{ProjectName}} in {{Location}}.\n\nYou may also share acceptable nearby areas.\n\nWhich option suits you?",
+      "bodyMeta": "Hi {{1}} 👋\n\nPlease confirm your preferred location for {{2}} in {{3}}.\n\nYou may also share acceptable nearby areas.\n\nWhich option suits you?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Same Location",
+        "Nearby Areas",
+        "Need Suggestions"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Map",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Which option suits you?"
+    },
+    {
+      "id": "utility-06",
+      "templateName": "real_estate_utility_configuration_preference_v1",
+      "title": "Configuration Preference",
+      "category": "Utility",
+      "intent": "Qualification",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nPlease confirm your preferred configuration for {{ProjectName}} in {{Location}}.\n\nAvailability and dimensions will be verified before recommendation.\n\nWhat do you prefer?",
+      "bodyMeta": "Hi {{1}} 👋\n\nPlease confirm your preferred configuration for {{2}} in {{3}}.\n\nAvailability and dimensions will be verified before recommendation.\n\nWhat do you prefer?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "2 BHK",
+        "3 BHK",
+        "Other"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Floor Plans",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "What do you prefer?"
+    },
+    {
+      "id": "utility-07",
+      "templateName": "real_estate_utility_purchase_timeline_check_v1",
+      "title": "Purchase Timeline Check",
+      "category": "Utility",
+      "intent": "Qualification",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nPlease share your expected purchase timeline for {{ProjectName}} in {{Location}}.\n\nThis helps determine the appropriate follow-up pace.\n\nWhen are you planning?",
+      "bodyMeta": "Hi {{1}} 👋\n\nPlease share your expected purchase timeline for {{2}} in {{3}}.\n\nThis helps determine the appropriate follow-up pace.\n\nWhen are you planning?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Within 30 Days",
+        "1–3 Months",
+        "Just Exploring"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Continue",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "When are you planning?"
+    },
+    {
+      "id": "utility-08",
+      "templateName": "real_estate_utility_payment_method_check_v1",
+      "title": "Payment Method Check",
+      "category": "Utility",
+      "intent": "Qualification",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nPlease indicate your expected payment method for {{ProjectName}} in {{Location}}.\n\nLoan eligibility and approval depend on the lender.\n\nWhich applies?",
+      "bodyMeta": "Hi {{1}} 👋\n\nPlease indicate your expected payment method for {{2}} in {{3}}.\n\nLoan eligibility and approval depend on the lender.\n\nWhich applies?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Self-Funded",
+        "Home Loan",
+        "Not Decided"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Payment Plan",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Which applies?"
+    },
+    {
+      "id": "utility-09",
+      "templateName": "real_estate_utility_requirement_summary_v1",
+      "title": "Requirement Summary",
+      "category": "Utility",
+      "intent": "Qualification",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nPlease review the requirement summary we captured for {{ProjectName}} in {{Location}}.\n\nReply CONFIRM if it is correct or choose Edit Requirement.\n\nIs this accurate?",
+      "bodyMeta": "Hi {{1}} 👋\n\nPlease review the requirement summary we captured for {{2}} in {{3}}.\n\nReply CONFIRM if it is correct or choose Edit Requirement.\n\nIs this accurate?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Confirm",
+        "Edit Requirement",
+        "Talk to Advisor"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Summary",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Is this accurate?"
+    },
+    {
+      "id": "utility-10",
+      "templateName": "real_estate_utility_matched_property_recommendation_v1",
+      "title": "Matched Property Recommendation",
+      "category": "Utility",
+      "intent": "Recommendation",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nA property option matches the requirements you shared for {{ProjectName}} in {{Location}}.\n\nPlease independently verify pricing, approvals, availability and suitability.\n\nWhat would you like next?",
+      "bodyMeta": "Hi {{1}} 👋\n\nA property option matches the requirements you shared for {{2}} in {{3}}.\n\nPlease independently verify pricing, approvals, availability and suitability.\n\nWhat would you like next?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "View Brochure",
+        "Check Price",
+        "Book Visit"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Property",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "What would you like next?"
+    },
+    {
+      "id": "utility-11",
+      "templateName": "real_estate_utility_brochure_delivery_v1",
+      "title": "Brochure Delivery",
+      "category": "Utility",
+      "intent": "Recommendation",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nHere is the requested project brochure for {{ProjectName}} in {{Location}}.\n\nSpecifications and availability should be reconfirmed with the authorized team.\n\nWould you like help reviewing it?",
+      "bodyMeta": "Hi {{1}} 👋\n\nHere is the requested project brochure for {{2}} in {{3}}.\n\nSpecifications and availability should be reconfirmed with the authorized team.\n\nWould you like help reviewing it?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Check Price",
+        "Book Visit",
+        "Ask Question"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Brochure",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Would you like help reviewing it?"
+    },
+    {
+      "id": "utility-12",
+      "templateName": "real_estate_utility_price_availability_response_v1",
+      "title": "Price & Availability Response",
+      "category": "Utility",
+      "intent": "Recommendation",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nHere is the latest verified price and availability response for {{ProjectName}} in {{Location}}.\n\nInventory and final charges can change and require written confirmation.\n\nWhat should we check next?",
+      "bodyMeta": "Hi {{1}} 👋\n\nHere is the latest verified price and availability response for {{2}} in {{3}}.\n\nInventory and final charges can change and require written confirmation.\n\nWhat should we check next?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Detailed Cost Sheet",
+        "Book Visit",
+        "Talk to Advisor"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Cost Sheet",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "What should we check next?"
+    },
+    {
+      "id": "utility-13",
+      "templateName": "real_estate_utility_site_visit_slot_selection_v1",
+      "title": "Site Visit Slot Selection",
+      "category": "Utility",
+      "intent": "Appointment",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nPlease choose a preferred site-visit slot for {{ProjectName}} in {{Location}}.\n\nThe team will confirm availability before finalizing the appointment.\n\nWhich slot works?",
+      "bodyMeta": "Hi {{1}} 👋\n\nPlease choose a preferred site-visit slot for {{2}} in {{3}}.\n\nThe team will confirm availability before finalizing the appointment.\n\nWhich slot works?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Morning",
+        "Afternoon",
+        "Choose Date"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Open Calendar",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Which slot works?"
+    },
+    {
+      "id": "utility-14",
+      "templateName": "real_estate_utility_site_visit_confirmation_v1",
+      "title": "Site Visit Confirmation",
+      "category": "Utility",
+      "intent": "Appointment",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nYour site visit has been scheduled for {{ProjectName}} in {{Location}}.\n\nReview the confirmed project, date, time and consultant details below.\n\nWill you attend?",
+      "bodyMeta": "Hi {{1}} 👋\n\nYour site visit has been scheduled for {{2}} in {{3}}.\n\nReview the confirmed project, date, time and consultant details below.\n\nWill you attend?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Confirm Visit",
+        "Reschedule",
+        "Cancel Visit"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Open Location",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Will you attend?"
+    },
+    {
+      "id": "utility-15",
+      "templateName": "real_estate_utility_site_visit_reminder_v1",
+      "title": "Site Visit Reminder",
+      "category": "Utility",
+      "intent": "Appointment",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nThis is a reminder for your upcoming property visit for {{ProjectName}} in {{Location}}.\n\nUse the directions button or contact the assigned consultant if needed.\n\nDo you need assistance?",
+      "bodyMeta": "Hi {{1}} 👋\n\nThis is a reminder for your upcoming property visit for {{2}} in {{3}}.\n\nUse the directions button or contact the assigned consultant if needed.\n\nDo you need assistance?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "I Will Attend",
+        "Need Directions",
+        "Reschedule"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Open Location",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Do you need assistance?"
+    },
+    {
+      "id": "utility-16",
+      "templateName": "real_estate_utility_site_visit_reschedule_v1",
+      "title": "Site Visit Reschedule",
+      "category": "Utility",
+      "intent": "Appointment",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nWe received your request to reschedule the visit for {{ProjectName}} in {{Location}}.\n\nPlease select another suitable day and the team will reconfirm.\n\nWhich option works?",
+      "bodyMeta": "Hi {{1}} 👋\n\nWe received your request to reschedule the visit for {{2}} in {{3}}.\n\nPlease select another suitable day and the team will reconfirm.\n\nWhich option works?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Tomorrow",
+        "This Weekend",
+        "Choose Date"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Open Calendar",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Which option works?"
+    },
+    {
+      "id": "utility-17",
+      "templateName": "real_estate_utility_site_visit_cancellation_v1",
+      "title": "Site Visit Cancellation",
+      "category": "Utility",
+      "intent": "Appointment",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nYour site-visit cancellation request has been recorded for {{ProjectName}} in {{Location}}.\n\nThe assigned team will update the appointment status.\n\nWould you like to book another date?",
+      "bodyMeta": "Hi {{1}} 👋\n\nYour site-visit cancellation request has been recorded for {{2}} in {{3}}.\n\nThe assigned team will update the appointment status.\n\nWould you like to book another date?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Book Another Date",
+        "No, Thanks",
+        "Talk to Advisor"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Open Calendar",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Would you like to book another date?"
+    },
+    {
+      "id": "utility-18",
+      "templateName": "real_estate_utility_consultant_assignment_v1",
+      "title": "Consultant Assignment",
+      "category": "Utility",
+      "intent": "Service",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nA consultant has been assigned to your enquiry for {{ProjectName}} in {{Location}}.\n\nUse only the verified contact details shown below.\n\nHow would you like to connect?",
+      "bodyMeta": "Hi {{1}} 👋\n\nA consultant has been assigned to your enquiry for {{2}} in {{3}}.\n\nUse only the verified contact details shown below.\n\nHow would you like to connect?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Request Callback",
+        "WhatsApp Later",
+        "Change Consultant"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Call Consultant",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "How would you like to connect?"
+    },
+    {
+      "id": "utility-19",
+      "templateName": "real_estate_utility_callback_confirmation_v1",
+      "title": "Callback Confirmation",
+      "category": "Utility",
+      "intent": "Service",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nYour callback request has been recorded for {{ProjectName}} in {{Location}}.\n\nThe team will attempt contact during the selected time window.\n\nDo you need to change the time?",
+      "bodyMeta": "Hi {{1}} 👋\n\nYour callback request has been recorded for {{2}} in {{3}}.\n\nThe team will attempt contact during the selected time window.\n\nDo you need to change the time?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Keep Time",
+        "Change Time",
+        "Cancel Callback"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Call Consultant",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Do you need to change the time?"
+    },
+    {
+      "id": "utility-20",
+      "templateName": "real_estate_utility_document_checklist_v1",
+      "title": "Document Checklist",
+      "category": "Utility",
+      "intent": "Documentation",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nHere is the requested document checklist for {{ProjectName}} in {{Location}}.\n\nShare documents only through an authorized secure channel.\n\nDo you need clarification?",
+      "bodyMeta": "Hi {{1}} 👋\n\nHere is the requested document checklist for {{2}} in {{3}}.\n\nShare documents only through an authorized secure channel.\n\nDo you need clarification?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "View Checklist",
+        "Ask Question",
+        "Talk to Team"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Checklist",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Do you need clarification?"
+    },
+    {
+      "id": "utility-21",
+      "templateName": "real_estate_utility_document_received_v1",
+      "title": "Document Received",
+      "category": "Utility",
+      "intent": "Documentation",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nWe received the submitted documents for {{ProjectName}} in {{Location}}.\n\nThe team will review them and request corrections if required.\n\nWould you like a status update later?",
+      "bodyMeta": "Hi {{1}} 👋\n\nWe received the submitted documents for {{2}} in {{3}}.\n\nThe team will review them and request corrections if required.\n\nWould you like a status update later?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Notify Me",
+        "Add Document",
+        "Contact Team"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Status",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Would you like a status update later?"
+    },
+    {
+      "id": "utility-22",
+      "templateName": "real_estate_utility_booking_summary_v1",
+      "title": "Booking Summary",
+      "category": "Utility",
+      "intent": "Booking",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nPlease review the verified booking summary for {{ProjectName}} in {{Location}}.\n\nConfirm the unit, price, charges and terms before making any payment.\n\nIs the summary correct?",
+      "bodyMeta": "Hi {{1}} 👋\n\nPlease review the verified booking summary for {{2}} in {{3}}.\n\nConfirm the unit, price, charges and terms before making any payment.\n\nIs the summary correct?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Confirm Summary",
+        "Request Correction",
+        "Talk to Advisor"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Summary",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Is the summary correct?"
+    },
+    {
+      "id": "utility-23",
+      "templateName": "real_estate_utility_booking_confirmation_v1",
+      "title": "Booking Confirmation",
+      "category": "Utility",
+      "intent": "Booking",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nYour booking has been recorded subject to official documentation for {{ProjectName}} in {{Location}}.\n\nPlease retain the authorized receipt and booking documents.\n\nWhat would you like next?",
+      "bodyMeta": "Hi {{1}} 👋\n\nYour booking has been recorded subject to official documentation for {{2}} in {{3}}.\n\nPlease retain the authorized receipt and booking documents.\n\nWhat would you like next?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "View Documents",
+        "Payment Schedule",
+        "Contact Team"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Booking",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "What would you like next?"
+    },
+    {
+      "id": "utility-24",
+      "templateName": "real_estate_utility_token_payment_instructions_v1",
+      "title": "Token Payment Instructions",
+      "category": "Utility",
+      "intent": "Payment",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nUse only the verified official payment channel for {{ProjectName}} in {{Location}}.\n\nConfirm beneficiary details and obtain an authorized receipt; this site does not process payments.\n\nDo you need assistance?",
+      "bodyMeta": "Hi {{1}} 👋\n\nUse only the verified official payment channel for {{2}} in {{3}}.\n\nConfirm beneficiary details and obtain an authorized receipt; this site does not process payments.\n\nDo you need assistance?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "View Official Link",
+        "Verify Details",
+        "Call Accounts"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Official Payment Page",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Do you need assistance?"
+    },
+    {
+      "id": "utility-25",
+      "templateName": "real_estate_utility_payment_reminder_v1",
+      "title": "Payment Reminder",
+      "category": "Utility",
+      "intent": "Payment",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nThis is a reminder for an upcoming verified payment due date for {{ProjectName}} in {{Location}}.\n\nRefer to your official agreement and contact the authorized accounts team for discrepancies.\n\nWhat would you like to do?",
+      "bodyMeta": "Hi {{1}} 👋\n\nThis is a reminder for an upcoming verified payment due date for {{2}} in {{3}}.\n\nRefer to your official agreement and contact the authorized accounts team for discrepancies.\n\nWhat would you like to do?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "View Schedule",
+        "Payment Help",
+        "Call Accounts"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Schedule",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "What would you like to do?"
+    },
+    {
+      "id": "utility-26",
+      "templateName": "real_estate_utility_payment_receipt_confirmation_v1",
+      "title": "Payment Receipt Confirmation",
+      "category": "Utility",
+      "intent": "Payment",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nYour payment receipt has been recorded for {{ProjectName}} in {{Location}}.\n\nVerify the amount, reference and official receipt details.\n\nDo you need a copy?",
+      "bodyMeta": "Hi {{1}} 👋\n\nYour payment receipt has been recorded for {{2}} in {{3}}.\n\nVerify the amount, reference and official receipt details.\n\nDo you need a copy?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "View Receipt",
+        "Report Issue",
+        "Contact Accounts"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Receipt",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Do you need a copy?"
+    },
+    {
+      "id": "utility-27",
+      "templateName": "real_estate_utility_home_loan_document_request_v1",
+      "title": "Home Loan Document Request",
+      "category": "Utility",
+      "intent": "Loan",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nThe lending team requires documents for assessment for {{ProjectName}} in {{Location}}.\n\nShare them only through the lender or an authorized secure channel.\n\nWould you like the checklist?",
+      "bodyMeta": "Hi {{1}} 👋\n\nThe lending team requires documents for assessment for {{2}} in {{3}}.\n\nShare them only through the lender or an authorized secure channel.\n\nWould you like the checklist?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "View Checklist",
+        "Upload Securely",
+        "Call Loan Expert"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Checklist",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Would you like the checklist?"
+    },
+    {
+      "id": "utility-28",
+      "templateName": "real_estate_utility_home_loan_callback_v1",
+      "title": "Home Loan Callback",
+      "category": "Utility",
+      "intent": "Loan",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nYour home-loan callback request has been recorded for {{ProjectName}} in {{Location}}.\n\nEligibility, rate and approval depend on the lender and applicant profile.\n\nWhen should the expert call?",
+      "bodyMeta": "Hi {{1}} 👋\n\nYour home-loan callback request has been recorded for {{2}} in {{3}}.\n\nEligibility, rate and approval depend on the lender and applicant profile.\n\nWhen should the expert call?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Today",
+        "Tomorrow",
+        "Choose Time"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Call Loan Expert",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "When should the expert call?"
+    },
+    {
+      "id": "utility-29",
+      "templateName": "real_estate_utility_customer_support_menu_v1",
+      "title": "Customer Support Menu",
+      "category": "Utility",
+      "intent": "Support",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nPlease select the support topic for {{ProjectName}} in {{Location}}.\n\nThe request will be routed to the relevant team.\n\nWhich issue applies?",
+      "bodyMeta": "Hi {{1}} 👋\n\nPlease select the support topic for {{2}} in {{3}}.\n\nThe request will be routed to the relevant team.\n\nWhich issue applies?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Payment Issue",
+        "Document Issue",
+        "Possession Update"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Open Support",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Which issue applies?"
+    },
+    {
+      "id": "utility-30",
+      "templateName": "real_estate_utility_support_ticket_created_v1",
+      "title": "Support Ticket Created",
+      "category": "Utility",
+      "intent": "Support",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nYour support request has been recorded for {{ProjectName}} in {{Location}}.\n\nKeep the reference number for future communication.\n\nDo you want to add information?",
+      "bodyMeta": "Hi {{1}} 👋\n\nYour support request has been recorded for {{2}} in {{3}}.\n\nKeep the reference number for future communication.\n\nDo you want to add information?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Add Details",
+        "View Status",
+        "Call Support"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Ticket",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Do you want to add information?"
+    },
+    {
+      "id": "utility-31",
+      "templateName": "real_estate_utility_support_status_update_v1",
+      "title": "Support Status Update",
+      "category": "Utility",
+      "intent": "Support",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nThere is an update on your support request for {{ProjectName}} in {{Location}}.\n\nReview the latest status and required next action.\n\nDo you need more help?",
+      "bodyMeta": "Hi {{1}} 👋\n\nThere is an update on your support request for {{2}} in {{3}}.\n\nReview the latest status and required next action.\n\nDo you need more help?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Issue Resolved",
+        "Need More Help",
+        "Call Support"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Status",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Do you need more help?"
+    },
+    {
+      "id": "utility-32",
+      "templateName": "real_estate_utility_possession_update_v1",
+      "title": "Possession Update",
+      "category": "Utility",
+      "intent": "Post-Sale",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nA possession-related update is available for {{ProjectName}} in {{Location}}.\n\nReview official dates, requirements and documentation before planning.\n\nWould you like the checklist?",
+      "bodyMeta": "Hi {{1}} 👋\n\nA possession-related update is available for {{2}} in {{3}}.\n\nReview official dates, requirements and documentation before planning.\n\nWould you like the checklist?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "View Update",
+        "Document Checklist",
+        "Contact Team"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Update",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Would you like the checklist?"
+    },
+    {
+      "id": "utility-33",
+      "templateName": "real_estate_utility_handover_appointment_v1",
+      "title": "Handover Appointment",
+      "category": "Utility",
+      "intent": "Post-Sale",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nA handover appointment is ready to be scheduled for {{ProjectName}} in {{Location}}.\n\nChoose a slot after reviewing the required documents and dues.\n\nWhich option suits you?",
+      "bodyMeta": "Hi {{1}} 👋\n\nA handover appointment is ready to be scheduled for {{2}} in {{3}}.\n\nChoose a slot after reviewing the required documents and dues.\n\nWhich option suits you?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Choose Date",
+        "View Checklist",
+        "Contact Team"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Open Calendar",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Which option suits you?"
+    },
+    {
+      "id": "utility-34",
+      "templateName": "real_estate_utility_cancellation_request_received_v1",
+      "title": "Cancellation Request Received",
+      "category": "Utility",
+      "intent": "Post-Sale",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nYour cancellation request has been recorded for {{ProjectName}} in {{Location}}.\n\nThe team will review contractual terms, deductions and required documents.\n\nWould you like the request status?",
+      "bodyMeta": "Hi {{1}} 👋\n\nYour cancellation request has been recorded for {{2}} in {{3}}.\n\nThe team will review contractual terms, deductions and required documents.\n\nWould you like the request status?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "View Status",
+        "Add Document",
+        "Contact Team"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Request",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Would you like the request status?"
+    },
+    {
+      "id": "utility-35",
+      "templateName": "real_estate_utility_refund_status_update_v1",
+      "title": "Refund Status Update",
+      "category": "Utility",
+      "intent": "Post-Sale",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nThere is an update on your refund request for {{ProjectName}} in {{Location}}.\n\nTimelines and deductions depend on verified contractual terms and processing status.\n\nDo you need clarification?",
+      "bodyMeta": "Hi {{1}} 👋\n\nThere is an update on your refund request for {{2}} in {{3}}.\n\nTimelines and deductions depend on verified contractual terms and processing status.\n\nDo you need clarification?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "View Status",
+        "Request Details",
+        "Contact Accounts"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "View Status",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Do you need clarification?"
+    },
+    {
+      "id": "utility-36",
+      "templateName": "real_estate_utility_conversation_closure_v1",
+      "title": "Conversation Closure",
+      "category": "Utility",
+      "intent": "Service",
+      "language": "English",
+      "premium": true,
+      "bodyNamed": "Hi {{CustomerName}} 👋\n\nThis request is being marked complete for {{ProjectName}} in {{Location}}.\n\nYou can restart the conversation if additional assistance is required.\n\nIs everything resolved?",
+      "bodyMeta": "Hi {{1}} 👋\n\nThis request is being marked complete for {{2}} in {{3}}.\n\nYou can restart the conversation if additional assistance is required.\n\nIs everything resolved?",
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location"
+      ],
+      "samples": {
+        "CustomerName": "Rahul Sharma",
+        "ProjectName": "Greenview Residences",
+        "Location": "Noida Extension"
+      },
+      "quickReplies": [
+        "Yes, Resolved",
+        "Need More Help",
+        "Start Again"
+      ],
+      "cta": {
+        "type": "URL",
+        "label": "Open Support",
+        "value": "https://your-domain.com/[VERIFIED_DESTINATION]"
+      },
+      "footer": "Your verified business name",
+      "goal": "Is everything resolved?"
+    }
+  ]
+}
