@@ -107,3 +107,10 @@ REWFB.substitute(template.message, REWFB.getSampleValues());
 - Searchable directory of all 33 real estate chat flows
 - Seven categories with stage, duration and sorting controls
 - Step, action and variable previews with browser-local saved flows
+
+
+## Part 12 — First 10 Flow Pages
+- Complete responsive pages for flows 1–10
+- Step-by-step expandable workflows and conversation previews
+- Variable panels, copy controls, safety notes and launch checklists
+- Previous/next navigation and direct builder actions
