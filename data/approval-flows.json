@@ -1,5 +1,5 @@
 {
-  "version": "4.2-flow-02-human-reviewed",
+  "version": "4.4-flow-04-human-reviewed",
   "purpose": "WhatsApp Business template approval and copy-paste flow library",
   "flows": [
     {
@@ -880,186 +880,258 @@
       "url": "flows/requirement-confirmation.html",
       "category": "Lead Management",
       "leadStage": "Discovery",
-      "description": "Summarize captured requirements and let the customer confirm or correct them",
-      "estimatedMinutes": 4,
+      "description": "Let a customer review collected property requirements, edit individual fields, confirm the final record or request expert help.",
+      "estimatedMinutes": 2,
       "steps": [
         {
           "id": "requirement-confirmation-01",
           "order": 1,
-          "title": "Collected information summary",
+          "title": "Review collected requirements",
           "type": "bot-message",
           "required": true,
           "approvalRequired": true,
-          "templateName": "requirement_confirmation_01_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "templateName": "requirement_confirmation_01_v2",
+          "suggestedCategory": "Utility (customer-requested update)",
+          "categoryNote": "Send after the customer has shared or requested confirmation of requirement details.",
           "language": "English",
-          "header": "Requirement Confirmation",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with collected information summary for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with collected information summary for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
+          "header": "Requirement summary",
+          "bodyNamed": "Hi {{CustomerName}}, please review the requirement we have recorded:\n\nPurpose: {{BuyingPurpose}}\nProperty: {{PropertyType}} · {{Configuration}}\nLocation: {{PreferredLocation}}\nBudget: {{BudgetRange}}\nTimeline: {{PurchaseTimeline}}\n\nAre these details correct?",
+          "bodyMeta": "Hi {{1}}, please review the requirement we have recorded:\n\nPurpose: {{2}}\nProperty: {{3}} · {{4}}\nLocation: {{5}}\nBudget: {{6}}\nTimeline: {{7}}\n\nAre these details correct?",
+          "footer": "Review carefully before confirming",
           "quickReplies": [
             {
               "label": "Confirm Details",
-              "next": 1
+              "next": 6
             },
             {
               "label": "Edit Details",
               "next": 1
             },
             {
-              "label": "Talk to Advisor",
-              "next": 1
+              "label": "Talk to Expert",
+              "next": 7
             }
           ],
           "ctaButtons": [],
           "variableMap": {
             "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
+            "BuyingPurpose": "{{2}}",
+            "PropertyType": "{{3}}",
+            "Configuration": "{{4}}",
+            "PreferredLocation": "{{5}}",
+            "BudgetRange": "{{6}}",
+            "PurchaseTimeline": "{{7}}"
           },
           "samples": {
             "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
+            "BuyingPurpose": "Self Use",
+            "PropertyType": "Apartment",
+            "Configuration": "2 BHK",
+            "PreferredLocation": "Gurugram",
+            "BudgetRange": "₹50L–₹1 Crore",
+            "PurchaseTimeline": "0–3 Months"
           },
-          "internalInstruction": "Internal workflow action: Collected information summary"
+          "internalInstruction": "Update CRM field: Review collected requirements"
         },
         {
           "id": "requirement-confirmation-02",
           "order": 2,
-          "title": "Confirm details",
+          "title": "Choose detail to edit",
           "type": "bot-message",
           "required": true,
           "approvalRequired": true,
-          "templateName": "requirement_confirmation_02_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "templateName": "requirement_confirmation_02_v2",
+          "suggestedCategory": "Utility (customer-requested update)",
+          "categoryNote": "Send after the customer has shared or requested confirmation of requirement details.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with confirm details for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with confirm details for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
+          "bodyNamed": "Which part of your requirement would you like to change?",
+          "bodyMeta": "Which part of your requirement would you like to change?",
+          "footer": "Review carefully before confirming",
           "quickReplies": [
             {
-              "label": "Confirm Details",
+              "label": "Edit Budget",
               "next": 2
             },
             {
-              "label": "Edit Details",
-              "next": 2
+              "label": "Edit Location",
+              "next": 3
             },
             {
-              "label": "Talk to Advisor",
-              "next": 2
+              "label": "Edit Config",
+              "next": 4
             }
           ],
           "ctaButtons": [],
-          "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
-          },
-          "samples": {
-            "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
-          },
-          "internalInstruction": "Internal workflow action: Confirm details"
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Update CRM field: Choose detail to edit"
         },
         {
           "id": "requirement-confirmation-03",
           "order": 3,
-          "title": "Edit requirements",
-          "type": "bot-message",
+          "title": "Update budget",
+          "type": "data-capture",
           "required": true,
           "approvalRequired": true,
-          "templateName": "requirement_confirmation_03_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "templateName": "requirement_confirmation_03_v2",
+          "suggestedCategory": "Utility (customer-requested update)",
+          "categoryNote": "Send after the customer has shared or requested confirmation of requirement details.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with edit requirements for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with edit requirements for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
+          "bodyNamed": "Select the revised total budget range for your property search.",
+          "bodyMeta": "Select the revised total budget range for your property search.",
+          "footer": "Review carefully before confirming",
           "quickReplies": [
             {
-              "label": "Continue",
-              "next": 3
+              "label": "Under ₹50 Lakh",
+              "next": 5
             },
             {
-              "label": "View Options",
-              "next": 3
+              "label": "₹50L–₹1 Crore",
+              "next": 5
             },
             {
-              "label": "Talk to Advisor",
-              "next": 3
+              "label": "Above ₹1 Crore",
+              "next": 5
             }
           ],
           "ctaButtons": [],
-          "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
-          },
-          "samples": {
-            "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
-          },
-          "internalInstruction": "Internal workflow action: Edit requirements"
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Update CRM field: Update budget"
         },
         {
           "id": "requirement-confirmation-04",
           "order": 4,
-          "title": "Speak with an expert",
-          "type": "human-handover",
-          "required": false,
+          "title": "Update location",
+          "type": "data-capture",
+          "required": true,
           "approvalRequired": true,
-          "templateName": "requirement_confirmation_04_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "templateName": "requirement_confirmation_04_v2",
+          "suggestedCategory": "Utility (customer-requested update)",
+          "categoryNote": "Send after the customer has shared or requested confirmation of requirement details.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with speak with an expert for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with speak with an expert for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
+          "bodyNamed": "Select the location we should prioritise in the revised shortlist.",
+          "bodyMeta": "Select the location we should prioritise in the revised shortlist.",
+          "footer": "Review carefully before confirming",
           "quickReplies": [
             {
-              "label": "Continue",
-              "next": 4
+              "label": "Gurugram",
+              "next": 5
             },
             {
-              "label": "View Options",
-              "next": 4
+              "label": "Noida",
+              "next": 5
             },
             {
-              "label": "Talk to Advisor",
-              "next": 4
+              "label": "Other Location",
+              "next": 5
             }
           ],
-          "ctaButtons": [],
-          "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
-          },
-          "samples": {
-            "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
-          },
-          "internalInstruction": "Handover: Speak with an expert"
+          "ctaButtons": [
+            {
+              "type": "URL",
+              "label": "View Locations",
+              "value": "https://your-domain.com/locations"
+            }
+          ],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Update CRM field: Update location"
         },
         {
           "id": "requirement-confirmation-05",
           "order": 5,
-          "title": "CRM-ready lead summary",
-          "type": "crm-action",
-          "required": false,
-          "approvalRequired": false,
-          "templateName": "",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "title": "Update configuration",
+          "type": "data-capture",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "requirement_confirmation_05_v2",
+          "suggestedCategory": "Utility (customer-requested update)",
+          "categoryNote": "Send after the customer has shared or requested confirmation of requirement details.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Thank you, {{CustomerName}}.\n\nYour requirement confirmation request for {{ProjectName}} has been recorded. Our team will use only verified information for the next step.",
-          "bodyMeta": "Thank you, {{1}}.\n\nYour requirement confirmation request for {{2}} has been recorded. Our team will use only verified information for the next step.",
-          "footer": "Your verified business name",
-          "quickReplies": [],
+          "bodyNamed": "Select the configuration you want us to include.",
+          "bodyMeta": "Select the configuration you want us to include.",
+          "footer": "Review carefully before confirming",
+          "quickReplies": [
+            {
+              "label": "1 BHK",
+              "next": 5
+            },
+            {
+              "label": "2 BHK",
+              "next": 5
+            },
+            {
+              "label": "3+ BHK",
+              "next": 5
+            }
+          ],
           "ctaButtons": [],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Update CRM field: Update configuration"
+        },
+        {
+          "id": "requirement-confirmation-06",
+          "order": 6,
+          "title": "Review revised requirements",
+          "type": "bot-message",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "requirement_confirmation_06_v2",
+          "suggestedCategory": "Utility (customer-requested update)",
+          "categoryNote": "Send after the customer has shared or requested confirmation of requirement details.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Your selected change has been noted. Please confirm the revised requirement or edit another field.",
+          "bodyMeta": "Your selected change has been noted. Please confirm the revised requirement or edit another field.",
+          "footer": "Review carefully before confirming",
+          "quickReplies": [
+            {
+              "label": "Confirm Changes",
+              "next": 6
+            },
+            {
+              "label": "Edit Another",
+              "next": 1
+            },
+            {
+              "label": "Talk to Expert",
+              "next": 7
+            }
+          ],
+          "ctaButtons": [],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Update CRM field: Review revised requirements"
+        },
+        {
+          "id": "requirement-confirmation-07",
+          "order": 7,
+          "title": "CRM-ready confirmation",
+          "type": "bot-message",
+          "required": false,
+          "approvalRequired": true,
+          "templateName": "requirement_confirmation_07_v2",
+          "suggestedCategory": "Utility (customer-requested update)",
+          "categoryNote": "Send after the customer has shared or requested confirmation of requirement details.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Thank you, {{CustomerName}}. Your confirmed requirement for {{ProjectName}} is saved. We can now prepare a verified shortlist based on your preferences.",
+          "bodyMeta": "Thank you, {{1}}. Your confirmed requirement for {{2}} is saved. We can now prepare a verified shortlist based on your preferences.",
+          "footer": "Review carefully before confirming",
+          "quickReplies": [],
+          "ctaButtons": [
+            {
+              "type": "URL",
+              "label": "View Matches",
+              "value": "https://your-domain.com/matches/[LEAD_ID]"
+            }
+          ],
           "variableMap": {
             "CustomerName": "{{1}}",
             "ProjectName": "{{2}}"
@@ -1068,7 +1140,34 @@
             "CustomerName": "Rahul Sharma",
             "ProjectName": "Greenview Residences"
           },
-          "internalInstruction": "Internal workflow action: CRM-ready lead summary"
+          "internalInstruction": "Update CRM field: CRM-ready confirmation"
+        },
+        {
+          "id": "requirement-confirmation-08",
+          "order": 8,
+          "title": "Expert handover",
+          "type": "human-handover",
+          "required": false,
+          "approvalRequired": true,
+          "templateName": "requirement_confirmation_08_v2",
+          "suggestedCategory": "Utility (customer-requested update)",
+          "categoryNote": "Send after the customer has shared or requested confirmation of requirement details.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Your requirement has been sent to a property expert. Use the verified call button below for immediate assistance.",
+          "bodyMeta": "Your requirement has been sent to a property expert. Use the verified call button below for immediate assistance.",
+          "footer": "Review carefully before confirming",
+          "quickReplies": [],
+          "ctaButtons": [
+            {
+              "type": "PHONE",
+              "label": "Call Expert",
+              "value": "tel:[VERIFIED_PHONE]"
+            }
+          ],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Update CRM field: Expert handover"
         }
       ],
       "disclaimers": []
@@ -1081,8 +1180,8 @@
       "url": "flows/lead-follow-up.html",
       "category": "Lead Management",
       "leadStage": "Nurture",
-      "description": "Use respectful time-based follow-ups without overwhelming the customer",
-      "estimatedMinutes": 4,
+      "description": "Consent-aware real-estate follow-up sequence with information requests, scheduled reminders, advisor handover and immediate opt-out.",
+      "estimatedMinutes": 2,
       "steps": [
         {
           "id": "lead-follow-up-01",
@@ -1091,29 +1190,35 @@
           "type": "bot-message",
           "required": true,
           "approvalRequired": true,
-          "templateName": "lead_follow_up_01_v1",
+          "templateName": "lead_follow_up_01_v2",
           "suggestedCategory": "Marketing",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "categoryNote": "Send only to opted-in leads. Honour STOP immediately.",
           "language": "English",
-          "header": "Lead Follow-Up",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with 15-minute follow-up for {{ProjectName}}. Choose the option that best matches your requirement.\n\nReply STOP anytime to opt out of promotional updates.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with 15-minute follow-up for {{2}}. Choose the option that best matches your requirement.\n\nReply STOP anytime to opt out of promotional updates.",
-          "footer": "Your verified business name",
+          "header": "Property follow-up",
+          "bodyNamed": "Hi {{CustomerName}} 👋\n\nJust checking whether you would like more information about {{ProjectName}}.\n\nReply STOP anytime to opt out of promotional updates.",
+          "bodyMeta": "Hi {{1}} 👋\n\nJust checking whether you would like more information about {{2}}.\n\nReply STOP anytime to opt out of promotional updates.",
+          "footer": "Reply STOP to opt out",
           "quickReplies": [
             {
-              "label": "Continue",
+              "label": "I’m Interested",
               "next": 1
             },
             {
-              "label": "View Options",
-              "next": 1
+              "label": "Remind Me Later",
+              "next": 5
             },
             {
-              "label": "Talk to Advisor",
-              "next": 1
+              "label": "Not Interested",
+              "next": 10
             }
           ],
-          "ctaButtons": [],
+          "ctaButtons": [
+            {
+              "type": "URL",
+              "label": "View Project",
+              "value": "https://your-domain.com/project/[PROJECT_SLUG]"
+            }
+          ],
           "variableMap": {
             "CustomerName": "{{1}}",
             "ProjectName": "{{2}}"
@@ -1122,155 +1227,221 @@
             "CustomerName": "Rahul Sharma",
             "ProjectName": "Greenview Residences"
           },
-          "internalInstruction": "Internal workflow action: 15-minute follow-up"
+          "internalInstruction": "Follow-up action: 15-minute follow-up"
         },
         {
           "id": "lead-follow-up-02",
           "order": 2,
-          "title": "24-hour follow-up",
+          "title": "Information menu",
           "type": "bot-message",
           "required": true,
           "approvalRequired": true,
-          "templateName": "lead_follow_up_02_v1",
+          "templateName": "lead_follow_up_02_v2",
           "suggestedCategory": "Marketing",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "categoryNote": "Send only to opted-in leads. Honour STOP immediately.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with 24-hour follow-up for {{ProjectName}}. Choose the option that best matches your requirement.\n\nReply STOP anytime to opt out of promotional updates.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with 24-hour follow-up for {{2}}. Choose the option that best matches your requirement.\n\nReply STOP anytime to opt out of promotional updates.",
-          "footer": "Your verified business name",
+          "bodyNamed": "What would help you evaluate {{ProjectName}} right now?",
+          "bodyMeta": "What would help you evaluate {{1}} right now?",
+          "footer": "Reply STOP to opt out",
           "quickReplies": [
             {
-              "label": "Continue",
+              "label": "Price & Plans",
               "next": 2
             },
             {
-              "label": "View Options",
-              "next": 2
+              "label": "Get Brochure",
+              "next": 3
             },
             {
-              "label": "Talk to Advisor",
-              "next": 2
+              "label": "Check Availability",
+              "next": 4
             }
           ],
           "ctaButtons": [],
           "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
+            "ProjectName": "{{1}}"
           },
           "samples": {
-            "CustomerName": "Rahul Sharma",
             "ProjectName": "Greenview Residences"
           },
-          "internalInstruction": "Internal workflow action: 24-hour follow-up"
+          "internalInstruction": "Follow-up action: Information menu"
         },
         {
           "id": "lead-follow-up-03",
           "order": 3,
-          "title": "Three-day follow-up",
+          "title": "Price and payment help",
           "type": "bot-message",
           "required": true,
           "approvalRequired": true,
-          "templateName": "lead_follow_up_03_v1",
+          "templateName": "lead_follow_up_03_v2",
           "suggestedCategory": "Marketing",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "categoryNote": "Send only to opted-in leads. Honour STOP immediately.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with three-day follow-up for {{ProjectName}}. Choose the option that best matches your requirement.\n\nReply STOP anytime to opt out of promotional updates.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with three-day follow-up for {{2}}. Choose the option that best matches your requirement.\n\nReply STOP anytime to opt out of promotional updates.",
-          "footer": "Your verified business name",
+          "bodyNamed": "Choose the pricing information you would like us to share.",
+          "bodyMeta": "Choose the pricing information you would like us to share.",
+          "footer": "Reply STOP to opt out",
           "quickReplies": [
             {
-              "label": "Continue",
-              "next": 3
+              "label": "Send Price List",
+              "next": 1
             },
             {
-              "label": "View Options",
-              "next": 3
+              "label": "Payment Plan",
+              "next": 1
             },
             {
-              "label": "Talk to Advisor",
-              "next": 3
+              "label": "Schedule Call",
+              "next": 9
             }
           ],
-          "ctaButtons": [],
-          "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
-          },
-          "samples": {
-            "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
-          },
-          "internalInstruction": "Internal workflow action: Three-day follow-up"
+          "ctaButtons": [
+            {
+              "type": "URL",
+              "label": "View Price List",
+              "value": "https://your-domain.com/pricing/[PROJECT_SLUG]"
+            }
+          ],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Follow-up action: Price and payment help"
         },
         {
           "id": "lead-follow-up-04",
           "order": 4,
-          "title": "Seven-day follow-up",
+          "title": "Brochure follow-up",
           "type": "bot-message",
-          "required": false,
+          "required": true,
           "approvalRequired": true,
-          "templateName": "lead_follow_up_04_v1",
+          "templateName": "lead_follow_up_04_v2",
           "suggestedCategory": "Marketing",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "categoryNote": "Send only to opted-in leads. Honour STOP immediately.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with seven-day follow-up for {{ProjectName}}. Choose the option that best matches your requirement.\n\nReply STOP anytime to opt out of promotional updates.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with seven-day follow-up for {{2}}. Choose the option that best matches your requirement.\n\nReply STOP anytime to opt out of promotional updates.",
-          "footer": "Your verified business name",
+          "bodyNamed": "The verified project brochure is ready. After reviewing it, you can continue exploring or request a call.",
+          "bodyMeta": "The verified project brochure is ready. After reviewing it, you can continue exploring or request a call.",
+          "footer": "Reply STOP to opt out",
           "quickReplies": [
             {
-              "label": "Continue",
-              "next": 4
+              "label": "Continue Search",
+              "next": 1
             },
             {
-              "label": "View Options",
-              "next": 4
+              "label": "Book Site Visit",
+              "next": 1
             },
             {
-              "label": "Talk to Advisor",
-              "next": 4
+              "label": "Schedule Call",
+              "next": 9
             }
           ],
-          "ctaButtons": [],
-          "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
-          },
-          "samples": {
-            "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
-          },
-          "internalInstruction": "Internal workflow action: Seven-day follow-up"
+          "ctaButtons": [
+            {
+              "type": "URL",
+              "label": "Get Brochure",
+              "value": "https://your-domain.com/brochure/[BROCHURE_ID]"
+            }
+          ],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Follow-up action: Brochure follow-up"
         },
         {
           "id": "lead-follow-up-05",
           "order": 5,
-          "title": "Final follow-up",
+          "title": "Availability check",
           "type": "bot-message",
-          "required": false,
+          "required": true,
           "approvalRequired": true,
-          "templateName": "lead_follow_up_05_v1",
+          "templateName": "lead_follow_up_05_v2",
           "suggestedCategory": "Marketing",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "categoryNote": "Send only to opted-in leads. Honour STOP immediately.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with final follow-up for {{ProjectName}}. Choose the option that best matches your requirement.\n\nReply STOP anytime to opt out of promotional updates.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with final follow-up for {{2}}. Choose the option that best matches your requirement.\n\nReply STOP anytime to opt out of promotional updates.",
-          "footer": "Your verified business name",
+          "bodyNamed": "Which inventory would you like us to verify?",
+          "bodyMeta": "Which inventory would you like us to verify?",
+          "footer": "Reply STOP to opt out",
           "quickReplies": [
             {
-              "label": "Continue",
-              "next": 5
+              "label": "Check 2 BHK",
+              "next": 1
             },
             {
+              "label": "Check 3 BHK",
+              "next": 1
+            },
+            {
+              "label": "Other Unit",
+              "next": 1
+            }
+          ],
+          "ctaButtons": [],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Follow-up action: Availability check"
+        },
+        {
+          "id": "lead-follow-up-06",
+          "order": 6,
+          "title": "Choose follow-up time",
+          "type": "data-capture",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "lead_follow_up_06_v2",
+          "suggestedCategory": "Marketing",
+          "categoryNote": "Send only to opted-in leads. Honour STOP immediately.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "When should we follow up again?",
+          "bodyMeta": "When should we follow up again?",
+          "footer": "Reply STOP to opt out",
+          "quickReplies": [
+            {
+              "label": "Tomorrow",
+              "next": 6
+            },
+            {
+              "label": "In 3 Days",
+              "next": 7
+            },
+            {
+              "label": "Next Week",
+              "next": 8
+            }
+          ],
+          "ctaButtons": [],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Follow-up action: Choose follow-up time"
+        },
+        {
+          "id": "lead-follow-up-07",
+          "order": 7,
+          "title": "24-hour follow-up",
+          "type": "bot-message",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "lead_follow_up_07_v2",
+          "suggestedCategory": "Marketing",
+          "categoryNote": "Send only to opted-in leads. Honour STOP immediately.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Hi {{CustomerName}}, here is your requested follow-up for {{ProjectName}}. What would you like to do next?\n\nReply STOP anytime to opt out of promotional updates.",
+          "bodyMeta": "Hi {{1}}, here is your requested follow-up for {{2}}. What would you like to do next?\n\nReply STOP anytime to opt out of promotional updates.",
+          "footer": "Reply STOP to opt out",
+          "quickReplies": [
+            {
               "label": "View Options",
-              "next": 5
+              "next": 1
             },
             {
               "label": "Talk to Advisor",
-              "next": 5
+              "next": 9
+            },
+            {
+              "label": "Remind in 3 Days",
+              "next": 7
             }
           ],
           "ctaButtons": [],
@@ -1282,24 +1453,37 @@
             "CustomerName": "Rahul Sharma",
             "ProjectName": "Greenview Residences"
           },
-          "internalInstruction": "Internal workflow action: Final follow-up"
+          "internalInstruction": "Follow-up action: 24-hour follow-up"
         },
         {
-          "id": "lead-follow-up-06",
-          "order": 6,
-          "title": "Opt-out message",
+          "id": "lead-follow-up-08",
+          "order": 8,
+          "title": "Three-day follow-up",
           "type": "bot-message",
-          "required": false,
+          "required": true,
           "approvalRequired": true,
-          "templateName": "lead_follow_up_06_v1",
+          "templateName": "lead_follow_up_08_v2",
           "suggestedCategory": "Marketing",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "categoryNote": "Send only to opted-in leads. Honour STOP immediately.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Thank you, {{CustomerName}}.\n\nYour lead follow-up request for {{ProjectName}} has been recorded. Our team will use only verified information for the next step.\n\nReply STOP anytime to opt out of promotional updates.",
-          "bodyMeta": "Thank you, {{1}}.\n\nYour lead follow-up request for {{2}} has been recorded. Our team will use only verified information for the next step.\n\nReply STOP anytime to opt out of promotional updates.",
-          "footer": "Your verified business name",
-          "quickReplies": [],
+          "bodyNamed": "Hi {{CustomerName}}, new verified options may be available for {{ProjectName}}. Would you like to continue?\n\nReply STOP anytime to opt out of promotional updates.",
+          "bodyMeta": "Hi {{1}}, new verified options may be available for {{2}}. Would you like to continue?\n\nReply STOP anytime to opt out of promotional updates.",
+          "footer": "Reply STOP to opt out",
+          "quickReplies": [
+            {
+              "label": "See New Options",
+              "next": 1
+            },
+            {
+              "label": "Remind Next Week",
+              "next": 8
+            },
+            {
+              "label": "Stop Updates",
+              "next": 10
+            }
+          ],
           "ctaButtons": [],
           "variableMap": {
             "CustomerName": "{{1}}",
@@ -1309,7 +1493,95 @@
             "CustomerName": "Rahul Sharma",
             "ProjectName": "Greenview Residences"
           },
-          "internalInstruction": "Internal workflow action: Opt-out message"
+          "internalInstruction": "Follow-up action: Three-day follow-up"
+        },
+        {
+          "id": "lead-follow-up-09",
+          "order": 9,
+          "title": "Seven-day final follow-up",
+          "type": "bot-message",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "lead_follow_up_09_v2",
+          "suggestedCategory": "Marketing",
+          "categoryNote": "Send only to opted-in leads. Honour STOP immediately.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Hi {{CustomerName}}, this is our final scheduled follow-up about {{ProjectName}}. Choose an option so we respect your preference.\n\nReply STOP anytime to opt out of promotional updates.",
+          "bodyMeta": "Hi {{1}}, this is our final scheduled follow-up about {{2}}. Choose an option so we respect your preference.\n\nReply STOP anytime to opt out of promotional updates.",
+          "footer": "Reply STOP to opt out",
+          "quickReplies": [
+            {
+              "label": "Continue Search",
+              "next": 1
+            },
+            {
+              "label": "Talk to Advisor",
+              "next": 9
+            },
+            {
+              "label": "Stop Updates",
+              "next": 10
+            }
+          ],
+          "ctaButtons": [],
+          "variableMap": {
+            "CustomerName": "{{1}}",
+            "ProjectName": "{{2}}"
+          },
+          "samples": {
+            "CustomerName": "Rahul Sharma",
+            "ProjectName": "Greenview Residences"
+          },
+          "internalInstruction": "Follow-up action: Seven-day final follow-up"
+        },
+        {
+          "id": "lead-follow-up-10",
+          "order": 10,
+          "title": "Advisor callback",
+          "type": "human-handover",
+          "required": false,
+          "approvalRequired": true,
+          "templateName": "lead_follow_up_10_v2",
+          "suggestedCategory": "Marketing",
+          "categoryNote": "Send only to opted-in leads. Honour STOP immediately.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Your callback request has been shared with a property advisor. Use the verified call button for immediate assistance.",
+          "bodyMeta": "Your callback request has been shared with a property advisor. Use the verified call button for immediate assistance.",
+          "footer": "Reply STOP to opt out",
+          "quickReplies": [],
+          "ctaButtons": [
+            {
+              "type": "PHONE",
+              "label": "Call Advisor",
+              "value": "tel:[VERIFIED_PHONE]"
+            }
+          ],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Follow-up action: Advisor callback"
+        },
+        {
+          "id": "lead-follow-up-11",
+          "order": 11,
+          "title": "Opt-out confirmation",
+          "type": "bot-message",
+          "required": false,
+          "approvalRequired": true,
+          "templateName": "lead_follow_up_11_v2",
+          "suggestedCategory": "Marketing",
+          "categoryNote": "Send only to opted-in leads. Honour STOP immediately.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Your preference has been saved. You will not receive further promotional follow-ups for this enquiry. You may contact us anytime to restart.",
+          "bodyMeta": "Your preference has been saved. You will not receive further promotional follow-ups for this enquiry. You may contact us anytime to restart.",
+          "footer": "Reply STOP to opt out",
+          "quickReplies": [],
+          "ctaButtons": [],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Follow-up action: Opt-out confirmation"
         }
       ],
       "disclaimers": []
