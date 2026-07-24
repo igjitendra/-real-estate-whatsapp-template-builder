@@ -1,5 +1,5 @@
 {
-  "version": "4.4-flow-04-human-reviewed",
+  "version": "4.6-flow-06-human-reviewed",
   "purpose": "WhatsApp Business template approval and copy-paste flow library",
   "flows": [
     {
@@ -1594,163 +1594,43 @@
       "url": "flows/lead-reactivation.html",
       "category": "Lead Management",
       "leadStage": "Reactivation",
-      "description": "Reconnect with older leads using relevant inventory and requirement updates",
-      "estimatedMinutes": 4,
+      "description": "Re-engage an opted-in old lead, update changed requirements, share verified inventory, record a purchase, pause contact or opt out.",
+      "estimatedMinutes": 2,
       "steps": [
         {
           "id": "lead-reactivation-01",
           "order": 1,
-          "title": "Old lead re-engagement",
+          "title": "Consent-aware reactivation",
           "type": "bot-message",
           "required": true,
           "approvalRequired": true,
-          "templateName": "lead_reactivation_01_v1",
+          "templateName": "lead_reactivation_01_v2",
           "suggestedCategory": "Marketing",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "categoryNote": "Send only to leads with valid marketing consent; honour STOP immediately.",
           "language": "English",
-          "header": "Lead Reactivation",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with old lead re-engagement for {{ProjectName}}. Choose the option that best matches your requirement.\n\nReply STOP anytime to opt out of promotional updates.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with old lead re-engagement for {{2}}. Choose the option that best matches your requirement.\n\nReply STOP anytime to opt out of promotional updates.",
-          "footer": "Your verified business name",
+          "header": "Property search update",
+          "bodyNamed": "Hi {{CustomerName}} 👋\n\nYou previously enquired about {{ProjectName}}. Are you still looking for a property?\n\nReply STOP anytime to opt out of promotional updates.",
+          "bodyMeta": "Hi {{1}} 👋\n\nYou previously enquired about {{2}}. Are you still looking for a property?\n\nReply STOP anytime to opt out of promotional updates.",
+          "footer": "Reply STOP to opt out",
           "quickReplies": [
             {
-              "label": "Continue",
+              "label": "Still Searching",
               "next": 1
             },
             {
-              "label": "View Options",
-              "next": 1
+              "label": "Already Purchased",
+              "next": 8
             },
             {
-              "label": "Talk to Advisor",
-              "next": 1
-            }
-          ],
-          "ctaButtons": [],
-          "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
-          },
-          "samples": {
-            "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
-          },
-          "internalInstruction": "Internal workflow action: Old lead re-engagement"
-        },
-        {
-          "id": "lead-reactivation-02",
-          "order": 2,
-          "title": "Requirement status check",
-          "type": "data-capture",
-          "required": true,
-          "approvalRequired": true,
-          "templateName": "lead_reactivation_02_v1",
-          "suggestedCategory": "Marketing",
-          "categoryNote": "Meta may reclassify the template during review.",
-          "language": "English",
-          "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with requirement status check for {{ProjectName}}. Choose the option that best matches your requirement.\n\nReply STOP anytime to opt out of promotional updates.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with requirement status check for {{2}}. Choose the option that best matches your requirement.\n\nReply STOP anytime to opt out of promotional updates.",
-          "footer": "Your verified business name",
-          "quickReplies": [
-            {
-              "label": "Continue",
-              "next": 2
-            },
-            {
-              "label": "View Options",
-              "next": 2
-            },
-            {
-              "label": "Talk to Advisor",
-              "next": 2
-            }
-          ],
-          "ctaButtons": [],
-          "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
-          },
-          "samples": {
-            "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
-          },
-          "internalInstruction": "Capture: Requirement status check"
-        },
-        {
-          "id": "lead-reactivation-03",
-          "order": 3,
-          "title": "Budget update",
-          "type": "data-capture",
-          "required": true,
-          "approvalRequired": true,
-          "templateName": "lead_reactivation_03_v1",
-          "suggestedCategory": "Marketing",
-          "categoryNote": "Meta may reclassify the template during review.",
-          "language": "English",
-          "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with budget update for {{ProjectName}}. Choose the option that best matches your requirement.\n\nReply STOP anytime to opt out of promotional updates.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with budget update for {{2}}. Choose the option that best matches your requirement.\n\nReply STOP anytime to opt out of promotional updates.",
-          "footer": "Your verified business name",
-          "quickReplies": [
-            {
-              "label": "Lower Range",
-              "next": 3
-            },
-            {
-              "label": "Mid Range",
-              "next": 3
-            },
-            {
-              "label": "Upper Range",
-              "next": 3
-            }
-          ],
-          "ctaButtons": [],
-          "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
-          },
-          "samples": {
-            "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
-          },
-          "internalInstruction": "Capture: Budget update"
-        },
-        {
-          "id": "lead-reactivation-04",
-          "order": 4,
-          "title": "Location update",
-          "type": "bot-message",
-          "required": false,
-          "approvalRequired": true,
-          "templateName": "lead_reactivation_04_v1",
-          "suggestedCategory": "Marketing",
-          "categoryNote": "Meta may reclassify the template during review.",
-          "language": "English",
-          "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with location update for {{ProjectName}}. Choose the option that best matches your requirement.\n\nReply STOP anytime to opt out of promotional updates.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with location update for {{2}}. Choose the option that best matches your requirement.\n\nReply STOP anytime to opt out of promotional updates.",
-          "footer": "Your verified business name",
-          "quickReplies": [
-            {
-              "label": "Preferred Option",
-              "next": 4
-            },
-            {
-              "label": "Other Option",
-              "next": 4
-            },
-            {
-              "label": "No Preference",
-              "next": 4
+              "label": "Not Looking Now",
+              "next": 9
             }
           ],
           "ctaButtons": [
             {
               "type": "URL",
-              "label": "Open in Maps",
-              "value": "https://maps.google.com/?q=[VERIFIED_LOCATION]"
+              "label": "View Project",
+              "value": "https://your-domain.com/project/[PROJECT_SLUG]"
             }
           ],
           "variableMap": {
@@ -1761,74 +1641,348 @@
             "CustomerName": "Rahul Sharma",
             "ProjectName": "Greenview Residences"
           },
-          "internalInstruction": "Internal workflow action: Location update"
+          "internalInstruction": "Reactivation action: Consent-aware reactivation"
+        },
+        {
+          "id": "lead-reactivation-02",
+          "order": 2,
+          "title": "Requirement update menu",
+          "type": "bot-message",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "lead_reactivation_02_v2",
+          "suggestedCategory": "Marketing",
+          "categoryNote": "Send only to leads with valid marketing consent; honour STOP immediately.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Welcome back. What should we update before sharing current options?\n\nReply STOP anytime to opt out of promotional updates.",
+          "bodyMeta": "Welcome back. What should we update before sharing current options?\n\nReply STOP anytime to opt out of promotional updates.",
+          "footer": "Reply STOP to opt out",
+          "quickReplies": [
+            {
+              "label": "Update Budget",
+              "next": 2
+            },
+            {
+              "label": "Update Location",
+              "next": 3
+            },
+            {
+              "label": "Change Property Type",
+              "next": 4
+            }
+          ],
+          "ctaButtons": [],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Reactivation action: Requirement update menu"
+        },
+        {
+          "id": "lead-reactivation-03",
+          "order": 3,
+          "title": "Revised budget",
+          "type": "data-capture",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "lead_reactivation_03_v2",
+          "suggestedCategory": "Marketing",
+          "categoryNote": "Send only to leads with valid marketing consent; honour STOP immediately.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Select your current total property budget.\n\nReply STOP anytime to opt out of promotional updates.",
+          "bodyMeta": "Select your current total property budget.\n\nReply STOP anytime to opt out of promotional updates.",
+          "footer": "Reply STOP to opt out",
+          "quickReplies": [
+            {
+              "label": "Under ₹50 Lakh",
+              "next": 5
+            },
+            {
+              "label": "₹50L–₹1 Crore",
+              "next": 5
+            },
+            {
+              "label": "Above ₹1 Crore",
+              "next": 5
+            }
+          ],
+          "ctaButtons": [],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Reactivation action: Revised budget"
+        },
+        {
+          "id": "lead-reactivation-04",
+          "order": 4,
+          "title": "Revised location",
+          "type": "data-capture",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "lead_reactivation_04_v2",
+          "suggestedCategory": "Marketing",
+          "categoryNote": "Send only to leads with valid marketing consent; honour STOP immediately.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Which location should we prioritise now?\n\nReply STOP anytime to opt out of promotional updates.",
+          "bodyMeta": "Which location should we prioritise now?\n\nReply STOP anytime to opt out of promotional updates.",
+          "footer": "Reply STOP to opt out",
+          "quickReplies": [
+            {
+              "label": "Gurugram",
+              "next": 5
+            },
+            {
+              "label": "Noida",
+              "next": 5
+            },
+            {
+              "label": "Other Location",
+              "next": 5
+            }
+          ],
+          "ctaButtons": [
+            {
+              "type": "URL",
+              "label": "View Locations",
+              "value": "https://your-domain.com/locations"
+            }
+          ],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Reactivation action: Revised location"
         },
         {
           "id": "lead-reactivation-05",
           "order": 5,
-          "title": "New inventory notification",
-          "type": "notification",
-          "required": false,
-          "approvalRequired": false,
-          "templateName": "",
+          "title": "Revised property type",
+          "type": "data-capture",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "lead_reactivation_05_v2",
           "suggestedCategory": "Marketing",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "categoryNote": "Send only to leads with valid marketing consent; honour STOP immediately.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with new inventory notification for {{ProjectName}}. Choose the option that best matches your requirement.\n\nReply STOP anytime to opt out of promotional updates.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with new inventory notification for {{2}}. Choose the option that best matches your requirement.\n\nReply STOP anytime to opt out of promotional updates.",
-          "footer": "Your verified business name",
+          "bodyNamed": "Which property type are you considering now?\n\nReply STOP anytime to opt out of promotional updates.",
+          "bodyMeta": "Which property type are you considering now?\n\nReply STOP anytime to opt out of promotional updates.",
+          "footer": "Reply STOP to opt out",
           "quickReplies": [
             {
-              "label": "Check Availability",
+              "label": "Apartment",
               "next": 5
             },
             {
-              "label": "View Floor Plan",
+              "label": "Villa",
               "next": 5
             },
             {
-              "label": "Reserve Unit",
+              "label": "Plot",
               "next": 5
             }
           ],
           "ctaButtons": [],
-          "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
-          },
-          "samples": {
-            "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
-          },
-          "internalInstruction": "Internal notification: New inventory notification. Send only the minimum customer data required."
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Reactivation action: Revised property type"
         },
         {
           "id": "lead-reactivation-06",
           "order": 6,
-          "title": "Reactivation campaign messages",
+          "title": "New inventory available",
+          "type": "bot-message",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "lead_reactivation_06_v2",
+          "suggestedCategory": "Marketing",
+          "categoryNote": "Send only to leads with valid marketing consent; honour STOP immediately.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Thanks, {{CustomerName}}. We can now show recently verified options matching your updated requirement.\n\nReply STOP anytime to opt out of promotional updates.",
+          "bodyMeta": "Thanks, {{1}}. We can now show recently verified options matching your updated requirement.\n\nReply STOP anytime to opt out of promotional updates.",
+          "footer": "Reply STOP to opt out",
+          "quickReplies": [
+            {
+              "label": "View New Options",
+              "next": 6
+            },
+            {
+              "label": "Get Brochure",
+              "next": 6
+            },
+            {
+              "label": "Talk to Advisor",
+              "next": 7
+            }
+          ],
+          "ctaButtons": [
+            {
+              "type": "URL",
+              "label": "View New Options",
+              "value": "https://your-domain.com/new-inventory/[LEAD_ID]"
+            }
+          ],
+          "variableMap": {
+            "CustomerName": "{{1}}"
+          },
+          "samples": {
+            "CustomerName": "Rahul Sharma"
+          },
+          "internalInstruction": "Reactivation action: New inventory available"
+        },
+        {
+          "id": "lead-reactivation-07",
+          "order": 7,
+          "title": "Updated shortlist",
+          "type": "bot-message",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "lead_reactivation_07_v2",
+          "suggestedCategory": "Marketing",
+          "categoryNote": "Send only to leads with valid marketing consent; honour STOP immediately.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Your updated property shortlist is ready. Open the verified results or request human assistance.\n\nReply STOP anytime to opt out of promotional updates.",
+          "bodyMeta": "Your updated property shortlist is ready. Open the verified results or request human assistance.\n\nReply STOP anytime to opt out of promotional updates.",
+          "footer": "Reply STOP to opt out",
+          "quickReplies": [],
+          "ctaButtons": [
+            {
+              "type": "URL",
+              "label": "Open Shortlist",
+              "value": "https://your-domain.com/matches/[LEAD_ID]"
+            }
+          ],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Reactivation action: Updated shortlist"
+        },
+        {
+          "id": "lead-reactivation-08",
+          "order": 8,
+          "title": "Advisor handover",
+          "type": "human-handover",
+          "required": false,
+          "approvalRequired": true,
+          "templateName": "lead_reactivation_08_v2",
+          "suggestedCategory": "Marketing",
+          "categoryNote": "Send only to leads with valid marketing consent; honour STOP immediately.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Your updated requirement has been sent to a property advisor. Use the verified button for immediate assistance.\n\nReply STOP anytime to opt out of promotional updates.",
+          "bodyMeta": "Your updated requirement has been sent to a property advisor. Use the verified button for immediate assistance.\n\nReply STOP anytime to opt out of promotional updates.",
+          "footer": "Reply STOP to opt out",
+          "quickReplies": [],
+          "ctaButtons": [
+            {
+              "type": "PHONE",
+              "label": "Call Advisor",
+              "value": "tel:[VERIFIED_PHONE]"
+            }
+          ],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Reactivation action: Advisor handover"
+        },
+        {
+          "id": "lead-reactivation-09",
+          "order": 9,
+          "title": "Purchase acknowledged",
           "type": "bot-message",
           "required": false,
           "approvalRequired": true,
-          "templateName": "lead_reactivation_06_v1",
-          "suggestedCategory": "Marketing",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "templateName": "lead_reactivation_09_v2",
+          "suggestedCategory": "Utility",
+          "categoryNote": "Send only to leads with valid marketing consent; honour STOP immediately.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Thank you, {{CustomerName}}.\n\nYour lead reactivation request for {{ProjectName}} has been recorded. Our team will use only verified information for the next step.\n\nReply STOP anytime to opt out of promotional updates.",
-          "bodyMeta": "Thank you, {{1}}.\n\nYour lead reactivation request for {{2}} has been recorded. Our team will use only verified information for the next step.\n\nReply STOP anytime to opt out of promotional updates.",
-          "footer": "Your verified business name",
+          "bodyNamed": "Thank you for letting us know, {{CustomerName}}. We have closed this property-search enquiry and will not send further campaign messages for it.",
+          "bodyMeta": "Thank you for letting us know, {{1}}. We have closed this property-search enquiry and will not send further campaign messages for it.",
+          "footer": "Preference saved",
           "quickReplies": [],
           "ctaButtons": [],
           "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
+            "CustomerName": "{{1}}"
           },
           "samples": {
-            "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
+            "CustomerName": "Rahul Sharma"
           },
-          "internalInstruction": "Internal workflow action: Reactivation campaign messages"
+          "internalInstruction": "Reactivation action: Purchase acknowledged"
+        },
+        {
+          "id": "lead-reactivation-10",
+          "order": 10,
+          "title": "Pause or stop menu",
+          "type": "bot-message",
+          "required": false,
+          "approvalRequired": true,
+          "templateName": "lead_reactivation_10_v2",
+          "suggestedCategory": "Marketing",
+          "categoryNote": "Send only to leads with valid marketing consent; honour STOP immediately.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "No problem. How should we manage future updates for this enquiry?\n\nReply STOP anytime to opt out of promotional updates.",
+          "bodyMeta": "No problem. How should we manage future updates for this enquiry?\n\nReply STOP anytime to opt out of promotional updates.",
+          "footer": "Reply STOP to opt out",
+          "quickReplies": [
+            {
+              "label": "Pause 30 Days",
+              "next": 10
+            },
+            {
+              "label": "Stop Updates",
+              "next": 11
+            },
+            {
+              "label": "Talk to Advisor",
+              "next": 7
+            }
+          ],
+          "ctaButtons": [],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Reactivation action: Pause or stop menu"
+        },
+        {
+          "id": "lead-reactivation-11",
+          "order": 11,
+          "title": "Updates paused",
+          "type": "bot-message",
+          "required": false,
+          "approvalRequired": true,
+          "templateName": "lead_reactivation_11_v2",
+          "suggestedCategory": "Utility",
+          "categoryNote": "Send only to leads with valid marketing consent; honour STOP immediately.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Property updates are paused for 30 days. You can contact us anytime if you want to restart sooner.",
+          "bodyMeta": "Property updates are paused for 30 days. You can contact us anytime if you want to restart sooner.",
+          "footer": "Preference saved",
+          "quickReplies": [],
+          "ctaButtons": [],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Reactivation action: Updates paused"
+        },
+        {
+          "id": "lead-reactivation-12",
+          "order": 12,
+          "title": "Opt-out confirmation",
+          "type": "bot-message",
+          "required": false,
+          "approvalRequired": true,
+          "templateName": "lead_reactivation_12_v2",
+          "suggestedCategory": "Utility",
+          "categoryNote": "Send only to leads with valid marketing consent; honour STOP immediately.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Your preference has been saved. You will not receive further promotional property updates from this campaign.",
+          "bodyMeta": "Your preference has been saved. You will not receive further promotional property updates from this campaign.",
+          "footer": "Preference saved",
+          "quickReplies": [],
+          "ctaButtons": [],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Reactivation action: Opt-out confirmation"
         }
       ],
       "disclaimers": []
@@ -1841,299 +1995,499 @@
       "url": "flows/property-recommendation.html",
       "category": "Property Recommendation",
       "leadStage": "Consideration",
-      "description": "Recommend projects matched to the customer’s location, budget and configuration",
-      "estimatedMinutes": 5,
+      "description": "Recommend suitable properties, rank a shortlist, refine priorities and move the customer to brochure, site visit or advisor assistance.",
+      "estimatedMinutes": 3,
       "steps": [
         {
           "id": "property-recommendation-01",
           "order": 1,
-          "title": "Requirement-based recommendation",
+          "title": "Recommendation welcome",
           "type": "bot-message",
           "required": true,
           "approvalRequired": true,
-          "templateName": "property_recommendation_01_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "templateName": "property_recommendation_01_v2",
+          "suggestedCategory": "Utility (customer-requested recommendations)",
+          "categoryNote": "Use after a customer requests property recommendations or shortlist assistance.",
           "language": "English",
-          "header": "Property Recommendation",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with requirement-based recommendation for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with requirement-based recommendation for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
+          "header": "Your property shortlist",
+          "bodyNamed": "Hi {{CustomerName}} 👋\n\nWe found suitable properties for your {{Configuration}} requirement in {{PreferredLocation}}, within {{BudgetRange}}. How would you like to review them?",
+          "bodyMeta": "Hi {{1}} 👋\n\nWe found suitable properties for your {{2}} requirement in {{3}}, within {{4}}. How would you like to review them?",
+          "footer": "Details subject to current verification",
           "quickReplies": [
             {
-              "label": "Continue",
+              "label": "View Shortlist",
               "next": 1
             },
             {
-              "label": "View Options",
-              "next": 1
+              "label": "Refine Matches",
+              "next": 2
             },
             {
               "label": "Talk to Advisor",
-              "next": 1
+              "next": 13
             }
           ],
-          "ctaButtons": [
-            {
-              "type": "URL",
-              "label": "View Project",
-              "value": "https://your-domain.com/project/[PROJECT_SLUG]"
-            }
-          ],
+          "ctaButtons": [],
           "variableMap": {
             "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
+            "Configuration": "{{2}}",
+            "PreferredLocation": "{{3}}",
+            "BudgetRange": "{{4}}"
           },
           "samples": {
             "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
+            "Configuration": "2 BHK",
+            "PreferredLocation": "Gurugram",
+            "BudgetRange": "₹50L–₹1 Crore"
           },
-          "internalInstruction": "Internal workflow action: Requirement-based recommendation"
+          "internalInstruction": "Recommendation action: Recommendation welcome"
         },
         {
           "id": "property-recommendation-02",
           "order": 2,
-          "title": "Project details",
+          "title": "Shortlist categories",
           "type": "bot-message",
           "required": true,
           "approvalRequired": true,
-          "templateName": "property_recommendation_02_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "templateName": "property_recommendation_02_v2",
+          "suggestedCategory": "Utility (customer-requested recommendations)",
+          "categoryNote": "Use after a customer requests property recommendations or shortlist assistance.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with project details for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with project details for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
+          "bodyNamed": "Choose how you want us to rank the verified shortlist.",
+          "bodyMeta": "Choose how you want us to rank the verified shortlist.",
+          "footer": "Details subject to current verification",
           "quickReplies": [
             {
-              "label": "Continue",
-              "next": 2
+              "label": "Best Overall Match",
+              "next": 3
             },
             {
-              "label": "View Options",
-              "next": 2
+              "label": "Best Value",
+              "next": 4
             },
             {
-              "label": "Talk to Advisor",
-              "next": 2
+              "label": "Premium Option",
+              "next": 5
             }
           ],
-          "ctaButtons": [
-            {
-              "type": "URL",
-              "label": "View Project",
-              "value": "https://your-domain.com/project/[PROJECT_SLUG]"
-            }
-          ],
-          "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
-          },
-          "samples": {
-            "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
-          },
-          "internalInstruction": "Internal workflow action: Project details"
+          "ctaButtons": [],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Recommendation action: Shortlist categories"
         },
         {
           "id": "property-recommendation-03",
           "order": 3,
-          "title": "Configuration and size",
+          "title": "Refine recommendation",
           "type": "bot-message",
           "required": true,
           "approvalRequired": true,
-          "templateName": "property_recommendation_03_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "templateName": "property_recommendation_03_v2",
+          "suggestedCategory": "Utility (customer-requested recommendations)",
+          "categoryNote": "Use after a customer requests property recommendations or shortlist assistance.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with configuration and size for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with configuration and size for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
+          "bodyNamed": "Which factor should have the highest priority in your recommendations?",
+          "bodyMeta": "Which factor should have the highest priority in your recommendations?",
+          "footer": "Details subject to current verification",
           "quickReplies": [
             {
-              "label": "1 BHK",
-              "next": 3
+              "label": "Budget Priority",
+              "next": 6
             },
             {
-              "label": "2 BHK",
-              "next": 3
+              "label": "Location Priority",
+              "next": 7
             },
             {
-              "label": "3+ BHK",
-              "next": 3
+              "label": "Amenities Priority",
+              "next": 8
             }
           ],
           "ctaButtons": [],
-          "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
-          },
-          "samples": {
-            "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
-          },
-          "internalInstruction": "Internal workflow action: Configuration and size"
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Recommendation action: Refine recommendation"
         },
         {
           "id": "property-recommendation-04",
           "order": 4,
-          "title": "Starting price",
+          "title": "Best overall match",
           "type": "bot-message",
-          "required": false,
+          "required": true,
           "approvalRequired": true,
-          "templateName": "property_recommendation_04_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "templateName": "property_recommendation_04_v2",
+          "suggestedCategory": "Utility (customer-requested recommendations)",
+          "categoryNote": "Use after a customer requests property recommendations or shortlist assistance.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with starting price for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with starting price for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
+          "bodyNamed": "{{ProjectName}} is the strongest overall match based on your budget, configuration and preferred location.",
+          "bodyMeta": "{{1}} is the strongest overall match based on your budget, configuration and preferred location.",
+          "footer": "Details subject to current verification",
           "quickReplies": [
             {
-              "label": "View Price",
-              "next": 4
+              "label": "View Property",
+              "next": 9
             },
             {
-              "label": "Payment Plan",
-              "next": 4
+              "label": "Compare Options",
+              "next": 1
             },
             {
               "label": "Talk to Advisor",
-              "next": 4
+              "next": 13
             }
           ],
-          "ctaButtons": [],
+          "ctaButtons": [
+            {
+              "type": "URL",
+              "label": "View Property",
+              "value": "https://your-domain.com/project/[PROJECT_SLUG]"
+            }
+          ],
           "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
+            "ProjectName": "{{1}}"
           },
           "samples": {
-            "CustomerName": "Rahul Sharma",
             "ProjectName": "Greenview Residences"
           },
-          "internalInstruction": "Internal workflow action: Starting price"
+          "internalInstruction": "Recommendation action: Best overall match"
         },
         {
           "id": "property-recommendation-05",
           "order": 5,
-          "title": "Amenities",
+          "title": "Best value match",
           "type": "bot-message",
-          "required": false,
+          "required": true,
           "approvalRequired": true,
-          "templateName": "property_recommendation_05_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "templateName": "property_recommendation_05_v2",
+          "suggestedCategory": "Utility (customer-requested recommendations)",
+          "categoryNote": "Use after a customer requests property recommendations or shortlist assistance.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with amenities for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with amenities for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
+          "bodyNamed": "This option provides the closest fit to your budget while retaining the requested configuration and key amenities.",
+          "bodyMeta": "This option provides the closest fit to your budget while retaining the requested configuration and key amenities.",
+          "footer": "Details subject to current verification",
           "quickReplies": [
             {
-              "label": "View Details",
-              "next": 5
+              "label": "View Property",
+              "next": 9
             },
             {
-              "label": "Ask a Question",
-              "next": 5
+              "label": "Compare Options",
+              "next": 1
             },
             {
               "label": "Talk to Advisor",
-              "next": 5
+              "next": 13
             }
           ],
-          "ctaButtons": [],
-          "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
-          },
-          "samples": {
-            "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
-          },
-          "internalInstruction": "Internal workflow action: Amenities"
+          "ctaButtons": [
+            {
+              "type": "URL",
+              "label": "View Best Value",
+              "value": "https://your-domain.com/project/[PROJECT_SLUG]"
+            }
+          ],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Recommendation action: Best value match"
         },
         {
           "id": "property-recommendation-06",
           "order": 6,
-          "title": "Brochure button",
+          "title": "Premium recommendation",
           "type": "bot-message",
-          "required": false,
+          "required": true,
           "approvalRequired": true,
-          "templateName": "property_recommendation_06_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "templateName": "property_recommendation_06_v2",
+          "suggestedCategory": "Utility (customer-requested recommendations)",
+          "categoryNote": "Use after a customer requests property recommendations or shortlist assistance.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with brochure button for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with brochure button for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
+          "bodyNamed": "This recommendation prioritises premium specifications, location advantages and lifestyle amenities.",
+          "bodyMeta": "This recommendation prioritises premium specifications, location advantages and lifestyle amenities.",
+          "footer": "Details subject to current verification",
           "quickReplies": [
             {
-              "label": "Get Brochure",
-              "next": 6
+              "label": "View Property",
+              "next": 9
             },
             {
-              "label": "View Price",
-              "next": 6
+              "label": "Compare Options",
+              "next": 1
             },
             {
-              "label": "Book Visit",
-              "next": 6
+              "label": "Talk to Advisor",
+              "next": 13
             }
           ],
           "ctaButtons": [
             {
               "type": "URL",
-              "label": "Download Brochure",
-              "value": "https://your-domain.com/brochure/[BROCHURE_ID]"
+              "label": "View Premium Option",
+              "value": "https://your-domain.com/project/[PROJECT_SLUG]"
             }
           ],
-          "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
-          },
-          "samples": {
-            "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
-          },
-          "internalInstruction": "Internal workflow action: Brochure button"
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Recommendation action: Premium recommendation"
         },
         {
           "id": "property-recommendation-07",
           "order": 7,
-          "title": "Location and video options",
+          "title": "Budget priority",
+          "type": "data-capture",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "property_recommendation_07_v2",
+          "suggestedCategory": "Utility (customer-requested recommendations)",
+          "categoryNote": "Use after a customer requests property recommendations or shortlist assistance.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Select the budget direction for the refreshed shortlist.",
+          "bodyMeta": "Select the budget direction for the refreshed shortlist.",
+          "footer": "Details subject to current verification",
+          "quickReplies": [
+            {
+              "label": "Lower Budget",
+              "next": 1
+            },
+            {
+              "label": "Same Budget",
+              "next": 1
+            },
+            {
+              "label": "Flexible Budget",
+              "next": 1
+            }
+          ],
+          "ctaButtons": [],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Recommendation action: Budget priority"
+        },
+        {
+          "id": "property-recommendation-08",
+          "order": 8,
+          "title": "Location priority",
+          "type": "data-capture",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "property_recommendation_08_v2",
+          "suggestedCategory": "Utility (customer-requested recommendations)",
+          "categoryNote": "Use after a customer requests property recommendations or shortlist assistance.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Select how strictly we should follow the preferred location.",
+          "bodyMeta": "Select how strictly we should follow the preferred location.",
+          "footer": "Details subject to current verification",
+          "quickReplies": [
+            {
+              "label": "Exact Location",
+              "next": 1
+            },
+            {
+              "label": "Nearby Areas",
+              "next": 1
+            },
+            {
+              "label": "Any NCR Location",
+              "next": 1
+            }
+          ],
+          "ctaButtons": [],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Recommendation action: Location priority"
+        },
+        {
+          "id": "property-recommendation-09",
+          "order": 9,
+          "title": "Amenities priority",
+          "type": "data-capture",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "property_recommendation_09_v2",
+          "suggestedCategory": "Utility (customer-requested recommendations)",
+          "categoryNote": "Use after a customer requests property recommendations or shortlist assistance.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Which amenity group matters most?",
+          "bodyMeta": "Which amenity group matters most?",
+          "footer": "Details subject to current verification",
+          "quickReplies": [
+            {
+              "label": "Family Amenities",
+              "next": 1
+            },
+            {
+              "label": "Work & Commute",
+              "next": 1
+            },
+            {
+              "label": "Luxury Lifestyle",
+              "next": 1
+            }
+          ],
+          "ctaButtons": [],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Recommendation action: Amenities priority"
+        },
+        {
+          "id": "property-recommendation-10",
+          "order": 10,
+          "title": "Selected property actions",
           "type": "bot-message",
           "required": false,
           "approvalRequired": true,
-          "templateName": "property_recommendation_07_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "templateName": "property_recommendation_10_v2",
+          "suggestedCategory": "Utility (customer-requested recommendations)",
+          "categoryNote": "Use after a customer requests property recommendations or shortlist assistance.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Thank you, {{CustomerName}}.\n\nYour property recommendation request for {{ProjectName}} has been recorded. Our team will use only verified information for the next step.",
-          "bodyMeta": "Thank you, {{1}}.\n\nYour property recommendation request for {{2}} has been recorded. Our team will use only verified information for the next step.",
-          "footer": "Your verified business name",
+          "bodyNamed": "What would you like to do with the selected property?",
+          "bodyMeta": "What would you like to do with the selected property?",
+          "footer": "Details subject to current verification",
+          "quickReplies": [
+            {
+              "label": "Get Brochure",
+              "next": 10
+            },
+            {
+              "label": "Book Site Visit",
+              "next": 11
+            },
+            {
+              "label": "Call Advisor",
+              "next": 13
+            }
+          ],
+          "ctaButtons": [],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Recommendation action: Selected property actions"
+        },
+        {
+          "id": "property-recommendation-11",
+          "order": 11,
+          "title": "Brochure ready",
+          "type": "bot-message",
+          "required": false,
+          "approvalRequired": true,
+          "templateName": "property_recommendation_11_v2",
+          "suggestedCategory": "Utility (customer-requested recommendations)",
+          "categoryNote": "Use after a customer requests property recommendations or shortlist assistance.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "The verified brochure for {{ProjectName}} is ready to open.",
+          "bodyMeta": "The verified brochure for {{1}} is ready to open.",
+          "footer": "Details subject to current verification",
           "quickReplies": [],
           "ctaButtons": [
             {
               "type": "URL",
-              "label": "Open in Maps",
-              "value": "https://maps.google.com/?q=[VERIFIED_LOCATION]"
+              "label": "Get Brochure",
+              "value": "https://your-domain.com/brochure/[BROCHURE_ID]"
             }
           ],
           "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
+            "ProjectName": "{{1}}"
           },
           "samples": {
-            "CustomerName": "Rahul Sharma",
             "ProjectName": "Greenview Residences"
           },
-          "internalInstruction": "Internal workflow action: Location and video options"
+          "internalInstruction": "Recommendation action: Brochure ready"
+        },
+        {
+          "id": "property-recommendation-12",
+          "order": 12,
+          "title": "Choose site-visit day",
+          "type": "data-capture",
+          "required": false,
+          "approvalRequired": true,
+          "templateName": "property_recommendation_12_v2",
+          "suggestedCategory": "Utility (customer-requested recommendations)",
+          "categoryNote": "Use after a customer requests property recommendations or shortlist assistance.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "When would you prefer to visit the selected property?",
+          "bodyMeta": "When would you prefer to visit the selected property?",
+          "footer": "Details subject to current verification",
+          "quickReplies": [
+            {
+              "label": "Today",
+              "next": 12
+            },
+            {
+              "label": "Tomorrow",
+              "next": 12
+            },
+            {
+              "label": "This Weekend",
+              "next": 12
+            }
+          ],
+          "ctaButtons": [],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Recommendation action: Choose site-visit day"
+        },
+        {
+          "id": "property-recommendation-13",
+          "order": 13,
+          "title": "Site-visit request saved",
+          "type": "bot-message",
+          "required": false,
+          "approvalRequired": true,
+          "templateName": "property_recommendation_13_v2",
+          "suggestedCategory": "Utility (customer-requested recommendations)",
+          "categoryNote": "Use after a customer requests property recommendations or shortlist assistance.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Your site-visit preference has been recorded. A coordinator will confirm the available slot before the visit.",
+          "bodyMeta": "Your site-visit preference has been recorded. A coordinator will confirm the available slot before the visit.",
+          "footer": "Details subject to current verification",
+          "quickReplies": [],
+          "ctaButtons": [
+            {
+              "type": "URL",
+              "label": "Open Location",
+              "value": "https://maps.google.com/?q=[VERIFIED_LOCATION]"
+            }
+          ],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Recommendation action: Site-visit request saved"
+        },
+        {
+          "id": "property-recommendation-14",
+          "order": 14,
+          "title": "Advisor handover",
+          "type": "human-handover",
+          "required": false,
+          "approvalRequired": true,
+          "templateName": "property_recommendation_14_v2",
+          "suggestedCategory": "Utility (customer-requested recommendations)",
+          "categoryNote": "Use after a customer requests property recommendations or shortlist assistance.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Your shortlist and preferences have been shared with a property advisor. Use the verified call button for immediate assistance.",
+          "bodyMeta": "Your shortlist and preferences have been shared with a property advisor. Use the verified call button for immediate assistance.",
+          "footer": "Details subject to current verification",
+          "quickReplies": [],
+          "ctaButtons": [
+            {
+              "type": "PHONE",
+              "label": "Call Advisor",
+              "value": "tel:[VERIFIED_PHONE]"
+            }
+          ],
+          "variableMap": {},
+          "samples": {},
+          "internalInstruction": "Recommendation action: Advisor handover"
         }
       ],
       "disclaimers": [
