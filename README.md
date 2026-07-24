@@ -90,3 +90,11 @@ REWFB.substitute(template.message, REWFB.getSampleValues());
 - Resolved copy, TXT download, JSON backup export/import
 - Print and user-triggered WhatsApp sharing
 - Import validation, safe filenames and storage error feedback
+
+
+## Part 8 — Complete Chat Flow Builder
+- Ten flow step types with drag/drop and move controls
+- Inline step editor for messages, conditions, delays and actions
+- Duplicate, delete, reorder, save, import and JSON export
+- Complete conversation preview with internal-action cards
+- Browser-local flow autosave and starter preset
