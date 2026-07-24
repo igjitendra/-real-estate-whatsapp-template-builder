@@ -1,0 +1,2338 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-07-23",
+  "categories": [
+    {
+      "id": "lead-management",
+      "label": "Lead Management",
+      "count": 5
+    },
+    {
+      "id": "property-recommendation",
+      "label": "Property Recommendation",
+      "count": 5
+    },
+    {
+      "id": "appointments",
+      "label": "Appointments & Site Visits",
+      "count": 5
+    },
+    {
+      "id": "sales-conversion",
+      "label": "Sales Conversion",
+      "count": 5
+    },
+    {
+      "id": "loan-payment",
+      "label": "Loan & Payment",
+      "count": 3
+    },
+    {
+      "id": "customer-support",
+      "label": "Customer Support",
+      "count": 5
+    },
+    {
+      "id": "marketing",
+      "label": "Marketing Campaigns",
+      "count": 5
+    }
+  ],
+  "flows": [
+    {
+      "id": "new-lead-welcome",
+      "slug": "new-lead-welcome",
+      "order": 1,
+      "title": "New Lead Welcome",
+      "url": "flows/new-lead-welcome.html",
+      "categoryId": "lead-management",
+      "category": "Lead Management",
+      "leadStage": "Awareness",
+      "description": "Instantly welcome a new property lead and guide them to the correct enquiry path",
+      "priority": "mvp",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "LeadSource",
+        "ProjectName",
+        "BuyingPurpose",
+        "PropertyType",
+        "Location",
+        "Budget",
+        "PurchaseTimeline",
+        "ConsultantName"
+      ],
+      "steps": [
+        {
+          "id": "new-lead-welcome-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Instant welcome message",
+          "required": true
+        },
+        {
+          "id": "new-lead-welcome-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "Lead-source acknowledgement",
+          "required": true
+        },
+        {
+          "id": "new-lead-welcome-03",
+          "order": 3,
+          "type": "data-capture",
+          "title": "Project enquiry confirmation",
+          "required": true
+        },
+        {
+          "id": "new-lead-welcome-04",
+          "order": 4,
+          "type": "data-capture",
+          "title": "Language selection",
+          "required": false
+        },
+        {
+          "id": "new-lead-welcome-05",
+          "order": 5,
+          "type": "bot-message",
+          "title": "Main menu options",
+          "required": false
+        },
+        {
+          "id": "new-lead-welcome-06",
+          "order": 6,
+          "type": "human-handover",
+          "title": "Human agent handover",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "lead-qualification",
+      "slug": "lead-qualification",
+      "order": 2,
+      "title": "Lead Qualification",
+      "url": "flows/lead-qualification.html",
+      "categoryId": "lead-management",
+      "category": "Lead Management",
+      "leadStage": "Discovery",
+      "description": "Capture essential buying requirements and calculate a practical lead priority",
+      "priority": "mvp",
+      "estimatedMinutes": 6,
+      "variables": [
+        "CustomerName",
+        "LeadSource",
+        "ProjectName",
+        "BuyingPurpose",
+        "PropertyType",
+        "Location",
+        "Budget",
+        "PurchaseTimeline",
+        "ConsultantName"
+      ],
+      "steps": [
+        {
+          "id": "lead-qualification-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Customer name",
+          "required": true
+        },
+        {
+          "id": "lead-qualification-02",
+          "order": 2,
+          "type": "data-capture",
+          "title": "Buying purpose",
+          "required": true
+        },
+        {
+          "id": "lead-qualification-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "Property type",
+          "required": true
+        },
+        {
+          "id": "lead-qualification-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Preferred location",
+          "required": false
+        },
+        {
+          "id": "lead-qualification-05",
+          "order": 5,
+          "type": "data-capture",
+          "title": "Budget",
+          "required": false
+        },
+        {
+          "id": "lead-qualification-06",
+          "order": 6,
+          "type": "bot-message",
+          "title": "Configuration",
+          "required": false
+        },
+        {
+          "id": "lead-qualification-07",
+          "order": 7,
+          "type": "bot-message",
+          "title": "Purchase timeline",
+          "required": false
+        },
+        {
+          "id": "lead-qualification-08",
+          "order": 8,
+          "type": "bot-message",
+          "title": "Payment method",
+          "required": false
+        },
+        {
+          "id": "lead-qualification-09",
+          "order": 9,
+          "type": "crm-action",
+          "title": "Lead priority calculation",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "requirement-confirmation",
+      "slug": "requirement-confirmation",
+      "order": 3,
+      "title": "Requirement Confirmation",
+      "url": "flows/requirement-confirmation.html",
+      "categoryId": "lead-management",
+      "category": "Lead Management",
+      "leadStage": "Discovery",
+      "description": "Summarize captured requirements and let the customer confirm or correct them",
+      "priority": "mvp",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "LeadSource",
+        "ProjectName",
+        "BuyingPurpose",
+        "PropertyType",
+        "Location",
+        "Budget",
+        "PurchaseTimeline",
+        "ConsultantName"
+      ],
+      "steps": [
+        {
+          "id": "requirement-confirmation-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Collected information summary",
+          "required": true
+        },
+        {
+          "id": "requirement-confirmation-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "Confirm details",
+          "required": true
+        },
+        {
+          "id": "requirement-confirmation-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "Edit requirements",
+          "required": true
+        },
+        {
+          "id": "requirement-confirmation-04",
+          "order": 4,
+          "type": "human-handover",
+          "title": "Speak with an expert",
+          "required": false
+        },
+        {
+          "id": "requirement-confirmation-05",
+          "order": 5,
+          "type": "crm-action",
+          "title": "CRM-ready lead summary",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "lead-follow-up",
+      "slug": "lead-follow-up",
+      "order": 4,
+      "title": "Lead Follow-Up",
+      "url": "flows/lead-follow-up.html",
+      "categoryId": "lead-management",
+      "category": "Lead Management",
+      "leadStage": "Nurture",
+      "description": "Use respectful time-based follow-ups without overwhelming the customer",
+      "priority": "mvp",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "LeadSource",
+        "ProjectName",
+        "BuyingPurpose",
+        "PropertyType",
+        "Location",
+        "Budget",
+        "PurchaseTimeline",
+        "ConsultantName"
+      ],
+      "steps": [
+        {
+          "id": "lead-follow-up-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "15-minute follow-up",
+          "required": true
+        },
+        {
+          "id": "lead-follow-up-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "24-hour follow-up",
+          "required": true
+        },
+        {
+          "id": "lead-follow-up-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "Three-day follow-up",
+          "required": true
+        },
+        {
+          "id": "lead-follow-up-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Seven-day follow-up",
+          "required": false
+        },
+        {
+          "id": "lead-follow-up-05",
+          "order": 5,
+          "type": "bot-message",
+          "title": "Final follow-up",
+          "required": false
+        },
+        {
+          "id": "lead-follow-up-06",
+          "order": 6,
+          "type": "bot-message",
+          "title": "Opt-out message",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "lead-reactivation",
+      "slug": "lead-reactivation",
+      "order": 5,
+      "title": "Lead Reactivation",
+      "url": "flows/lead-reactivation.html",
+      "categoryId": "lead-management",
+      "category": "Lead Management",
+      "leadStage": "Reactivation",
+      "description": "Reconnect with older leads using relevant inventory and requirement updates",
+      "priority": "standard",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "LeadSource",
+        "ProjectName",
+        "BuyingPurpose",
+        "PropertyType",
+        "Location",
+        "Budget",
+        "PurchaseTimeline",
+        "ConsultantName"
+      ],
+      "steps": [
+        {
+          "id": "lead-reactivation-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Old lead re-engagement",
+          "required": true
+        },
+        {
+          "id": "lead-reactivation-02",
+          "order": 2,
+          "type": "data-capture",
+          "title": "Requirement status check",
+          "required": true
+        },
+        {
+          "id": "lead-reactivation-03",
+          "order": 3,
+          "type": "data-capture",
+          "title": "Budget update",
+          "required": true
+        },
+        {
+          "id": "lead-reactivation-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Location update",
+          "required": false
+        },
+        {
+          "id": "lead-reactivation-05",
+          "order": 5,
+          "type": "notification",
+          "title": "New inventory notification",
+          "required": false
+        },
+        {
+          "id": "lead-reactivation-06",
+          "order": 6,
+          "type": "bot-message",
+          "title": "Reactivation campaign messages",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "property-recommendation",
+      "slug": "property-recommendation",
+      "order": 6,
+      "title": "Property Recommendation",
+      "url": "flows/property-recommendation.html",
+      "categoryId": "property-recommendation",
+      "category": "Property Recommendation",
+      "leadStage": "Consideration",
+      "description": "Recommend projects matched to the customer’s location, budget and configuration",
+      "priority": "mvp",
+      "estimatedMinutes": 5,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "PropertyType",
+        "Location",
+        "Configuration",
+        "Size",
+        "Price",
+        "Amenities",
+        "BrochureLink",
+        "VideoLink",
+        "MapLink"
+      ],
+      "steps": [
+        {
+          "id": "property-recommendation-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Requirement-based recommendation",
+          "required": true
+        },
+        {
+          "id": "property-recommendation-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "Project details",
+          "required": true
+        },
+        {
+          "id": "property-recommendation-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "Configuration and size",
+          "required": true
+        },
+        {
+          "id": "property-recommendation-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Starting price",
+          "required": false
+        },
+        {
+          "id": "property-recommendation-05",
+          "order": 5,
+          "type": "bot-message",
+          "title": "Amenities",
+          "required": false
+        },
+        {
+          "id": "property-recommendation-06",
+          "order": 6,
+          "type": "bot-message",
+          "title": "Brochure button",
+          "required": false
+        },
+        {
+          "id": "property-recommendation-07",
+          "order": 7,
+          "type": "bot-message",
+          "title": "Location and video options",
+          "required": false
+        }
+      ],
+      "disclaimers": [
+        "Verify RERA, pricing, approvals and live inventory from official sources."
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "property-comparison",
+      "slug": "property-comparison",
+      "order": 7,
+      "title": "Property Comparison",
+      "url": "flows/property-comparison.html",
+      "categoryId": "property-recommendation",
+      "category": "Property Recommendation",
+      "leadStage": "Consideration",
+      "description": "Compare shortlisted properties in a concise decision-friendly format",
+      "priority": "standard",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "PropertyType",
+        "Location",
+        "Configuration",
+        "Size",
+        "Price",
+        "Amenities",
+        "BrochureLink",
+        "VideoLink",
+        "MapLink"
+      ],
+      "steps": [
+        {
+          "id": "property-comparison-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Compare two or more projects",
+          "required": true
+        },
+        {
+          "id": "property-comparison-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "Price comparison",
+          "required": true
+        },
+        {
+          "id": "property-comparison-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "Location comparison",
+          "required": true
+        },
+        {
+          "id": "property-comparison-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Possession comparison",
+          "required": false
+        },
+        {
+          "id": "property-comparison-05",
+          "order": 5,
+          "type": "bot-message",
+          "title": "Amenities comparison",
+          "required": false
+        },
+        {
+          "id": "property-comparison-06",
+          "order": 6,
+          "type": "human-handover",
+          "title": "Expert recommendation",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "price-offer",
+      "slug": "price-offer",
+      "order": 8,
+      "title": "Price and Offer",
+      "url": "flows/price-offer.html",
+      "categoryId": "property-recommendation",
+      "category": "Property Recommendation",
+      "leadStage": "Decision",
+      "description": "Explain pricing, payment plans and time-bound offers transparently",
+      "priority": "standard",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "PropertyType",
+        "Location",
+        "Configuration",
+        "Size",
+        "Price",
+        "Amenities",
+        "BrochureLink",
+        "VideoLink",
+        "MapLink"
+      ],
+      "steps": [
+        {
+          "id": "price-offer-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Starting price",
+          "required": true
+        },
+        {
+          "id": "price-offer-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "Unit-wise pricing",
+          "required": true
+        },
+        {
+          "id": "price-offer-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "Payment plan",
+          "required": true
+        },
+        {
+          "id": "price-offer-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Limited-period offer",
+          "required": false
+        },
+        {
+          "id": "price-offer-05",
+          "order": 5,
+          "type": "bot-message",
+          "title": "Discount request",
+          "required": false
+        },
+        {
+          "id": "price-offer-06",
+          "order": 6,
+          "type": "human-handover",
+          "title": "Negotiation callback",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "project-launch",
+      "slug": "project-launch",
+      "order": 9,
+      "title": "New Project Launch",
+      "url": "flows/project-launch.html",
+      "categoryId": "property-recommendation",
+      "category": "Property Recommendation",
+      "leadStage": "Awareness",
+      "description": "Introduce a new launch and capture priority interest",
+      "priority": "standard",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "PropertyType",
+        "Location",
+        "Configuration",
+        "Size",
+        "Price",
+        "Amenities",
+        "BrochureLink",
+        "VideoLink",
+        "MapLink"
+      ],
+      "steps": [
+        {
+          "id": "project-launch-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Pre-launch announcement",
+          "required": true
+        },
+        {
+          "id": "project-launch-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "Project highlights",
+          "required": true
+        },
+        {
+          "id": "project-launch-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "Early-bird benefits",
+          "required": true
+        },
+        {
+          "id": "project-launch-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Expression of interest",
+          "required": false
+        },
+        {
+          "id": "project-launch-05",
+          "order": 5,
+          "type": "bot-message",
+          "title": "Brochure request",
+          "required": false
+        },
+        {
+          "id": "project-launch-06",
+          "order": 6,
+          "type": "human-handover",
+          "title": "Priority callback",
+          "required": false
+        }
+      ],
+      "disclaimers": [
+        "Verify RERA, pricing, approvals and live inventory from official sources."
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "property-availability",
+      "slug": "property-availability",
+      "order": 10,
+      "title": "Property Availability",
+      "url": "flows/property-availability.html",
+      "categoryId": "property-recommendation",
+      "category": "Property Recommendation",
+      "leadStage": "Consideration",
+      "description": "Check customer preferences before confirming available inventory",
+      "priority": "standard",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "PropertyType",
+        "Location",
+        "Configuration",
+        "Size",
+        "Price",
+        "Amenities",
+        "BrochureLink",
+        "VideoLink",
+        "MapLink"
+      ],
+      "steps": [
+        {
+          "id": "property-availability-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Unit availability",
+          "required": true
+        },
+        {
+          "id": "property-availability-02",
+          "order": 2,
+          "type": "data-capture",
+          "title": "Floor preference",
+          "required": true
+        },
+        {
+          "id": "property-availability-03",
+          "order": 3,
+          "type": "data-capture",
+          "title": "Facing preference",
+          "required": true
+        },
+        {
+          "id": "property-availability-04",
+          "order": 4,
+          "type": "data-capture",
+          "title": "Size selection",
+          "required": false
+        },
+        {
+          "id": "property-availability-05",
+          "order": 5,
+          "type": "data-capture",
+          "title": "Inventory confirmation",
+          "required": false
+        },
+        {
+          "id": "property-availability-06",
+          "order": 6,
+          "type": "bot-message",
+          "title": "Reservation request",
+          "required": false
+        }
+      ],
+      "disclaimers": [
+        "Verify RERA, pricing, approvals and live inventory from official sources."
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "site-visit-booking",
+      "slug": "site-visit-booking",
+      "order": 11,
+      "title": "Site Visit Booking",
+      "url": "flows/site-visit-booking.html",
+      "categoryId": "appointments",
+      "category": "Appointments & Site Visits",
+      "leadStage": "Appointment",
+      "description": "Book a physical site visit or video tour with complete logistics",
+      "priority": "mvp",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "VisitDate",
+        "VisitTime",
+        "VisitorCount",
+        "ConsultantName",
+        "ConsultantPhone"
+      ],
+      "steps": [
+        {
+          "id": "site-visit-booking-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Physical visit or video tour",
+          "required": true
+        },
+        {
+          "id": "site-visit-booking-02",
+          "order": 2,
+          "type": "data-capture",
+          "title": "Date selection",
+          "required": true
+        },
+        {
+          "id": "site-visit-booking-03",
+          "order": 3,
+          "type": "data-capture",
+          "title": "Time-slot selection",
+          "required": true
+        },
+        {
+          "id": "site-visit-booking-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Number of visitors",
+          "required": false
+        },
+        {
+          "id": "site-visit-booking-05",
+          "order": 5,
+          "type": "bot-message",
+          "title": "Pickup requirement",
+          "required": false
+        },
+        {
+          "id": "site-visit-booking-06",
+          "order": 6,
+          "type": "data-capture",
+          "title": "Booking confirmation",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "site-visit-reminder",
+      "slug": "site-visit-reminder",
+      "order": 12,
+      "title": "Site Visit Reminder",
+      "url": "flows/site-visit-reminder.html",
+      "categoryId": "appointments",
+      "category": "Appointments & Site Visits",
+      "leadStage": "Appointment",
+      "description": "Reduce missed visits with timely reminders and flexible responses",
+      "priority": "mvp",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "VisitDate",
+        "VisitTime",
+        "VisitorCount",
+        "ConsultantName",
+        "ConsultantPhone"
+      ],
+      "steps": [
+        {
+          "id": "site-visit-reminder-01",
+          "order": 1,
+          "type": "notification",
+          "title": "One-day reminder",
+          "required": true
+        },
+        {
+          "id": "site-visit-reminder-02",
+          "order": 2,
+          "type": "notification",
+          "title": "Two-hour reminder",
+          "required": true
+        },
+        {
+          "id": "site-visit-reminder-03",
+          "order": 3,
+          "type": "data-capture",
+          "title": "Attendance confirmation",
+          "required": true
+        },
+        {
+          "id": "site-visit-reminder-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Reschedule",
+          "required": false
+        },
+        {
+          "id": "site-visit-reminder-05",
+          "order": 5,
+          "type": "bot-message",
+          "title": "Cancellation",
+          "required": false
+        },
+        {
+          "id": "site-visit-reminder-06",
+          "order": 6,
+          "type": "notification",
+          "title": "Late-arrival notification",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "site-visit-reschedule",
+      "slug": "site-visit-reschedule",
+      "order": 13,
+      "title": "Site Visit Rescheduling",
+      "url": "flows/site-visit-reschedule.html",
+      "categoryId": "appointments",
+      "category": "Appointments & Site Visits",
+      "leadStage": "Appointment",
+      "description": "Update an existing visit booking while preserving the original context",
+      "priority": "standard",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "VisitDate",
+        "VisitTime",
+        "VisitorCount",
+        "ConsultantName",
+        "ConsultantPhone"
+      ],
+      "steps": [
+        {
+          "id": "site-visit-reschedule-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Existing booking details",
+          "required": true
+        },
+        {
+          "id": "site-visit-reschedule-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "New date",
+          "required": true
+        },
+        {
+          "id": "site-visit-reschedule-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "New time",
+          "required": true
+        },
+        {
+          "id": "site-visit-reschedule-04",
+          "order": 4,
+          "type": "data-capture",
+          "title": "Reschedule reason",
+          "required": false
+        },
+        {
+          "id": "site-visit-reschedule-05",
+          "order": 5,
+          "type": "data-capture",
+          "title": "Updated confirmation",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "post-site-visit",
+      "slug": "post-site-visit",
+      "order": 14,
+      "title": "Post-Site-Visit",
+      "url": "flows/post-site-visit.html",
+      "categoryId": "appointments",
+      "category": "Appointments & Site Visits",
+      "leadStage": "Evaluation",
+      "description": "Collect visit feedback, understand objections and determine next intent",
+      "priority": "mvp",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "VisitDate",
+        "VisitTime",
+        "VisitorCount",
+        "ConsultantName",
+        "ConsultantPhone"
+      ],
+      "steps": [
+        {
+          "id": "post-site-visit-01",
+          "order": 1,
+          "type": "data-capture",
+          "title": "Visit feedback",
+          "required": true
+        },
+        {
+          "id": "post-site-visit-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "Property interest level",
+          "required": true
+        },
+        {
+          "id": "post-site-visit-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "Price objection",
+          "required": true
+        },
+        {
+          "id": "post-site-visit-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Family discussion",
+          "required": false
+        },
+        {
+          "id": "post-site-visit-05",
+          "order": 5,
+          "type": "bot-message",
+          "title": "Second-visit request",
+          "required": false
+        },
+        {
+          "id": "post-site-visit-06",
+          "order": 6,
+          "type": "bot-message",
+          "title": "Booking intent",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "consultation-booking",
+      "slug": "consultation-booking",
+      "order": 15,
+      "title": "Consultation Booking",
+      "url": "flows/consultation-booking.html",
+      "categoryId": "appointments",
+      "category": "Appointments & Site Visits",
+      "leadStage": "Appointment",
+      "description": "Schedule a focused phone or video consultation with an assigned expert",
+      "priority": "standard",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Location",
+        "VisitDate",
+        "VisitTime",
+        "VisitorCount",
+        "ConsultantName",
+        "ConsultantPhone"
+      ],
+      "steps": [
+        {
+          "id": "consultation-booking-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Phone consultation",
+          "required": true
+        },
+        {
+          "id": "consultation-booking-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "Video consultation",
+          "required": true
+        },
+        {
+          "id": "consultation-booking-03",
+          "order": 3,
+          "type": "human-handover",
+          "title": "Preferred callback time",
+          "required": true
+        },
+        {
+          "id": "consultation-booking-04",
+          "order": 4,
+          "type": "human-handover",
+          "title": "Consultant assignment",
+          "required": false
+        },
+        {
+          "id": "consultation-booking-05",
+          "order": 5,
+          "type": "data-capture",
+          "title": "Call confirmation",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "price-negotiation",
+      "slug": "price-negotiation",
+      "order": 16,
+      "title": "Price Negotiation",
+      "url": "flows/price-negotiation.html",
+      "categoryId": "sales-conversion",
+      "category": "Sales Conversion",
+      "leadStage": "Decision",
+      "description": "Handle price objections and escalate genuine offer requests",
+      "priority": "mvp",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Configuration",
+        "Price",
+        "BookingAmount",
+        "PaymentLink",
+        "ConsultantName",
+        "ConsultantPhone"
+      ],
+      "steps": [
+        {
+          "id": "price-negotiation-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Customer price objection",
+          "required": true
+        },
+        {
+          "id": "price-negotiation-02",
+          "order": 2,
+          "type": "data-capture",
+          "title": "Expected budget",
+          "required": true
+        },
+        {
+          "id": "price-negotiation-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "Offer request",
+          "required": true
+        },
+        {
+          "id": "price-negotiation-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Manager approval request",
+          "required": false
+        },
+        {
+          "id": "price-negotiation-05",
+          "order": 5,
+          "type": "bot-message",
+          "title": "Payment-plan alternative",
+          "required": false
+        },
+        {
+          "id": "price-negotiation-06",
+          "order": 6,
+          "type": "bot-message",
+          "title": "Negotiation call booking",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "unit-booking",
+      "slug": "unit-booking",
+      "order": 17,
+      "title": "Unit Booking",
+      "url": "flows/unit-booking.html",
+      "categoryId": "sales-conversion",
+      "category": "Sales Conversion",
+      "leadStage": "Conversion",
+      "description": "Collect booking choices and explain the approved booking process",
+      "priority": "standard",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Configuration",
+        "Price",
+        "BookingAmount",
+        "PaymentLink",
+        "ConsultantName",
+        "ConsultantPhone"
+      ],
+      "steps": [
+        {
+          "id": "unit-booking-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Selected property",
+          "required": true
+        },
+        {
+          "id": "unit-booking-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "Selected unit",
+          "required": true
+        },
+        {
+          "id": "unit-booking-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "Booking amount",
+          "required": true
+        },
+        {
+          "id": "unit-booking-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Required documents",
+          "required": false
+        },
+        {
+          "id": "unit-booking-05",
+          "order": 5,
+          "type": "bot-message",
+          "title": "Payment instructions",
+          "required": false
+        },
+        {
+          "id": "unit-booking-06",
+          "order": 6,
+          "type": "data-capture",
+          "title": "Booking confirmation",
+          "required": false
+        }
+      ],
+      "disclaimers": [
+        "Verify recipient, payment link and official account details before any payment."
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "token-payment",
+      "slug": "token-payment",
+      "order": 18,
+      "title": "Token Payment",
+      "url": "flows/token-payment.html",
+      "categoryId": "sales-conversion",
+      "category": "Sales Conversion",
+      "leadStage": "Conversion",
+      "description": "Guide customers through a verified token payment and receipt process",
+      "priority": "standard",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Configuration",
+        "Price",
+        "BookingAmount",
+        "PaymentLink",
+        "ConsultantName",
+        "ConsultantPhone"
+      ],
+      "steps": [
+        {
+          "id": "token-payment-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Token amount information",
+          "required": true
+        },
+        {
+          "id": "token-payment-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "Payment link",
+          "required": true
+        },
+        {
+          "id": "token-payment-03",
+          "order": 3,
+          "type": "notification",
+          "title": "Payment reminder",
+          "required": true
+        },
+        {
+          "id": "token-payment-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Payment verification",
+          "required": false
+        },
+        {
+          "id": "token-payment-05",
+          "order": 5,
+          "type": "data-capture",
+          "title": "Receipt confirmation",
+          "required": false
+        },
+        {
+          "id": "token-payment-06",
+          "order": 6,
+          "type": "bot-message",
+          "title": "Failed-payment assistance",
+          "required": false
+        }
+      ],
+      "disclaimers": [
+        "Verify recipient, payment link and official account details before any payment."
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "document-collection",
+      "slug": "document-collection",
+      "order": 19,
+      "title": "Document Collection",
+      "url": "flows/document-collection.html",
+      "categoryId": "sales-conversion",
+      "category": "Sales Conversion",
+      "leadStage": "Verification",
+      "description": "Coordinate required documents through a secure verified process",
+      "priority": "standard",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Configuration",
+        "Price",
+        "BookingAmount",
+        "PaymentLink",
+        "ConsultantName",
+        "ConsultantPhone"
+      ],
+      "steps": [
+        {
+          "id": "document-collection-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Identity proof",
+          "required": true
+        },
+        {
+          "id": "document-collection-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "Address proof",
+          "required": true
+        },
+        {
+          "id": "document-collection-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "PAN details",
+          "required": true
+        },
+        {
+          "id": "document-collection-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Income documents",
+          "required": false
+        },
+        {
+          "id": "document-collection-05",
+          "order": 5,
+          "type": "bot-message",
+          "title": "Application form",
+          "required": false
+        },
+        {
+          "id": "document-collection-06",
+          "order": 6,
+          "type": "bot-message",
+          "title": "Document verification status",
+          "required": false
+        }
+      ],
+      "disclaimers": [
+        "Use a secure verified upload system or approved human process for sensitive documents."
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "booking-confirmation",
+      "slug": "booking-confirmation",
+      "order": 20,
+      "title": "Booking Confirmation",
+      "url": "flows/booking-confirmation.html",
+      "categoryId": "sales-conversion",
+      "category": "Sales Conversion",
+      "leadStage": "Conversion",
+      "description": "Provide a clear booking summary and the immediate next steps",
+      "priority": "mvp",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Configuration",
+        "Price",
+        "BookingAmount",
+        "PaymentLink",
+        "ConsultantName",
+        "ConsultantPhone"
+      ],
+      "steps": [
+        {
+          "id": "booking-confirmation-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Customer information",
+          "required": true
+        },
+        {
+          "id": "booking-confirmation-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "Project and unit",
+          "required": true
+        },
+        {
+          "id": "booking-confirmation-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "Booking amount",
+          "required": true
+        },
+        {
+          "id": "booking-confirmation-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Payment status",
+          "required": false
+        },
+        {
+          "id": "booking-confirmation-05",
+          "order": 5,
+          "type": "bot-message",
+          "title": "Assigned consultant",
+          "required": false
+        },
+        {
+          "id": "booking-confirmation-06",
+          "order": 6,
+          "type": "bot-message",
+          "title": "Next steps",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "home-loan",
+      "slug": "home-loan",
+      "order": 21,
+      "title": "Home Loan Assistance",
+      "url": "flows/home-loan.html",
+      "categoryId": "loan-payment",
+      "category": "Loan & Payment",
+      "leadStage": "Finance",
+      "description": "Capture basic loan requirements and arrange an expert callback",
+      "priority": "standard",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Budget",
+        "PaymentMethod",
+        "PaymentLink",
+        "DueDate",
+        "ConsultantName"
+      ],
+      "steps": [
+        {
+          "id": "home-loan-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Loan requirement",
+          "required": true
+        },
+        {
+          "id": "home-loan-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "Approximate income range",
+          "required": true
+        },
+        {
+          "id": "home-loan-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "Employment type",
+          "required": true
+        },
+        {
+          "id": "home-loan-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Loan amount",
+          "required": false
+        },
+        {
+          "id": "home-loan-05",
+          "order": 5,
+          "type": "data-capture",
+          "title": "Bank preference",
+          "required": false
+        },
+        {
+          "id": "home-loan-06",
+          "order": 6,
+          "type": "human-handover",
+          "title": "Loan-expert callback",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "payment-plan",
+      "slug": "payment-plan",
+      "order": 22,
+      "title": "Payment Plan",
+      "url": "flows/payment-plan.html",
+      "categoryId": "loan-payment",
+      "category": "Loan & Payment",
+      "leadStage": "Finance",
+      "description": "Explain available payment structures and indicative EMI options",
+      "priority": "standard",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Budget",
+        "PaymentMethod",
+        "PaymentLink",
+        "DueDate",
+        "ConsultantName"
+      ],
+      "steps": [
+        {
+          "id": "payment-plan-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Construction-linked plan",
+          "required": true
+        },
+        {
+          "id": "payment-plan-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "Down-payment plan",
+          "required": true
+        },
+        {
+          "id": "payment-plan-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "Flexible payment plan",
+          "required": true
+        },
+        {
+          "id": "payment-plan-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "EMI estimate",
+          "required": false
+        },
+        {
+          "id": "payment-plan-05",
+          "order": 5,
+          "type": "human-handover",
+          "title": "Expert consultation",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "payment-reminder",
+      "slug": "payment-reminder",
+      "order": 23,
+      "title": "Payment Reminder",
+      "url": "flows/payment-reminder.html",
+      "categoryId": "loan-payment",
+      "category": "Loan & Payment",
+      "leadStage": "Payment",
+      "description": "Send clear, respectful and auditable payment reminders",
+      "priority": "standard",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "Budget",
+        "PaymentMethod",
+        "PaymentLink",
+        "DueDate",
+        "ConsultantName"
+      ],
+      "steps": [
+        {
+          "id": "payment-reminder-01",
+          "order": 1,
+          "type": "notification",
+          "title": "Upcoming payment reminder",
+          "required": true
+        },
+        {
+          "id": "payment-reminder-02",
+          "order": 2,
+          "type": "notification",
+          "title": "Due-date reminder",
+          "required": true
+        },
+        {
+          "id": "payment-reminder-03",
+          "order": 3,
+          "type": "notification",
+          "title": "Overdue notification",
+          "required": true
+        },
+        {
+          "id": "payment-reminder-04",
+          "order": 4,
+          "type": "data-capture",
+          "title": "Payment confirmation",
+          "required": false
+        },
+        {
+          "id": "payment-reminder-05",
+          "order": 5,
+          "type": "bot-message",
+          "title": "Accounts-team assistance",
+          "required": false
+        }
+      ],
+      "disclaimers": [
+        "Verify recipient, payment link and official account details before any payment."
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "general-enquiry",
+      "slug": "general-enquiry",
+      "order": 24,
+      "title": "General Property Enquiry",
+      "url": "flows/general-enquiry.html",
+      "categoryId": "customer-support",
+      "category": "Customer Support",
+      "leadStage": "Support",
+      "description": "Answer common project questions and provide human support",
+      "priority": "standard",
+      "estimatedMinutes": 5,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "RERANumber",
+        "PossessionStatus",
+        "ConsultantName",
+        "ConsultantPhone"
+      ],
+      "steps": [
+        {
+          "id": "general-enquiry-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Project information",
+          "required": true
+        },
+        {
+          "id": "general-enquiry-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "Location",
+          "required": true
+        },
+        {
+          "id": "general-enquiry-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "Price",
+          "required": true
+        },
+        {
+          "id": "general-enquiry-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Amenities",
+          "required": false
+        },
+        {
+          "id": "general-enquiry-05",
+          "order": 5,
+          "type": "bot-message",
+          "title": "Possession",
+          "required": false
+        },
+        {
+          "id": "general-enquiry-06",
+          "order": 6,
+          "type": "bot-message",
+          "title": "Brochure",
+          "required": false
+        },
+        {
+          "id": "general-enquiry-07",
+          "order": 7,
+          "type": "bot-message",
+          "title": "Human support",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "property-faq",
+      "slug": "property-faq",
+      "order": 25,
+      "title": "Property FAQ",
+      "url": "flows/property-faq.html",
+      "categoryId": "customer-support",
+      "category": "Customer Support",
+      "leadStage": "Support",
+      "description": "Provide consistent answers to frequently asked project questions",
+      "priority": "standard",
+      "estimatedMinutes": 5,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "RERANumber",
+        "PossessionStatus",
+        "ConsultantName",
+        "ConsultantPhone"
+      ],
+      "steps": [
+        {
+          "id": "property-faq-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Project approval",
+          "required": true
+        },
+        {
+          "id": "property-faq-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "RERA information",
+          "required": true
+        },
+        {
+          "id": "property-faq-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "Maintenance charges",
+          "required": true
+        },
+        {
+          "id": "property-faq-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Parking",
+          "required": false
+        },
+        {
+          "id": "property-faq-05",
+          "order": 5,
+          "type": "bot-message",
+          "title": "Possession timeline",
+          "required": false
+        },
+        {
+          "id": "property-faq-06",
+          "order": 6,
+          "type": "bot-message",
+          "title": "Loan availability",
+          "required": false
+        },
+        {
+          "id": "property-faq-07",
+          "order": 7,
+          "type": "bot-message",
+          "title": "Booking cancellation",
+          "required": false
+        }
+      ],
+      "disclaimers": [
+        "Verify RERA, pricing, approvals and live inventory from official sources."
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "customer-support",
+      "slug": "customer-support",
+      "order": 26,
+      "title": "Customer Support",
+      "url": "flows/customer-support.html",
+      "categoryId": "customer-support",
+      "category": "Customer Support",
+      "leadStage": "Retention",
+      "description": "Route existing customers to the appropriate support path",
+      "priority": "standard",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "RERANumber",
+        "PossessionStatus",
+        "ConsultantName",
+        "ConsultantPhone"
+      ],
+      "steps": [
+        {
+          "id": "customer-support-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Existing booking support",
+          "required": true
+        },
+        {
+          "id": "customer-support-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "Payment issue",
+          "required": true
+        },
+        {
+          "id": "customer-support-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "Document issue",
+          "required": true
+        },
+        {
+          "id": "customer-support-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Construction update",
+          "required": false
+        },
+        {
+          "id": "customer-support-05",
+          "order": 5,
+          "type": "bot-message",
+          "title": "Possession enquiry",
+          "required": false
+        },
+        {
+          "id": "customer-support-06",
+          "order": 6,
+          "type": "bot-message",
+          "title": "Complaint registration",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "possession-update",
+      "slug": "possession-update",
+      "order": 27,
+      "title": "Possession Update",
+      "url": "flows/possession-update.html",
+      "categoryId": "customer-support",
+      "category": "Customer Support",
+      "leadStage": "Retention",
+      "description": "Share transparent construction and possession milestones",
+      "priority": "standard",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "RERANumber",
+        "PossessionStatus",
+        "ConsultantName",
+        "ConsultantPhone"
+      ],
+      "steps": [
+        {
+          "id": "possession-update-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Construction status",
+          "required": true
+        },
+        {
+          "id": "possession-update-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "Expected possession",
+          "required": true
+        },
+        {
+          "id": "possession-update-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "Inspection schedule",
+          "required": true
+        },
+        {
+          "id": "possession-update-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Pending documents",
+          "required": false
+        },
+        {
+          "id": "possession-update-05",
+          "order": 5,
+          "type": "bot-message",
+          "title": "Final payment",
+          "required": false
+        },
+        {
+          "id": "possession-update-06",
+          "order": 6,
+          "type": "human-handover",
+          "title": "Key-handover process",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "cancellation-refund",
+      "slug": "cancellation-refund",
+      "order": 28,
+      "title": "Cancellation and Refund",
+      "url": "flows/cancellation-refund.html",
+      "categoryId": "customer-support",
+      "category": "Customer Support",
+      "leadStage": "Support",
+      "description": "Capture cancellation context and escalate policy-sensitive requests",
+      "priority": "standard",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "ProjectName",
+        "RERANumber",
+        "PossessionStatus",
+        "ConsultantName",
+        "ConsultantPhone"
+      ],
+      "steps": [
+        {
+          "id": "cancellation-refund-01",
+          "order": 1,
+          "type": "data-capture",
+          "title": "Cancellation reason",
+          "required": true
+        },
+        {
+          "id": "cancellation-refund-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "Booking details",
+          "required": true
+        },
+        {
+          "id": "cancellation-refund-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "Policy acknowledgement",
+          "required": true
+        },
+        {
+          "id": "cancellation-refund-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Support ticket",
+          "required": false
+        },
+        {
+          "id": "cancellation-refund-05",
+          "order": 5,
+          "type": "human-handover",
+          "title": "Human escalation",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "festive-offer",
+      "slug": "festive-offer",
+      "order": 29,
+      "title": "Festive Offer",
+      "url": "flows/festive-offer.html",
+      "categoryId": "marketing",
+      "category": "Marketing Campaigns",
+      "leadStage": "Campaign",
+      "description": "Promote a compliant time-bound festive offer with a clear CTA",
+      "priority": "standard",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "CompanyName",
+        "ProjectName",
+        "Location",
+        "Price",
+        "OfferValidity",
+        "BrochureLink",
+        "ConsultantPhone"
+      ],
+      "steps": [
+        {
+          "id": "festive-offer-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Festival greeting",
+          "required": true
+        },
+        {
+          "id": "festive-offer-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "Special offer",
+          "required": true
+        },
+        {
+          "id": "festive-offer-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "Offer validity",
+          "required": true
+        },
+        {
+          "id": "festive-offer-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Eligible properties",
+          "required": false
+        },
+        {
+          "id": "festive-offer-05",
+          "order": 5,
+          "type": "human-handover",
+          "title": "Callback request",
+          "required": false
+        },
+        {
+          "id": "festive-offer-06",
+          "order": 6,
+          "type": "bot-message",
+          "title": "Site visit CTA",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "open-house",
+      "slug": "open-house",
+      "order": 30,
+      "title": "Open House Invitation",
+      "url": "flows/open-house.html",
+      "categoryId": "marketing",
+      "category": "Marketing Campaigns",
+      "leadStage": "Campaign",
+      "description": "Invite prospects to an open house and manage attendance",
+      "priority": "standard",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "CompanyName",
+        "ProjectName",
+        "Location",
+        "Price",
+        "OfferValidity",
+        "BrochureLink",
+        "ConsultantPhone"
+      ],
+      "steps": [
+        {
+          "id": "open-house-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Event announcement",
+          "required": true
+        },
+        {
+          "id": "open-house-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "Date and location",
+          "required": true
+        },
+        {
+          "id": "open-house-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "Registration",
+          "required": true
+        },
+        {
+          "id": "open-house-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Guest count",
+          "required": false
+        },
+        {
+          "id": "open-house-05",
+          "order": 5,
+          "type": "notification",
+          "title": "Reminder",
+          "required": false
+        },
+        {
+          "id": "open-house-06",
+          "order": 6,
+          "type": "data-capture",
+          "title": "Attendance confirmation",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "property-webinar",
+      "slug": "property-webinar",
+      "order": 31,
+      "title": "Property Webinar",
+      "url": "flows/property-webinar.html",
+      "categoryId": "marketing",
+      "category": "Marketing Campaigns",
+      "leadStage": "Campaign",
+      "description": "Register prospects for a property webinar and continue follow-up",
+      "priority": "standard",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "CompanyName",
+        "ProjectName",
+        "Location",
+        "Price",
+        "OfferValidity",
+        "BrochureLink",
+        "ConsultantPhone"
+      ],
+      "steps": [
+        {
+          "id": "property-webinar-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Webinar topic",
+          "required": true
+        },
+        {
+          "id": "property-webinar-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "Registration",
+          "required": true
+        },
+        {
+          "id": "property-webinar-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "Schedule",
+          "required": true
+        },
+        {
+          "id": "property-webinar-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Meeting link",
+          "required": false
+        },
+        {
+          "id": "property-webinar-05",
+          "order": 5,
+          "type": "notification",
+          "title": "Reminder",
+          "required": false
+        },
+        {
+          "id": "property-webinar-06",
+          "order": 6,
+          "type": "bot-message",
+          "title": "Post-webinar follow-up",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "referral-campaign",
+      "slug": "referral-campaign",
+      "order": 32,
+      "title": "Referral Campaign",
+      "url": "flows/referral-campaign.html",
+      "categoryId": "marketing",
+      "category": "Marketing Campaigns",
+      "leadStage": "Advocacy",
+      "description": "Invite consent-based referrals and communicate reward terms",
+      "priority": "standard",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "CompanyName",
+        "ProjectName",
+        "Location",
+        "Price",
+        "OfferValidity",
+        "BrochureLink",
+        "ConsultantPhone"
+      ],
+      "steps": [
+        {
+          "id": "referral-campaign-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Referral invitation",
+          "required": true
+        },
+        {
+          "id": "referral-campaign-02",
+          "order": 2,
+          "type": "bot-message",
+          "title": "Friend’s details",
+          "required": true
+        },
+        {
+          "id": "referral-campaign-03",
+          "order": 3,
+          "type": "data-capture",
+          "title": "Consent confirmation",
+          "required": true
+        },
+        {
+          "id": "referral-campaign-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Referral status",
+          "required": false
+        },
+        {
+          "id": "referral-campaign-05",
+          "order": 5,
+          "type": "bot-message",
+          "title": "Reward information",
+          "required": false
+        }
+      ],
+      "disclaimers": [],
+      "status": "planned"
+    },
+    {
+      "id": "investor-campaign",
+      "slug": "investor-campaign",
+      "order": 33,
+      "title": "Investor Campaign",
+      "url": "flows/investor-campaign.html",
+      "categoryId": "marketing",
+      "category": "Marketing Campaigns",
+      "leadStage": "Campaign",
+      "description": "Understand investor preferences and arrange a suitable expert discussion",
+      "priority": "standard",
+      "estimatedMinutes": 4,
+      "variables": [
+        "CustomerName",
+        "CompanyName",
+        "ProjectName",
+        "Location",
+        "Price",
+        "OfferValidity",
+        "BrochureLink",
+        "ConsultantPhone"
+      ],
+      "steps": [
+        {
+          "id": "investor-campaign-01",
+          "order": 1,
+          "type": "bot-message",
+          "title": "Investment objective",
+          "required": true
+        },
+        {
+          "id": "investor-campaign-02",
+          "order": 2,
+          "type": "data-capture",
+          "title": "Budget",
+          "required": true
+        },
+        {
+          "id": "investor-campaign-03",
+          "order": 3,
+          "type": "bot-message",
+          "title": "Expected holding period",
+          "required": true
+        },
+        {
+          "id": "investor-campaign-04",
+          "order": 4,
+          "type": "bot-message",
+          "title": "Rental-yield interest",
+          "required": false
+        },
+        {
+          "id": "investor-campaign-05",
+          "order": 5,
+          "type": "bot-message",
+          "title": "Project recommendation",
+          "required": false
+        },
+        {
+          "id": "investor-campaign-06",
+          "order": 6,
+          "type": "human-handover",
+          "title": "Expert call",
+          "required": false
+        }
+      ],
+      "disclaimers": [
+        "Returns, rental yield and property appreciation are not guaranteed."
+      ],
+      "status": "planned"
+    }
+  ]
+}

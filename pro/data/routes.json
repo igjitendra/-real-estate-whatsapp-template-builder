@@ -1,0 +1,207 @@
+[
+  {
+    "title": "Home",
+    "path": "index.html",
+    "category": "main"
+  },
+  {
+    "title": "Template Maker",
+    "path": "template-maker.html",
+    "category": "main"
+  },
+  {
+    "title": "All Templates",
+    "path": "templates.html",
+    "category": "main"
+  },
+  {
+    "title": "Chat Flows",
+    "path": "chat-flows.html",
+    "category": "main"
+  },
+  {
+    "title": "About",
+    "path": "about.html",
+    "category": "main"
+  },
+  {
+    "title": "Contact",
+    "path": "contact.html",
+    "category": "main"
+  },
+  {
+    "title": "Privacy Policy",
+    "path": "privacy-policy.html",
+    "category": "legal"
+  },
+  {
+    "title": "Disclaimer",
+    "path": "disclaimer.html",
+    "category": "legal"
+  },
+  {
+    "title": "New Lead Welcome",
+    "path": "flows/new-lead-welcome.html",
+    "category": "Lead Management"
+  },
+  {
+    "title": "Lead Qualification",
+    "path": "flows/lead-qualification.html",
+    "category": "Lead Management"
+  },
+  {
+    "title": "Requirement Confirmation",
+    "path": "flows/requirement-confirmation.html",
+    "category": "Lead Management"
+  },
+  {
+    "title": "Lead Follow-Up",
+    "path": "flows/lead-follow-up.html",
+    "category": "Lead Management"
+  },
+  {
+    "title": "Lead Reactivation",
+    "path": "flows/lead-reactivation.html",
+    "category": "Lead Management"
+  },
+  {
+    "title": "Property Recommendation",
+    "path": "flows/property-recommendation.html",
+    "category": "Property Recommendation"
+  },
+  {
+    "title": "Property Comparison",
+    "path": "flows/property-comparison.html",
+    "category": "Property Recommendation"
+  },
+  {
+    "title": "Price and Offer",
+    "path": "flows/price-offer.html",
+    "category": "Property Recommendation"
+  },
+  {
+    "title": "New Project Launch",
+    "path": "flows/project-launch.html",
+    "category": "Property Recommendation"
+  },
+  {
+    "title": "Property Availability",
+    "path": "flows/property-availability.html",
+    "category": "Property Recommendation"
+  },
+  {
+    "title": "Site Visit Booking",
+    "path": "flows/site-visit-booking.html",
+    "category": "Appointments"
+  },
+  {
+    "title": "Site Visit Reminder",
+    "path": "flows/site-visit-reminder.html",
+    "category": "Appointments"
+  },
+  {
+    "title": "Site Visit Rescheduling",
+    "path": "flows/site-visit-reschedule.html",
+    "category": "Appointments"
+  },
+  {
+    "title": "Post-Site-Visit",
+    "path": "flows/post-site-visit.html",
+    "category": "Appointments"
+  },
+  {
+    "title": "Consultation Booking",
+    "path": "flows/consultation-booking.html",
+    "category": "Appointments"
+  },
+  {
+    "title": "Price Negotiation",
+    "path": "flows/price-negotiation.html",
+    "category": "Sales Conversion"
+  },
+  {
+    "title": "Unit Booking",
+    "path": "flows/unit-booking.html",
+    "category": "Sales Conversion"
+  },
+  {
+    "title": "Token Payment",
+    "path": "flows/token-payment.html",
+    "category": "Sales Conversion"
+  },
+  {
+    "title": "Document Collection",
+    "path": "flows/document-collection.html",
+    "category": "Sales Conversion"
+  },
+  {
+    "title": "Booking Confirmation",
+    "path": "flows/booking-confirmation.html",
+    "category": "Sales Conversion"
+  },
+  {
+    "title": "Home Loan Assistance",
+    "path": "flows/home-loan.html",
+    "category": "Loan and Payment"
+  },
+  {
+    "title": "Payment Plan",
+    "path": "flows/payment-plan.html",
+    "category": "Loan and Payment"
+  },
+  {
+    "title": "Payment Reminder",
+    "path": "flows/payment-reminder.html",
+    "category": "Loan and Payment"
+  },
+  {
+    "title": "General Property Enquiry",
+    "path": "flows/general-enquiry.html",
+    "category": "Customer Support"
+  },
+  {
+    "title": "Property FAQ",
+    "path": "flows/property-faq.html",
+    "category": "Customer Support"
+  },
+  {
+    "title": "Customer Support",
+    "path": "flows/customer-support.html",
+    "category": "Customer Support"
+  },
+  {
+    "title": "Possession Update",
+    "path": "flows/possession-update.html",
+    "category": "Customer Support"
+  },
+  {
+    "title": "Cancellation and Refund",
+    "path": "flows/cancellation-refund.html",
+    "category": "Customer Support"
+  },
+  {
+    "title": "Festive Offer",
+    "path": "flows/festive-offer.html",
+    "category": "Marketing"
+  },
+  {
+    "title": "Open House",
+    "path": "flows/open-house.html",
+    "category": "Marketing"
+  },
+  {
+    "title": "Property Webinar",
+    "path": "flows/property-webinar.html",
+    "category": "Marketing"
+  },
+  {
+    "title": "Referral Campaign",
+    "path": "flows/referral-campaign.html",
+    "category": "Marketing"
+  },
+  {
+    "title": "Investor Campaign",
+    "path": "flows/investor-campaign.html",
+    "category": "Marketing"
+  }
+]
