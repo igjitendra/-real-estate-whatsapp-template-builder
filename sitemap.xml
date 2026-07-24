@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/sitemap/0.9">
 <url><loc>https://realestatewhatsappflowbuilder.com/about.html</loc><changefreq>monthly</changefreq></url>
+<url><loc>https://realestatewhatsappflowbuilder.com/blog.html</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://realestatewhatsappflowbuilder.com/blogs/real-estate-whatsapp-follow-up-flow.html</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://realestatewhatsappflowbuilder.com/blogs/whatsapp-template-approval-guide.html</loc><changefreq>weekly</changefreq></url>
 <url><loc>https://realestatewhatsappflowbuilder.com/chat-flows.html</loc><changefreq>monthly</changefreq></url>
 <url><loc>https://realestatewhatsappflowbuilder.com/contact.html</loc><changefreq>monthly</changefreq></url>
 <url><loc>https://realestatewhatsappflowbuilder.com/disclaimer.html</loc><changefreq>monthly</changefreq></url>
@@ -38,7 +41,10 @@
 <url><loc>https://realestatewhatsappflowbuilder.com/flows/token-payment.html</loc><changefreq>monthly</changefreq></url>
 <url><loc>https://realestatewhatsappflowbuilder.com/flows/unit-booking.html</loc><changefreq>monthly</changefreq></url>
 <url><loc>https://realestatewhatsappflowbuilder.com/</loc><changefreq>monthly</changefreq></url>
+<url><loc>https://realestatewhatsappflowbuilder.com/marketing-templates.html</loc><changefreq>monthly</changefreq></url>
+<url><loc>https://realestatewhatsappflowbuilder.com/premium-templates.html</loc><changefreq>monthly</changefreq></url>
 <url><loc>https://realestatewhatsappflowbuilder.com/privacy-policy.html</loc><changefreq>monthly</changefreq></url>
 <url><loc>https://realestatewhatsappflowbuilder.com/template-maker.html</loc><changefreq>monthly</changefreq></url>
 <url><loc>https://realestatewhatsappflowbuilder.com/templates.html</loc><changefreq>monthly</changefreq></url>
+<url><loc>https://realestatewhatsappflowbuilder.com/utility-templates.html</loc><changefreq>monthly</changefreq></url>
 </urlset>

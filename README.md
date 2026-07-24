@@ -129,3 +129,25 @@ REWFB.substitute(template.message, REWFB.getSampleValues());
 - Sitemap, robots, manifest and deployment security headers
 - Accessibility improvements and local-link validation
 - Complete visual flow builder and logic simulator restored
+
+
+## Approval-Ready Flow Upgrade
+- All 33 flows rebuilt as copy-paste WhatsApp Business template journeys
+- Quick Reply and CTA buttons with next-message mappings
+- Named-variable and Meta-numbered-variable views
+- Copy full step/flow, TXT and JSON exports, interactive click-path preview
+- Approval checklists, samples, category guidance and compliance warnings
+
+
+## Premium Template Category Pages
+- Comprehensive premium Marketing, Utility and All Real Estate template pages
+- Search, use-case filters, favorites, WhatsApp preview and Meta submission copy
+- Clear Quick Replies, CTA buttons, named variables and numbered Meta variables
+- Conversion-focused wording with consent, verification and non-guarantee safeguards
+
+
+## Blog and Learning Center
+- Root `blog.html` listing with search, categories, saved posts and reading progress
+- Dedicated `blogs/` folder with separate CSS, JavaScript, images and data
+- Two complete sample articles, reusable upload template, README and RSS feed
+- Article TOC, reading progress, font controls, copy blocks, sharing, printing and feedback

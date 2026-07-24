@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://realestatewhatsappflowbuilder.com/sitemap.xml
