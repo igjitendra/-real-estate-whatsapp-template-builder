@@ -155,3 +155,5 @@
 
   renderVariableDialog(''); loadTemplate();
 })();
+/* Part 10: open a library template in the editor */
+(()=>{const id=new URLSearchParams(location.search).get('template');if(!id||!window.REWFB)return;setTimeout(()=>{const t=window.REWFB.getTemplate(id);if(!t)return;const category=document.querySelector('#templateCategory'),language=document.querySelector('#templateLanguage'),title=document.querySelector('#messageTitle'),editor=document.querySelector('.message-area');if(category){category.value=t.categoryId;category.dispatchEvent(new Event('change',{bubbles:true}))}setTimeout(()=>{if(language){language.value=t.language;language.dispatchEvent(new Event('change',{bubbles:true}))}setTimeout(()=>{if(title){title.value=t.title;title.dispatchEvent(new Event('input',{bubbles:true}))}if(editor){editor.value=t.message;editor.dispatchEvent(new Event('input',{bubbles:true}))}},80)},80)},350)})();

@@ -85,16 +85,19 @@ REWFB.substitute(template.message, REWFB.getSampleValues());
 
 
 ## Part 7 — Save, Copy, Download and Import
-- Browser-local draft save and autosave
-- Open, search, rename, duplicate, delete and clear saved drafts
-- Resolved copy, TXT download, JSON backup export/import
-- Print and user-triggered WhatsApp sharing
-- Import validation, safe filenames and storage error feedback
+- Browser-local draft creation, update and post-save autosave
+- Saved Drafts manager with open, rename, duplicate, delete, search and clear-all
+- Resolved message copy with missing-variable warnings
+- TXT download and versioned JSON backup export
+- Validated JSON import with 1 MB safety limit
+- Print layout and user-triggered WhatsApp sharing
+- Safe filenames, URL encoding, storage error handling and accessible toast feedback
+- No automatic external transmission of form or draft data
 
 
-## Part 8 — Complete Chat Flow Builder
-- Ten flow step types with drag/drop and move controls
-- Inline step editor for messages, conditions, delays and actions
-- Duplicate, delete, reorder, save, import and JSON export
-- Complete conversation preview with internal-action cards
-- Browser-local flow autosave and starter preset
+## Part 10 — Template Library
+- Searchable catalog of all 24 professional templates
+- Category, language, length and property-type filters
+- Featured, title and lead-stage sorting
+- Browser-local favorites, copy action and WhatsApp-style preview
+- Direct template handoff into Template Maker
