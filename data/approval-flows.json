@@ -1,5 +1,5 @@
 {
-  "version": "4.0-human-reviewed",
+  "version": "4.2-flow-02-human-reviewed",
   "purpose": "WhatsApp Business template approval and copy-paste flow library",
   "flows": [
     {
@@ -10,116 +10,36 @@
       "url": "flows/new-lead-welcome.html",
       "category": "Lead Management",
       "leadStage": "Awareness",
-      "description": "Instantly welcome a new property lead and guide them to the correct enquiry path",
-      "estimatedMinutes": 4,
+      "description": "Welcome a new real-estate lead, understand intent, capture requirements and route them to verified properties or a human advisor.",
+      "estimatedMinutes": 3,
       "steps": [
         {
           "id": "new-lead-welcome-01",
           "order": 1,
-          "title": "Instant welcome message",
+          "title": "Welcome and intent",
           "type": "bot-message",
           "required": true,
           "approvalRequired": true,
-          "templateName": "new_lead_welcome_01_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "templateName": "new_lead_welcome_01_v2",
+          "suggestedCategory": "Utility (customer-initiated enquiry)",
+          "categoryNote": "Use only after the customer starts or expects this conversation.",
           "language": "English",
-          "header": "New Lead Welcome",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with instant welcome message for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with instant welcome message for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
+          "header": "Property enquiry",
+          "bodyNamed": "Hi {{CustomerName}} 👋\n\nThanks for contacting us about {{ProjectName}}. What would you like to do today?",
+          "bodyMeta": "Hi {{1}} 👋\n\nThanks for contacting us about {{2}}. What would you like to do today?",
+          "footer": "Reply MENU anytime to restart",
           "quickReplies": [
             {
-              "label": "Continue",
+              "label": "Find a Property",
               "next": 1
             },
             {
-              "label": "View Options",
-              "next": 1
-            },
-            {
-              "label": "Talk to Advisor",
-              "next": 1
-            }
-          ],
-          "ctaButtons": [],
-          "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
-          },
-          "samples": {
-            "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
-          },
-          "internalInstruction": "Internal workflow action: Instant welcome message"
-        },
-        {
-          "id": "new-lead-welcome-02",
-          "order": 2,
-          "title": "Lead-source acknowledgement",
-          "type": "bot-message",
-          "required": true,
-          "approvalRequired": true,
-          "templateName": "new_lead_welcome_02_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
-          "language": "English",
-          "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with lead-source acknowledgement for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with lead-source acknowledgement for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
-          "quickReplies": [
-            {
-              "label": "Continue",
-              "next": 2
-            },
-            {
-              "label": "View Options",
+              "label": "Explore Project",
               "next": 2
             },
             {
               "label": "Talk to Advisor",
-              "next": 2
-            }
-          ],
-          "ctaButtons": [],
-          "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
-          },
-          "samples": {
-            "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
-          },
-          "internalInstruction": "Internal workflow action: Lead-source acknowledgement"
-        },
-        {
-          "id": "new-lead-welcome-03",
-          "order": 3,
-          "title": "Project enquiry confirmation",
-          "type": "data-capture",
-          "required": true,
-          "approvalRequired": true,
-          "templateName": "new_lead_welcome_03_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
-          "language": "English",
-          "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with project enquiry confirmation for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with project enquiry confirmation for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
-          "quickReplies": [
-            {
-              "label": "Confirm Details",
-              "next": 3
-            },
-            {
-              "label": "Edit Details",
-              "next": 3
-            },
-            {
-              "label": "Talk to Advisor",
-              "next": 3
+              "next": 8
             }
           ],
           "ctaButtons": [
@@ -137,202 +57,35 @@
             "CustomerName": "Rahul Sharma",
             "ProjectName": "Greenview Residences"
           },
-          "internalInstruction": "Capture: Project enquiry confirmation"
+          "internalInstruction": "Flow action: Welcome and intent"
         },
         {
-          "id": "new-lead-welcome-04",
-          "order": 4,
-          "title": "Language selection",
-          "type": "data-capture",
-          "required": false,
-          "approvalRequired": true,
-          "templateName": "new_lead_welcome_04_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
-          "language": "English",
-          "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with language selection for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with language selection for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
-          "quickReplies": [
-            {
-              "label": "English",
-              "next": 4
-            },
-            {
-              "label": "हिंदी",
-              "next": 4
-            },
-            {
-              "label": "Hinglish",
-              "next": 4
-            }
-          ],
-          "ctaButtons": [],
-          "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
-          },
-          "samples": {
-            "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
-          },
-          "internalInstruction": "Capture: Language selection"
-        },
-        {
-          "id": "new-lead-welcome-05",
-          "order": 5,
-          "title": "Main menu options",
-          "type": "bot-message",
-          "required": false,
-          "approvalRequired": true,
-          "templateName": "new_lead_welcome_05_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
-          "language": "English",
-          "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with main menu options for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with main menu options for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
-          "quickReplies": [
-            {
-              "label": "Continue",
-              "next": 5
-            },
-            {
-              "label": "View Options",
-              "next": 5
-            },
-            {
-              "label": "Talk to Advisor",
-              "next": 5
-            }
-          ],
-          "ctaButtons": [],
-          "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
-          },
-          "samples": {
-            "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
-          },
-          "internalInstruction": "Internal workflow action: Main menu options"
-        },
-        {
-          "id": "new-lead-welcome-06",
-          "order": 6,
-          "title": "Human agent handover",
-          "type": "human-handover",
-          "required": false,
-          "approvalRequired": true,
-          "templateName": "new_lead_welcome_06_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
-          "language": "English",
-          "header": "",
-          "bodyNamed": "Thank you, {{CustomerName}}.\n\nYour new lead welcome request for {{ProjectName}} has been recorded. Our team will use only verified information for the next step.",
-          "bodyMeta": "Thank you, {{1}}.\n\nYour new lead welcome request for {{2}} has been recorded. Our team will use only verified information for the next step.",
-          "footer": "Your verified business name",
-          "quickReplies": [],
-          "ctaButtons": [
-            {
-              "type": "PHONE",
-              "label": "Call Advisor",
-              "value": "tel:[VERIFIED_PHONE]"
-            }
-          ],
-          "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
-          },
-          "samples": {
-            "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
-          },
-          "internalInstruction": "Handover: Human agent handover"
-        }
-      ],
-      "disclaimers": []
-    },
-    {
-      "id": "lead-qualification",
-      "slug": "lead-qualification",
-      "order": 2,
-      "title": "Lead Qualification",
-      "url": "flows/lead-qualification.html",
-      "category": "Lead Management",
-      "leadStage": "Discovery",
-      "description": "Capture essential buying requirements and calculate a practical lead priority",
-      "estimatedMinutes": 6,
-      "steps": [
-        {
-          "id": "lead-qualification-01",
-          "order": 1,
-          "title": "Customer name",
-          "type": "bot-message",
-          "required": true,
-          "approvalRequired": true,
-          "templateName": "lead_qualification_01_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
-          "language": "English",
-          "header": "Lead Qualification",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with customer name for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with customer name for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
-          "quickReplies": [
-            {
-              "label": "Continue",
-              "next": 1
-            },
-            {
-              "label": "View Options",
-              "next": 1
-            },
-            {
-              "label": "Talk to Advisor",
-              "next": 1
-            }
-          ],
-          "ctaButtons": [],
-          "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
-          },
-          "samples": {
-            "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
-          },
-          "internalInstruction": "Internal workflow action: Customer name"
-        },
-        {
-          "id": "lead-qualification-02",
+          "id": "new-lead-welcome-02",
           "order": 2,
           "title": "Buying purpose",
           "type": "data-capture",
           "required": true,
           "approvalRequired": true,
-          "templateName": "lead_qualification_02_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "templateName": "new_lead_welcome_02_v2",
+          "suggestedCategory": "Utility (customer-initiated enquiry)",
+          "categoryNote": "Use only after the customer starts or expects this conversation.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with buying purpose for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with buying purpose for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
+          "bodyNamed": "Great, {{CustomerName}}. Is the property for your own use, investment, or rental income?",
+          "bodyMeta": "Great, {{1}}. Is the property for your own use, investment, or rental income?",
+          "footer": "Reply MENU anytime to restart",
           "quickReplies": [
             {
               "label": "Self Use",
-              "next": 2
+              "next": 3
             },
             {
               "label": "Investment",
-              "next": 2
+              "next": 3
             },
             {
               "label": "Rental Income",
-              "next": 2
+              "next": 3
             }
           ],
           "ctaButtons": [],
@@ -344,42 +97,42 @@
             "CustomerName": "Rahul Sharma",
             "ProjectName": "Greenview Residences"
           },
-          "internalInstruction": "Capture: Buying purpose"
+          "internalInstruction": "Flow action: Buying purpose"
         },
         {
-          "id": "lead-qualification-03",
+          "id": "new-lead-welcome-03",
           "order": 3,
-          "title": "Property type",
+          "title": "Project quick menu",
           "type": "bot-message",
           "required": true,
           "approvalRequired": true,
-          "templateName": "lead_qualification_03_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "templateName": "new_lead_welcome_03_v2",
+          "suggestedCategory": "Utility (customer-initiated enquiry)",
+          "categoryNote": "Use only after the customer starts or expects this conversation.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with property type for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with property type for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
+          "bodyNamed": "Here is the quickest way to explore {{ProjectName}}. Choose what you want to check first.",
+          "bodyMeta": "Here is the quickest way to explore {{2}}. Choose what you want to check first.",
+          "footer": "Reply MENU anytime to restart",
           "quickReplies": [
             {
-              "label": "Apartment",
-              "next": 3
+              "label": "Price & Plans",
+              "next": 4
             },
             {
-              "label": "Villa",
-              "next": 3
+              "label": "Amenities",
+              "next": 5
             },
             {
-              "label": "Plot",
-              "next": 3
+              "label": "Location",
+              "next": 6
             }
           ],
           "ctaButtons": [
             {
               "type": "URL",
-              "label": "View Project",
-              "value": "https://your-domain.com/project/[PROJECT_SLUG]"
+              "label": "Get Brochure",
+              "value": "https://your-domain.com/brochure/[BROCHURE_ID]"
             }
           ],
           "variableMap": {
@@ -390,41 +143,121 @@
             "CustomerName": "Rahul Sharma",
             "ProjectName": "Greenview Residences"
           },
-          "internalInstruction": "Internal workflow action: Property type"
+          "internalInstruction": "Flow action: Project quick menu"
         },
         {
-          "id": "lead-qualification-04",
+          "id": "new-lead-welcome-04",
           "order": 4,
-          "title": "Preferred location",
-          "type": "bot-message",
-          "required": false,
+          "title": "Configuration preference",
+          "type": "data-capture",
+          "required": true,
           "approvalRequired": true,
-          "templateName": "lead_qualification_04_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "templateName": "new_lead_welcome_04_v2",
+          "suggestedCategory": "Utility (customer-initiated enquiry)",
+          "categoryNote": "Use only after the customer starts or expects this conversation.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with preferred location for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with preferred location for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
+          "bodyNamed": "Which configuration are you looking for in or around {{ProjectName}}?",
+          "bodyMeta": "Which configuration are you looking for in or around {{2}}?",
+          "footer": "Reply MENU anytime to restart",
           "quickReplies": [
             {
-              "label": "Preferred Option",
+              "label": "1 BHK",
               "next": 4
             },
             {
-              "label": "Other Option",
+              "label": "2 BHK",
               "next": 4
+            },
+            {
+              "label": "3+ BHK",
+              "next": 4
+            }
+          ],
+          "ctaButtons": [],
+          "variableMap": {
+            "CustomerName": "{{1}}",
+            "ProjectName": "{{2}}"
+          },
+          "samples": {
+            "CustomerName": "Rahul Sharma",
+            "ProjectName": "Greenview Residences"
+          },
+          "internalInstruction": "Flow action: Configuration preference"
+        },
+        {
+          "id": "new-lead-welcome-05",
+          "order": 5,
+          "title": "Budget range",
+          "type": "data-capture",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "new_lead_welcome_05_v2",
+          "suggestedCategory": "Utility (customer-initiated enquiry)",
+          "categoryNote": "Use only after the customer starts or expects this conversation.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "What budget range should we use to shortlist verified options for you?",
+          "bodyMeta": "What budget range should we use to shortlist verified options for you?",
+          "footer": "Reply MENU anytime to restart",
+          "quickReplies": [
+            {
+              "label": "Under ₹50 Lakh",
+              "next": 5
+            },
+            {
+              "label": "₹50L–₹1 Crore",
+              "next": 5
+            },
+            {
+              "label": "Above ₹1 Crore",
+              "next": 5
+            }
+          ],
+          "ctaButtons": [],
+          "variableMap": {
+            "CustomerName": "{{1}}",
+            "ProjectName": "{{2}}"
+          },
+          "samples": {
+            "CustomerName": "Rahul Sharma",
+            "ProjectName": "Greenview Residences"
+          },
+          "internalInstruction": "Flow action: Budget range"
+        },
+        {
+          "id": "new-lead-welcome-06",
+          "order": 6,
+          "title": "Preferred location",
+          "type": "data-capture",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "new_lead_welcome_06_v2",
+          "suggestedCategory": "Utility (customer-initiated enquiry)",
+          "categoryNote": "Use only after the customer starts or expects this conversation.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Which location preference should we use for your shortlist?",
+          "bodyMeta": "Which location preference should we use for your shortlist?",
+          "footer": "Reply MENU anytime to restart",
+          "quickReplies": [
+            {
+              "label": "Near Project",
+              "next": 6
+            },
+            {
+              "label": "Other Location",
+              "next": 6
             },
             {
               "label": "No Preference",
-              "next": 4
+              "next": 6
             }
           ],
           "ctaButtons": [
             {
               "type": "URL",
-              "label": "Open in Maps",
+              "label": "Open Location",
               "value": "https://maps.google.com/?q=[VERIFIED_LOCATION]"
             }
           ],
@@ -436,103 +269,23 @@
             "CustomerName": "Rahul Sharma",
             "ProjectName": "Greenview Residences"
           },
-          "internalInstruction": "Internal workflow action: Preferred location"
+          "internalInstruction": "Flow action: Preferred location"
         },
         {
-          "id": "lead-qualification-05",
-          "order": 5,
-          "title": "Budget",
-          "type": "data-capture",
-          "required": false,
-          "approvalRequired": true,
-          "templateName": "lead_qualification_05_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
-          "language": "English",
-          "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with budget for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with budget for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
-          "quickReplies": [
-            {
-              "label": "Lower Range",
-              "next": 5
-            },
-            {
-              "label": "Mid Range",
-              "next": 5
-            },
-            {
-              "label": "Upper Range",
-              "next": 5
-            }
-          ],
-          "ctaButtons": [],
-          "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
-          },
-          "samples": {
-            "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
-          },
-          "internalInstruction": "Capture: Budget"
-        },
-        {
-          "id": "lead-qualification-06",
-          "order": 6,
-          "title": "Configuration",
-          "type": "bot-message",
-          "required": false,
-          "approvalRequired": true,
-          "templateName": "lead_qualification_06_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
-          "language": "English",
-          "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with configuration for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with configuration for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
-          "quickReplies": [
-            {
-              "label": "1 BHK",
-              "next": 6
-            },
-            {
-              "label": "2 BHK",
-              "next": 6
-            },
-            {
-              "label": "3+ BHK",
-              "next": 6
-            }
-          ],
-          "ctaButtons": [],
-          "variableMap": {
-            "CustomerName": "{{1}}",
-            "ProjectName": "{{2}}"
-          },
-          "samples": {
-            "CustomerName": "Rahul Sharma",
-            "ProjectName": "Greenview Residences"
-          },
-          "internalInstruction": "Internal workflow action: Configuration"
-        },
-        {
-          "id": "lead-qualification-07",
+          "id": "new-lead-welcome-07",
           "order": 7,
           "title": "Purchase timeline",
-          "type": "bot-message",
-          "required": false,
+          "type": "data-capture",
+          "required": true,
           "approvalRequired": true,
-          "templateName": "lead_qualification_07_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "templateName": "new_lead_welcome_07_v2",
+          "suggestedCategory": "Utility (customer-initiated enquiry)",
+          "categoryNote": "Use only after the customer starts or expects this conversation.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with purchase timeline for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with purchase timeline for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
+          "bodyNamed": "When are you planning to purchase the property?",
+          "bodyMeta": "When are you planning to purchase the property?",
+          "footer": "Reply MENU anytime to restart",
           "quickReplies": [
             {
               "label": "0–3 Months",
@@ -556,23 +309,435 @@
             "CustomerName": "Rahul Sharma",
             "ProjectName": "Greenview Residences"
           },
-          "internalInstruction": "Internal workflow action: Purchase timeline"
+          "internalInstruction": "Flow action: Purchase timeline"
+        },
+        {
+          "id": "new-lead-welcome-08",
+          "order": 8,
+          "title": "Requirement summary",
+          "type": "bot-message",
+          "required": false,
+          "approvalRequired": true,
+          "templateName": "new_lead_welcome_08_v2",
+          "suggestedCategory": "Utility (customer-initiated enquiry)",
+          "categoryNote": "Use only after the customer starts or expects this conversation.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Perfect, {{CustomerName}}. We have enough information to prepare suitable options for {{ProjectName}}. What should happen next?",
+          "bodyMeta": "Perfect, {{1}}. We have enough information to prepare suitable options for {{2}}. What should happen next?",
+          "footer": "Reply MENU anytime to restart",
+          "quickReplies": [
+            {
+              "label": "View Matches",
+              "next": 9
+            },
+            {
+              "label": "Edit Requirement",
+              "next": 1
+            },
+            {
+              "label": "Talk to Advisor",
+              "next": 8
+            }
+          ],
+          "ctaButtons": [],
+          "variableMap": {
+            "CustomerName": "{{1}}",
+            "ProjectName": "{{2}}"
+          },
+          "samples": {
+            "CustomerName": "Rahul Sharma",
+            "ProjectName": "Greenview Residences"
+          },
+          "internalInstruction": "Flow action: Requirement summary"
+        },
+        {
+          "id": "new-lead-welcome-09",
+          "order": 9,
+          "title": "Advisor handover",
+          "type": "human-handover",
+          "required": false,
+          "approvalRequired": true,
+          "templateName": "new_lead_welcome_09_v2",
+          "suggestedCategory": "Utility (customer-initiated enquiry)",
+          "categoryNote": "Use only after the customer starts or expects this conversation.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Your request has been assigned to a property advisor. Please use the verified call button for immediate assistance.",
+          "bodyMeta": "Your request has been assigned to a property advisor. Please use the verified call button for immediate assistance.",
+          "footer": "Reply MENU anytime to restart",
+          "quickReplies": [],
+          "ctaButtons": [
+            {
+              "type": "PHONE",
+              "label": "Call Advisor",
+              "value": "tel:[VERIFIED_PHONE]"
+            }
+          ],
+          "variableMap": {
+            "CustomerName": "{{1}}",
+            "ProjectName": "{{2}}"
+          },
+          "samples": {
+            "CustomerName": "Rahul Sharma",
+            "ProjectName": "Greenview Residences"
+          },
+          "internalInstruction": "Flow action: Advisor handover"
+        },
+        {
+          "id": "new-lead-welcome-10",
+          "order": 10,
+          "title": "Matching properties",
+          "type": "bot-message",
+          "required": false,
+          "approvalRequired": true,
+          "templateName": "new_lead_welcome_10_v2",
+          "suggestedCategory": "Utility (customer-initiated enquiry)",
+          "categoryNote": "Use only after the customer starts or expects this conversation.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Your matching-property shortlist is ready. Open only verified project information, or restart the menu to change your requirement.",
+          "bodyMeta": "Your matching-property shortlist is ready. Open only verified project information, or restart the menu to change your requirement.",
+          "footer": "Reply MENU anytime to restart",
+          "quickReplies": [],
+          "ctaButtons": [
+            {
+              "type": "URL",
+              "label": "View Matches",
+              "value": "https://your-domain.com/matches/[LEAD_ID]"
+            }
+          ],
+          "variableMap": {
+            "CustomerName": "{{1}}",
+            "ProjectName": "{{2}}"
+          },
+          "samples": {
+            "CustomerName": "Rahul Sharma",
+            "ProjectName": "Greenview Residences"
+          },
+          "internalInstruction": "Flow action: Matching properties"
+        }
+      ],
+      "disclaimers": []
+    },
+    {
+      "id": "lead-qualification",
+      "slug": "lead-qualification",
+      "order": 2,
+      "title": "Lead Qualification",
+      "url": "flows/lead-qualification.html",
+      "category": "Lead Management",
+      "leadStage": "Discovery",
+      "description": "Qualify a real-estate lead through purpose, property type, location, budget, configuration, timeline and payment preference.",
+      "estimatedMinutes": 2,
+      "steps": [
+        {
+          "id": "lead-qualification-01",
+          "order": 1,
+          "title": "Qualification welcome",
+          "type": "bot-message",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "lead_qualification_01_v2",
+          "suggestedCategory": "Utility (customer-initiated enquiry)",
+          "categoryNote": "Use when the customer has requested property assistance.",
+          "language": "English",
+          "header": "Property requirement",
+          "bodyNamed": "Hi {{CustomerName}} 👋\n\nI can shortlist suitable properties in about one minute. How would you like to continue?",
+          "bodyMeta": "Hi {{1}} 👋\n\nI can shortlist suitable properties in about one minute. How would you like to continue?",
+          "footer": "Reply MENU to restart",
+          "quickReplies": [
+            {
+              "label": "Start Qualification",
+              "next": 1
+            },
+            {
+              "label": "View Project",
+              "next": 9
+            },
+            {
+              "label": "Talk to Advisor",
+              "next": 10
+            }
+          ],
+          "ctaButtons": [
+            {
+              "type": "URL",
+              "label": "View Project",
+              "value": "https://your-domain.com/project/[PROJECT_SLUG]"
+            }
+          ],
+          "variableMap": {
+            "CustomerName": "{{1}}",
+            "ProjectName": "{{2}}"
+          },
+          "samples": {
+            "CustomerName": "Rahul Sharma",
+            "ProjectName": "Greenview Residences"
+          },
+          "internalInstruction": "Capture and save: Qualification welcome"
+        },
+        {
+          "id": "lead-qualification-02",
+          "order": 2,
+          "title": "Buying purpose",
+          "type": "data-capture",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "lead_qualification_02_v2",
+          "suggestedCategory": "Utility (customer-initiated enquiry)",
+          "categoryNote": "Use when the customer has requested property assistance.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "What is your primary reason for buying a property?",
+          "bodyMeta": "What is your primary reason for buying a property?",
+          "footer": "Reply MENU to restart",
+          "quickReplies": [
+            {
+              "label": "Self Use",
+              "next": 2
+            },
+            {
+              "label": "Investment",
+              "next": 2
+            },
+            {
+              "label": "Rental Income",
+              "next": 2
+            }
+          ],
+          "ctaButtons": [],
+          "variableMap": {
+            "CustomerName": "{{1}}",
+            "ProjectName": "{{2}}"
+          },
+          "samples": {
+            "CustomerName": "Rahul Sharma",
+            "ProjectName": "Greenview Residences"
+          },
+          "internalInstruction": "Capture and save: Buying purpose"
+        },
+        {
+          "id": "lead-qualification-03",
+          "order": 3,
+          "title": "Property type",
+          "type": "data-capture",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "lead_qualification_03_v2",
+          "suggestedCategory": "Utility (customer-initiated enquiry)",
+          "categoryNote": "Use when the customer has requested property assistance.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Which property type should we include in your shortlist?",
+          "bodyMeta": "Which property type should we include in your shortlist?",
+          "footer": "Reply MENU to restart",
+          "quickReplies": [
+            {
+              "label": "Apartment",
+              "next": 3
+            },
+            {
+              "label": "Villa",
+              "next": 3
+            },
+            {
+              "label": "Plot",
+              "next": 3
+            }
+          ],
+          "ctaButtons": [],
+          "variableMap": {
+            "CustomerName": "{{1}}",
+            "ProjectName": "{{2}}"
+          },
+          "samples": {
+            "CustomerName": "Rahul Sharma",
+            "ProjectName": "Greenview Residences"
+          },
+          "internalInstruction": "Capture and save: Property type"
+        },
+        {
+          "id": "lead-qualification-04",
+          "order": 4,
+          "title": "Preferred location",
+          "type": "data-capture",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "lead_qualification_04_v2",
+          "suggestedCategory": "Utility (customer-initiated enquiry)",
+          "categoryNote": "Use when the customer has requested property assistance.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Which location should we prioritise for your property search?",
+          "bodyMeta": "Which location should we prioritise for your property search?",
+          "footer": "Reply MENU to restart",
+          "quickReplies": [
+            {
+              "label": "Gurugram",
+              "next": 4
+            },
+            {
+              "label": "Noida",
+              "next": 4
+            },
+            {
+              "label": "Other Location",
+              "next": 4
+            }
+          ],
+          "ctaButtons": [
+            {
+              "type": "URL",
+              "label": "View Service Areas",
+              "value": "https://your-domain.com/locations"
+            }
+          ],
+          "variableMap": {
+            "CustomerName": "{{1}}",
+            "ProjectName": "{{2}}"
+          },
+          "samples": {
+            "CustomerName": "Rahul Sharma",
+            "ProjectName": "Greenview Residences"
+          },
+          "internalInstruction": "Capture and save: Preferred location"
+        },
+        {
+          "id": "lead-qualification-05",
+          "order": 5,
+          "title": "Budget range",
+          "type": "data-capture",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "lead_qualification_05_v2",
+          "suggestedCategory": "Utility (customer-initiated enquiry)",
+          "categoryNote": "Use when the customer has requested property assistance.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "What is your comfortable total property budget?",
+          "bodyMeta": "What is your comfortable total property budget?",
+          "footer": "Reply MENU to restart",
+          "quickReplies": [
+            {
+              "label": "Under ₹50 Lakh",
+              "next": 5
+            },
+            {
+              "label": "₹50L–₹1 Crore",
+              "next": 5
+            },
+            {
+              "label": "Above ₹1 Crore",
+              "next": 5
+            }
+          ],
+          "ctaButtons": [],
+          "variableMap": {
+            "CustomerName": "{{1}}",
+            "ProjectName": "{{2}}"
+          },
+          "samples": {
+            "CustomerName": "Rahul Sharma",
+            "ProjectName": "Greenview Residences"
+          },
+          "internalInstruction": "Capture and save: Budget range"
+        },
+        {
+          "id": "lead-qualification-06",
+          "order": 6,
+          "title": "Configuration",
+          "type": "data-capture",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "lead_qualification_06_v2",
+          "suggestedCategory": "Utility (customer-initiated enquiry)",
+          "categoryNote": "Use when the customer has requested property assistance.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Which configuration best matches your requirement?",
+          "bodyMeta": "Which configuration best matches your requirement?",
+          "footer": "Reply MENU to restart",
+          "quickReplies": [
+            {
+              "label": "1 BHK",
+              "next": 6
+            },
+            {
+              "label": "2 BHK",
+              "next": 6
+            },
+            {
+              "label": "3+ BHK",
+              "next": 6
+            }
+          ],
+          "ctaButtons": [],
+          "variableMap": {
+            "CustomerName": "{{1}}",
+            "ProjectName": "{{2}}"
+          },
+          "samples": {
+            "CustomerName": "Rahul Sharma",
+            "ProjectName": "Greenview Residences"
+          },
+          "internalInstruction": "Capture and save: Configuration"
+        },
+        {
+          "id": "lead-qualification-07",
+          "order": 7,
+          "title": "Purchase timeline",
+          "type": "data-capture",
+          "required": true,
+          "approvalRequired": true,
+          "templateName": "lead_qualification_07_v2",
+          "suggestedCategory": "Utility (customer-initiated enquiry)",
+          "categoryNote": "Use when the customer has requested property assistance.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "When are you planning to finalise the property?",
+          "bodyMeta": "When are you planning to finalise the property?",
+          "footer": "Reply MENU to restart",
+          "quickReplies": [
+            {
+              "label": "0–3 Months",
+              "next": 7
+            },
+            {
+              "label": "3–6 Months",
+              "next": 7
+            },
+            {
+              "label": "6+ Months",
+              "next": 7
+            }
+          ],
+          "ctaButtons": [],
+          "variableMap": {
+            "CustomerName": "{{1}}",
+            "ProjectName": "{{2}}"
+          },
+          "samples": {
+            "CustomerName": "Rahul Sharma",
+            "ProjectName": "Greenview Residences"
+          },
+          "internalInstruction": "Capture and save: Purchase timeline"
         },
         {
           "id": "lead-qualification-08",
           "order": 8,
-          "title": "Payment method",
-          "type": "bot-message",
-          "required": false,
+          "title": "Payment preference",
+          "type": "data-capture",
+          "required": true,
           "approvalRequired": true,
-          "templateName": "lead_qualification_08_v1",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "templateName": "lead_qualification_08_v2",
+          "suggestedCategory": "Utility (customer-initiated enquiry)",
+          "categoryNote": "Use when the customer has requested property assistance.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Hi {{CustomerName}},\n\nLet's continue with payment method for {{ProjectName}}. Choose the option that best matches your requirement.",
-          "bodyMeta": "Hi {{1}},\n\nLet's continue with payment method for {{2}}. Choose the option that best matches your requirement.",
-          "footer": "Your verified business name",
+          "bodyNamed": "How are you planning to fund the purchase?",
+          "bodyMeta": "How are you planning to fund the purchase?",
+          "footer": "Reply MENU to restart",
           "quickReplies": [
             {
               "label": "Self Funded",
@@ -596,24 +761,37 @@
             "CustomerName": "Rahul Sharma",
             "ProjectName": "Greenview Residences"
           },
-          "internalInstruction": "Internal workflow action: Payment method"
+          "internalInstruction": "Capture and save: Payment preference"
         },
         {
           "id": "lead-qualification-09",
           "order": 9,
-          "title": "Lead priority calculation",
-          "type": "crm-action",
+          "title": "Qualification summary",
+          "type": "bot-message",
           "required": false,
-          "approvalRequired": false,
-          "templateName": "",
-          "suggestedCategory": "Utility (customer-triggered context)",
-          "categoryNote": "Meta may reclassify the template during review.",
+          "approvalRequired": true,
+          "templateName": "lead_qualification_09_v2",
+          "suggestedCategory": "Utility (customer-initiated enquiry)",
+          "categoryNote": "Use when the customer has requested property assistance.",
           "language": "English",
           "header": "",
-          "bodyNamed": "Thank you, {{CustomerName}}.\n\nYour lead qualification request for {{ProjectName}} has been recorded. Our team will use only verified information for the next step.",
-          "bodyMeta": "Thank you, {{1}}.\n\nYour lead qualification request for {{2}} has been recorded. Our team will use only verified information for the next step.",
-          "footer": "Your verified business name",
-          "quickReplies": [],
+          "bodyNamed": "Thanks, {{CustomerName}}. Your requirement profile is ready. Choose the next action for {{ProjectName}}.",
+          "bodyMeta": "Thanks, {{1}}. Your requirement profile is ready. Choose the next action for {{2}}.",
+          "footer": "Reply MENU to restart",
+          "quickReplies": [
+            {
+              "label": "View Matches",
+              "next": 9
+            },
+            {
+              "label": "Edit Answers",
+              "next": 1
+            },
+            {
+              "label": "Talk to Advisor",
+              "next": 10
+            }
+          ],
           "ctaButtons": [],
           "variableMap": {
             "CustomerName": "{{1}}",
@@ -623,7 +801,73 @@
             "CustomerName": "Rahul Sharma",
             "ProjectName": "Greenview Residences"
           },
-          "internalInstruction": "Internal workflow action: Lead priority calculation"
+          "internalInstruction": "Capture and save: Qualification summary"
+        },
+        {
+          "id": "lead-qualification-10",
+          "order": 10,
+          "title": "Matching recommendations",
+          "type": "bot-message",
+          "required": false,
+          "approvalRequired": true,
+          "templateName": "lead_qualification_10_v2",
+          "suggestedCategory": "Utility (customer-initiated enquiry)",
+          "categoryNote": "Use when the customer has requested property assistance.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Your personalised property matches are ready. Open the verified shortlist to compare price, location and availability.",
+          "bodyMeta": "Your personalised property matches are ready. Open the verified shortlist to compare price, location and availability.",
+          "footer": "Reply MENU to restart",
+          "quickReplies": [],
+          "ctaButtons": [
+            {
+              "type": "URL",
+              "label": "View Matches",
+              "value": "https://your-domain.com/matches/[LEAD_ID]"
+            }
+          ],
+          "variableMap": {
+            "CustomerName": "{{1}}",
+            "ProjectName": "{{2}}"
+          },
+          "samples": {
+            "CustomerName": "Rahul Sharma",
+            "ProjectName": "Greenview Residences"
+          },
+          "internalInstruction": "Capture and save: Matching recommendations"
+        },
+        {
+          "id": "lead-qualification-11",
+          "order": 11,
+          "title": "Advisor handover",
+          "type": "human-handover",
+          "required": false,
+          "approvalRequired": true,
+          "templateName": "lead_qualification_11_v2",
+          "suggestedCategory": "Utility (customer-initiated enquiry)",
+          "categoryNote": "Use when the customer has requested property assistance.",
+          "language": "English",
+          "header": "",
+          "bodyNamed": "Your requirement has been sent to a property advisor. Use the verified button below if you need immediate help.",
+          "bodyMeta": "Your requirement has been sent to a property advisor. Use the verified button below if you need immediate help.",
+          "footer": "Reply MENU to restart",
+          "quickReplies": [],
+          "ctaButtons": [
+            {
+              "type": "PHONE",
+              "label": "Call Advisor",
+              "value": "tel:[VERIFIED_PHONE]"
+            }
+          ],
+          "variableMap": {
+            "CustomerName": "{{1}}",
+            "ProjectName": "{{2}}"
+          },
+          "samples": {
+            "CustomerName": "Rahul Sharma",
+            "ProjectName": "Greenview Residences"
+          },
+          "internalInstruction": "Capture and save: Advisor handover"
         }
       ],
       "disclaimers": []
